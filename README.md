@@ -7,8 +7,6 @@ npm run build
 ```
 This will result in a folder structure as build output like following :
 
-.
- 
 * [au](./dir2)
     * [Content](./dir2)
         * [fonts](./dir2)
@@ -50,7 +48,6 @@ This widget builder uses the following key technologies:
 In the location you require the banner, use the following markup:
 
 ```HTML
-
 <!-- Price Info -->
 <script id="oxipay-price-info" src="price-info.js?productPrice=0"></script>
 
@@ -71,17 +68,16 @@ To switch between local testing and online deployment, you will make changes in 
 
     change "baseContentUrl"
 
-2. in /css/oxipay-branding.scss:
+2. in /css/humm-branding.scss:
 
     change font-face url (in all 3 font-faces)
-    change #oxipay-img background-image url
+    change #humm-img background-image url
 
 All .scss files in /src/au/styles and /src/nz/styles have to be compile into .min.css files.
 To do so, go to project root folder and use command:
 ```
-sass -s compressed src/au/styles/ExternalModal.scss:src/au/styles/ExternalModal.min.css src/au/styles/priceInfo.scss:src/au/styles/priceInfo.min.css src/au/styles/MoreInfo-modal.scss:src/au/styles/MoreInfo-modal.min.css src/au/html/landing-page/styles/landing.scss:src/au/html/landing-page/styles/landing.css src/au/styles/MoreInfo.scss:src/au/styles/MoreInfo.min.css 
-
-sass -s compressed css/oxipay-branding.scss:css/oxipay-branding.css 
+sass -s compressed src/au/styles/ExternalModal.scss:src/au/styles/ExternalModal.min.css src/au/styles/priceInfo.scss:src/au/styles/priceInfo.min.css src/au/styles/MoreInfo-modal.scss:src/au/styles/MoreInfo-modal.min.css src/au/html/landing-page/styles/landing.scss:src/au/html/landing-page/styles/landing.css src/au/styles/MoreInfo.scss:src/au/styles/MoreInfo.min.css
+sass -s compressed css/humm-branding.scss:css/humm-branding.css 
 
 ```
 

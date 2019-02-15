@@ -1,5 +1,5 @@
 ///<reference path="../../typings/jquery/jquery.d.ts"/>
-///<reference path="../../typings/oxipay.d.ts"/>
+///<reference path="../../typings/humm.d.ts"/>
 // tslint:disable-next-line:no-var-requires
 require('jquery');
 // tslint:disable-next-line:no-var-requires
@@ -9,7 +9,7 @@ require('../../node_modules/remodal/dist/remodal.css');
 // tslint:disable-next-line:no-var-requires
 require('../../node_modules/remodal/dist/remodal-default-theme.css');
 // tslint:disable-next-line:no-var-requires
-require('../../css/oxipay-branding.css');
+require('../../css/humm-branding.css');
 
 export class ModalInjector {
     constructor(private jQuery: JQueryStatic) {
