@@ -13,12 +13,18 @@ $HUMM_GRAY: #ecedee;
 $HUMM_LIGHT_GRAY: #f9f9f9;
 $HUMM_DARK_GRAY: #515565;
 
-#humm-img{
+.humm-img{
     background-image: url($baseURL + "/content/images/logo-orange.svg");
-    padding: 1px 32px;
-    margin-left: 3px;
+    padding: 0px 38px;
+    margin-right: 10px;
     background-repeat: no-repeat;
+    background-size: contain;
 }
+
+.description {
+    vertical-align: middle;
+}
+
 
 @font-face {
     font-family: 'AvenirLTStd-Medium';
@@ -490,7 +496,10 @@ div[id^="humm-modal-"] {
 }
 
 .more-info {
-    text-decoration: underline; font-size: 0.7em; vertical-align: middle;
+    text-decoration: underline;
+    font-size: 0.7em;
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
 div[id^="humm-more-info-"]:hover .more-info-btn {

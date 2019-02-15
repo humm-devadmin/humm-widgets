@@ -10,7 +10,6 @@ module.exports = {
         "au/content/scripts/register-interest-large": "./src/au/register-interest-large.ts",
         "au/content/scripts/price-info": "./src/au/payments.ts",
         "au/content/scripts/payments": "./src/au/payments.ts",
-        "au/content/scripts/payments-weekly": "./src/au/payments-weekly.ts",
         "au/content/scripts/landing-page": "./src/au/landing-page.ts",
         "au/content/scripts/top-banner": "./src/au/top-banner.ts"
     },

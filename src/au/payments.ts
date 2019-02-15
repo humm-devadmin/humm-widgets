@@ -29,6 +29,8 @@ let widget;
     let max: number;
     let used_in: string;
     let element: any;
+    let widgetUrl: string;
+    let widgetId: string;
 
     /**
      * The extracted product price from either parsing the content from HTML (via css selector)
@@ -67,7 +69,10 @@ let widget;
         // because we have been provided the price we can't bind to events on 
         // the element containing the price. We just inject the template
         const template: string = generateWidget(productPrice, noLogo, min, max, used_in);
-        widget.injectBanner(template, Config.priceInfoUrl, Config.priceInfoModalId, element);
+        widgetUrl = productPrice<=2000? Config.priceInfoLessUrl : Config.priceInfoMoreUrl;
+        widgetId = productPrice<=2000? Config.priceInfoModalLessId : Config.priceInfoModalMoreId;
+
+        widget.injectBanner(template, widgetUrl, widgetId, element);
 
     } else {
         
@@ -84,7 +89,9 @@ let widget;
             productPrice = extractPrice(el);
 
             if (productPrice) {
-                widget.injectBanner(generateWidget(productPrice, noLogo, min, max, used_in), Config.priceInfoUrl, Config.priceInfoModalId, element);
+                widgetUrl = productPrice<=2000? Config.priceInfoLessUrl : Config.priceInfoMoreUrl;
+                widgetId = productPrice<=2000? Config.priceInfoModalLessId : Config.priceInfoModalMoreId;
+                widget.injectBanner(generateWidget(productPrice, noLogo, min, max, used_in), widgetUrl, widgetId, element);
             }
 
             // register event handler to update the price
@@ -120,60 +127,52 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
     let template;
     let templateCheckout;
     let templatenologo;
+    let widgetId = productPrice<=2000? Config.priceInfoModalLessId : Config.priceInfoModalMoreId;
+
     if (productPrice < min){
-        template = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
-                            <p>or 4 fortnightly payments </b></p><p>Interest free with <span id="humm-img"></span></p>
+        template = `<a id="humm-tag-02" data-remodal-target="${widgetId}">
+                            <span class="humm-img"></span><span class="description">with 5 fortnightly payments </b></span><span class="more-info">more info</span>
                         </a>`;
 
-        templateCheckout = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
-                            <p>4 fortnightly payments </b></p><p>Interest free with <span id="humm-img"></span></p>
+        templateCheckout = `<a id="humm-tag-02" data-remodal-target="${widgetId}">
+                            <span class="humm-img"></span><span class="description">with 5 fortnightly payments </b></span><span class="more-info">more info</span>
                         </a>`;
 
-        templatenologo = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
-                                <p>or 4 fortnightly payments </b></p><p>Interest free - <strong>find out how</strong></p>
+        templatenologo = `<a id="humm-tag-02" data-remodal-target="${widgetId}">
+                                <span class="description">with 5 fortnightly payments </b></span><span class="more-info">more info</span>
                             </a>`;
     }
-    else if (productPrice <= 2100 && productPrice <= max) {
-        if (productPrice > 1400) {
-            let initialPayment = productPrice - 1050;
-
-            // tslint:disable-next-line:max-line-length
-            template = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
-                            <p>or 1 initial payment of <b>$${initialPayment.toFixed(2)}</b></p>
-                            <p>and 3 payments of <b>$350.00</b></p>
-                            <p>Interest free with <span id="humm-img"></span></p>
-                        </a>`;
-
-            templateCheckout = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
-                            <p>1 initial payment of <b>$${initialPayment.toFixed(2)}</b></p>
-                            <p>and 3 payments of <b>$350.00</b></p>
-                            <p>Interest free with <span id="humm-img"></span></p>
-                        </a>`;
-
-            // tslint:disable-next-line:max-line-length
-            templatenologo = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
-                                <p>or 1 initial payment of <b>$${initialPayment.toFixed(2)}</b></p>
-                                <p>and 3 payments of <b>$350.00</b></p>
-                                <p>Interest free - <strong>find out how</strong></p>
-                            </a>`;
-        } else {
-            let productPriceDividedByFour = productPrice / 4;
+    else if (productPrice <= 1000 && productPrice <= max) {
+            let productPriceDividedByFour = productPrice / 5;
 
             // Banking Rounding
             let roundedDownProductPrice = Math.floor( productPriceDividedByFour * Math.pow(10, 2) ) / Math.pow(10, 2);
-            template = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
-                            <p>or 4 payments of <b>$${roundedDownProductPrice.toFixed(2)}</b></p><p>Interest free with <span id="humm-img"></span></p>
+            template = `<a id="humm-tag-02" data-remodal-target="${widgetId}">
+                            <span class="humm-img"></span><span class="description">with 5 fortnightly payments of <b>$${roundedDownProductPrice.toFixed(2)}</b></span><span class="more-info">more info</span>
                         </a>`;
 
-            templateCheckout = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
-                            <p>4 payments of <b>$${roundedDownProductPrice.toFixed(2)}</b></p><p>Interest free with <span id="humm-img"></span></p>
+            templateCheckout = `<a id="humm-tag-02" data-remodal-target="${widgetId}">
+                            <span class="humm-img"></span><span class="description">with 5 fortnightly payments of <b>$${roundedDownProductPrice.toFixed(2)}</b></span><span class="more-info">more info</span>
                         </a>`;
 
-            templatenologo = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
-                                <p>or 4 payments of <b>$${roundedDownProductPrice.toFixed(2)}</b></p><p>Interest free - <strong>find out how</strong></p>
+            templatenologo = `<a id="humm-tag-02" data-remodal-target="${widgetId}">
+                                <span class="description">with 5 fortnightly payments of <b>$${roundedDownProductPrice.toFixed(2)}</b></span><span class="more-info">more info</span>
                             </a>`;
-        }
-    } else {
+    }
+    else if (productPrice <= max) {
+        template = `<a id="humm-tag-02" data-remodal-target="${widgetId}">
+                    <span class="humm-img"></span><span>streeetch your payments</span><span class="more-info">more info</span>
+                    </a>`;
+
+        templateCheckout = `<a id="humm-tag-02" data-remodal-target="${widgetId}">
+                    <span class="humm-img"></span><span>streeetch your payments</span><span class="more-info">more info</span>
+                    </a>`;
+
+        templatenologo = `<a id="humm-tag-02" data-remodal-target="${widgetId}">
+                            <span>streeetch your payments</span><span class="more-info">more info</span>
+                        </a>`;
+    }
+    else {
         return '<a id="humm-tag-02"></a>'
     }
     if(used_in == "checkout"){
@@ -197,7 +196,9 @@ function updatePrice(el: JQuery, jq: JQueryStatic, noLogo: boolean, min: number,
     let productPrice = extractPrice(el);
     let template = generateWidget(productPrice, noLogo, min, max, used_in);
     let parent =  jq(getCurrentScript()).parent();
-    widget.injectBanner(template, Config.priceInfoUrl, Config.priceInfoModalId, parent);
+    let widgetUrl = productPrice<=2000? Config.priceInfoLessUrl : Config.priceInfoMoreUrl;
+    let widgetId = productPrice<=2000? Config.priceInfoModalLessId : Config.priceInfoModalMoreId;
+    widget.injectBanner(template, widgetUrl, widgetId, parent);
 }
 
 function getParameterByName(name: string, url: string): string {
