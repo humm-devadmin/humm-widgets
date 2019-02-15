@@ -8,14 +8,14 @@ let widget;
 
     /**
      * The src attribute from the script we are executing e.g
-     * <script src="http://widgets.oxipay.com.au/scripts/price-info.js?foo"
+     * <script src="http://widgets.shophumm.com.au/scripts/price-info.js?foo"
      */
     let srcString: string;
     let scriptElement: any;
     
     widget = new ModalInjector($);
 
-    /* Choose if we want to render the Oxipay Logo or not */
+    /* Choose if we want to render the Humm Logo or not */
     let noLogo: boolean;
 
     /* Choose if we want to monitor price change ever half second */
@@ -121,15 +121,15 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
     let templateCheckout;
     let templatenologo;
     if (productPrice < min){
-        template = `<a id="oxipay-tag-02" data-remodal-target="${Config.priceInfoModalId}">
-                            <p>or 4 fortnightly payments </b></p><p>Interest free with <span id="oxipay-img"></span></p>
+        template = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
+                            <p>or 4 fortnightly payments </b></p><p>Interest free with <span id="humm-img"></span></p>
                         </a>`;
 
-        templateCheckout = `<a id="oxipay-tag-02" data-remodal-target="${Config.priceInfoModalId}">
-                            <p>4 fortnightly payments </b></p><p>Interest free with <span id="oxipay-img"></span></p>
+        templateCheckout = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
+                            <p>4 fortnightly payments </b></p><p>Interest free with <span id="humm-img"></span></p>
                         </a>`;
 
-        templatenologo = `<a id="oxipay-tag-02" data-remodal-target="${Config.priceInfoModalId}">
+        templatenologo = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
                                 <p>or 4 fortnightly payments </b></p><p>Interest free - <strong>find out how</strong></p>
                             </a>`;
     }
@@ -138,20 +138,20 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
             let initialPayment = productPrice - 1050;
 
             // tslint:disable-next-line:max-line-length
-            template = `<a id="oxipay-tag-02" data-remodal-target="${Config.priceInfoModalId}">
+            template = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
                             <p>or 1 initial payment of <b>$${initialPayment.toFixed(2)}</b></p>
                             <p>and 3 payments of <b>$350.00</b></p>
-                            <p>Interest free with <span id="oxipay-img"></span></p>
+                            <p>Interest free with <span id="humm-img"></span></p>
                         </a>`;
 
-            templateCheckout = `<a id="oxipay-tag-02" data-remodal-target="${Config.priceInfoModalId}">
+            templateCheckout = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
                             <p>1 initial payment of <b>$${initialPayment.toFixed(2)}</b></p>
                             <p>and 3 payments of <b>$350.00</b></p>
-                            <p>Interest free with <span id="oxipay-img"></span></p>
+                            <p>Interest free with <span id="humm-img"></span></p>
                         </a>`;
 
             // tslint:disable-next-line:max-line-length
-            templatenologo = `<a id="oxipay-tag-02" data-remodal-target="${Config.priceInfoModalId}">
+            templatenologo = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
                                 <p>or 1 initial payment of <b>$${initialPayment.toFixed(2)}</b></p>
                                 <p>and 3 payments of <b>$350.00</b></p>
                                 <p>Interest free - <strong>find out how</strong></p>
@@ -161,20 +161,20 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
 
             // Banking Rounding
             let roundedDownProductPrice = Math.floor( productPriceDividedByFour * Math.pow(10, 2) ) / Math.pow(10, 2);
-            template = `<a id="oxipay-tag-02" data-remodal-target="${Config.priceInfoModalId}">
-                            <p>or 4 payments of <b>$${roundedDownProductPrice.toFixed(2)}</b></p><p>Interest free with <span id="oxipay-img"></span></p>
+            template = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
+                            <p>or 4 payments of <b>$${roundedDownProductPrice.toFixed(2)}</b></p><p>Interest free with <span id="humm-img"></span></p>
                         </a>`;
 
-            templateCheckout = `<a id="oxipay-tag-02" data-remodal-target="${Config.priceInfoModalId}">
-                            <p>4 payments of <b>$${roundedDownProductPrice.toFixed(2)}</b></p><p>Interest free with <span id="oxipay-img"></span></p>
+            templateCheckout = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
+                            <p>4 payments of <b>$${roundedDownProductPrice.toFixed(2)}</b></p><p>Interest free with <span id="humm-img"></span></p>
                         </a>`;
 
-            templatenologo = `<a id="oxipay-tag-02" data-remodal-target="${Config.priceInfoModalId}">
+            templatenologo = `<a id="humm-tag-02" data-remodal-target="${Config.priceInfoModalId}">
                                 <p>or 4 payments of <b>$${roundedDownProductPrice.toFixed(2)}</b></p><p>Interest free - <strong>find out how</strong></p>
                             </a>`;
         }
     } else {
-        return '<a id="oxipay-tag-02"></a>'
+        return '<a id="humm-tag-02"></a>'
     }
     if(used_in == "checkout"){
         return templateCheckout;

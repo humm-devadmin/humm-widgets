@@ -1,7 +1,7 @@
 {
-  "name": "oxipay-register-interest-banner",
+  "name": "humm-register-interest-banner",
   "version": "1.0.0",
-  "description": "Interactive drop in banners for oxipay",
+  "description": "Interactive drop in banners for Humm",
   "main": "register-interest.js",
   "dependencies": {
     "jquery": "^3.1.1",
@@ -19,6 +19,6 @@
     "build": "webpack",
     "watch": "webpack --watch"
   },
-  "author": "Oxipay",
+  "author": "Humm",
   "license": "ISC"
 }

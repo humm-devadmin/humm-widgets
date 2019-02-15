@@ -23,5 +23,5 @@ class PageInjector {
 
 (($: JQueryStatic) => {
     const widget = new PageInjector($);
-    widget.injectPage("https://s3-ap-southeast-2.amazonaws.com/widgets.oxipay.com.au/content/html/landing-page/landing-page-content.html", "#oxipay-landing-page");
+    widget.injectPage("https://s3-ap-southeast-2.amazonaws.com/widgets.shophumm.com.au/content/html/landing-page/landing-page-content.html", "#humm-landing-page");
 })(jq);

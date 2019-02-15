@@ -24,7 +24,7 @@
 body {
     margin: 0;
 }
-div[id^="oxipay-modal-"] {
+div[id^="humm-modal-"] {
     font-family: 'Montserrat-Regular';
     font-size: 16px;
     line-height: 1.3;
@@ -127,7 +127,7 @@ div[id^="oxipay-modal-"] {
 }
 
 @media screen and (max-width: 50rem) {
-    div[id^="oxipay-modal-"] {
+    div[id^="humm-modal-"] {
         width: 100%;
         padding-left: 0;
         padding-right: 0;

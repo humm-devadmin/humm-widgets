@@ -32,8 +32,8 @@ export class ModalInjector {
 
         // look for the id , if it exists then we replace the element
         // this could cause issues with multiple entries.. @todo make element id dynamic
-        if (this.jQuery('#oxipay-tag-02', element).length > 0) {
-            this.jQuery('#oxipay-tag-02', element).replaceWith(template);
+        if (this.jQuery('#humm-tag-02', element).length > 0) {
+            this.jQuery('#humm-tag-02', element).replaceWith(template);
         } else {
             element.first().after(template);
         }
@@ -47,7 +47,7 @@ export class ModalInjector {
         const bodyTag = 'body';
         const modalDiv =
             `<div id='${modalId}' class='remodal' data-remodal-id='${modalId}'>
-                <iframe id='oxipay-external' src='${url}'></iframe>
+                <iframe id='humm-external' src='${url}'></iframe>
                 <button data-remodal-action="close" class="remodal-close"></button>
             </div>`;
         const body = this.jQuery(bodyTag);

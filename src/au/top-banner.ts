@@ -18,9 +18,9 @@ import { Config } from './config';
     element = (getParameterByName('element', srcString))? jq(getParameterByName('element', srcString)) : jq(scriptElement);
 
     const template =
-        `<a id="oxipay-banner-top" data-remodal-target="${Config.oxipayBannerTopModalId}">
+        `<a id="humm-banner-top" data-remodal-target="${Config.hummBannerTopModalId}">
             <div class="logo">
-                <img alt="Oxipay" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
+                <img alt="Humm" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
             </div>
             <div class="placeholder"></div>
             <div class='title'>
@@ -36,7 +36,7 @@ import { Config } from './config';
             </div>
         </a>`;
     const widget = new ModalInjector($);
-    widget.injectBanner(template,  Config.oxipayBannerTopModalUrl, Config.oxipayBannerTopModalId, element);
+    widget.injectBanner(template,  Config.hummBannerTopModalUrl, Config.hummBannerTopModalId, element);
 
 
     function getCurrentScript(): any {

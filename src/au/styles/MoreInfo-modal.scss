@@ -29,18 +29,18 @@
     font-style: normal;
 }
 
-$OXIPAY_ORANGE: #f6771c;
-$OXIPAY_GRAY: #ecedee;
-$OXIPAY_LIGHT_GRAY: #f9f9f9;
-$OXIPAY_DARK_GRAY: #515565;
+$HUMM_ORANGE: #f6771c;
+$HUMM_GRAY: #ecedee;
+$HUMM_LIGHT_GRAY: #f9f9f9;
+$HUMM_DARK_GRAY: #515565;
 
 body {
     margin: 0;
     font-size: 14px;
-    color: $OXIPAY_DARK_GRAY;
+    color: $HUMM_DARK_GRAY;
 }
 
-#oxipay-modal-more-info_1 {
+#humm-modal-more-info_1 {
     font-family: 'Montserrat-Regular';
     line-height: 1.3;
     max-width: 50rem;
@@ -115,9 +115,9 @@ body {
     #middle {
         font-size: 1.5rem;
         padding: 0.5em;
-        background: $OXIPAY_GRAY;
+        background: $HUMM_GRAY;
         font-family: "Montserrat-Bold";
-        color: $OXIPAY_ORANGE;
+        color: $HUMM_ORANGE;
         p {
             max-width: 14em;
             margin: 0 auto;
@@ -150,7 +150,7 @@ body {
 
     footer {
         bottom: 0;
-        background-color: $OXIPAY_DARK_GRAY;
+        background-color: $HUMM_DARK_GRAY;
         color: white;
         font-weight:100;
         padding: 1em 1em;

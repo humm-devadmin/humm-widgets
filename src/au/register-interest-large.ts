@@ -5,13 +5,13 @@ import {Config } from './config';
 
 (($: JQueryStatic) => {
         let template =
-            `<a id="oxipay-banner-01" data-remodal-target="${Config.registerInterestModalId}">
+            `<a id="humm-banner-01" data-remodal-target="${Config.registerInterestModalId}">
             <div class="logo">
-                <img alt="Oxipay" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
+                <img alt="Humm" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
             </div>
             <div class="text">
                 <h3>Pay the easier way.</h3>
-                <p>Choose Oxipay at the checkout and pay for your purchase in 4 easy no interest payments</p>
+                <p>Choose Humm at the checkout and pay for your purchase in 4 easy no interest payments</p>
             </div>
             <div class="button">
                 <p class="info">More info</p>

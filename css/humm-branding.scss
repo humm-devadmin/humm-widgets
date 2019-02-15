@@ -1,5 +1,5 @@
 // for deploying to server:
-// $baseURL: "https://widgets.oxipay.com.au";
+// $baseURL: "https://widgets.shophumm.com.au";
 // for local test (AU)
 $baseURL: "/dist/au";
 // for local test (NZ)
@@ -13,7 +13,7 @@ $HUMM_GRAY: #ecedee;
 $HUMM_LIGHT_GRAY: #f9f9f9;
 $HUMM_DARK_GRAY: #515565;
 
-#oxipay-img{
+#humm-img{
     background-image: url($baseURL + "/content/images/logo-orange.svg");
     padding: 1px 32px;
     margin-left: 3px;
@@ -44,16 +44,16 @@ $HUMM_DARK_GRAY: #515565;
 }
 
 /** Modal **/
-div[id^="oxipay-modal-"] {
+div[id^="humm-modal-"] {
     padding: 0;
     max-width:660px;
 }
 
-#oxipay-modal-more-info {
+#humm-modal-more-info {
     max-width: 880px;
 }
 
-#oxipay-external {
+#humm-external {
     width: 100%;
     height: 640px;
     max-height: 84vh;
@@ -62,7 +62,7 @@ div[id^="oxipay-modal-"] {
 
 /** Banner 01 (more info large) **/
 
-#oxipay-banner-01 {
+#humm-banner-01 {
     width: 100%;
     overflow: hidden;
     display: block;
@@ -123,7 +123,7 @@ div[id^="oxipay-modal-"] {
     }
 }
 @media screen and (max-width: 670px) {
-    #oxipay-banner-01 {
+    #humm-banner-01 {
         max-height: 100%;
         .logo {
             width: 100%;
@@ -146,13 +146,13 @@ div[id^="oxipay-modal-"] {
     }
 }
 
-#oxipay-banner-01:hover .info {
+#humm-banner-01:hover .info {
     background-color: #bf6e15;
 }
 
 /** Tag 01 (more info small) **/
 
-#oxipay-tag-01 {
+#humm-tag-01 {
     font-family: 'AvenirLTStd-Medium', 'arial', sans-serif;
     background: #1A1C28;
     color: white;
@@ -182,13 +182,13 @@ div[id^="oxipay-modal-"] {
     }
 }
 
-#oxipay-tag-01:hover span {
+#humm-tag-01:hover span {
     text-decoration: underline;
 }
 
 /** Tag 02 (price info) **/
 
-#oxipay-tag-02 {
+#humm-tag-02 {
     font-family: AvenirLTStd-Medium,arial,sans-serif;
     font-size:14px;
     color: #3d4246 !important;
@@ -214,7 +214,7 @@ div[id^="oxipay-modal-"] {
 
 /* new more-info large */
 
-#oxipay-more-info-large {
+#humm-more-info-large {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -257,7 +257,7 @@ div[id^="oxipay-modal-"] {
 }
 
 @media screen and (max-width: 595px){
-    #oxipay-more-info-large {
+    #humm-more-info-large {
         flex-direction: column;
         text-align: center;
         max-width: 450px;
@@ -276,7 +276,7 @@ div[id^="oxipay-modal-"] {
     }
 }
 
-#oxipay-banner-top, #oxipay-more-info-general {
+#humm-banner-top, #humm-more-info-general {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -334,7 +334,7 @@ div[id^="oxipay-modal-"] {
     }
 }
 
-#oxipay-banner-top {
+#humm-banner-top {
     max-width: 1147px;
     margin-left: auto;
     margin-right: auto;
@@ -351,7 +351,7 @@ div[id^="oxipay-modal-"] {
 }
 
 @media screen and (max-width: 1100px) {
-    #oxipay-banner-top {
+    #humm-banner-top {
         font-size: 12px;
         .orange-area {
             flex: 1 1 200px;
@@ -361,7 +361,7 @@ div[id^="oxipay-modal-"] {
 }
 
 @media screen and (max-width: 760px) {
-    #oxipay-banner-top {
+    #humm-banner-top {
         .logo {
             flex: 1 1 150px;
             img {
@@ -376,7 +376,7 @@ div[id^="oxipay-modal-"] {
 }
 
 @media screen and (max-width: 625px) {
-    #oxipay-banner-top {
+    #humm-banner-top {
         font-size: 10.5px;
         .title {
             margin-left: 8px;
@@ -385,7 +385,7 @@ div[id^="oxipay-modal-"] {
 }
 
 @media screen and (min-width: 596px) and (max-width: 1196px) {
-    #oxipay-more-info-general {
+    #humm-more-info-general {
         padding: 32px;
         #wide-screen {
             display: none;
@@ -425,7 +425,7 @@ div[id^="oxipay-modal-"] {
 }
 
 @media screen and (max-width: 595px){
-    #oxipay-more-info-general {
+    #humm-more-info-general {
         padding: 32px;
         flex-direction: column;
         text-align: center;
@@ -466,7 +466,7 @@ div[id^="oxipay-modal-"] {
     }
 }
 
-#oxipay-modal-more-info_1 {
+#humm-modal-more-info_1 {
     background-color: rgba(0,0,0,0);
     .remodal-close {
         color: white;
@@ -493,13 +493,13 @@ div[id^="oxipay-modal-"] {
     text-decoration: underline; font-size: 0.7em; vertical-align: middle;
 }
 
-div[id^="oxipay-more-info-"]:hover .more-info-btn {
+div[id^="humm-more-info-"]:hover .more-info-btn {
     text-decoration: underline;
 }
 
 /* new more-info small */
 
-#oxipay-more-info-small {
+#humm-more-info-small {
     border: 1px solid darkgray;
     font-size: 16px;
     background: white;

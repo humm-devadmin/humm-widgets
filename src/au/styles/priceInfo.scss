@@ -21,7 +21,7 @@ body {
         padding: 1px;
 }
 
-div[id^="oxipay-price-info"] {
+div[id^="humm-price-info"] {
     font-family: 'AvenirLTStd-Medium';
     min-width: 100%;
     background: #FFF;
@@ -88,7 +88,7 @@ div[id^="oxipay-price-info"] {
 }
 
 @media screen and (max-width: 670px) {
-    div[id^="oxipay-modal-"] {
+    div[id^="humm-modal-"] {
         top: 5vh !important;
         left: 0 !important;
     }

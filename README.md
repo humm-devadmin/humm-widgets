@@ -1,4 +1,4 @@
-### How to build
+﻿### How to build
 
 ```bash
 cd /to/this/directory
@@ -49,18 +49,17 @@ In the location you require the banner, use the following markup:
 
 ```HTML
 <!-- Price Info -->
-<script id="oxipay-price-info" src="price-info.js?productPrice=0"></script>
+<script id="humm-price-info" src="price-info.js?productPrice=0"></script>
 
 <!-- More Info Large-->
-<script id='oxipay-banner' src="more-info-large.js"></script>
+<script id='humm-banner' src="more-info-large.js"></script>
 
 <!-- More Info Small-->
-<script id='oxipay-banner' src="more-info-small.js"></script>
+<script id='humm-banner' src="more-info-small.js"></script>
 ```
 The script will bring in all of its CSS and dependencies, and register the button click events
-Guide: Installation guide is located at [http://docs.oxipay.com.au/](http://docs.oxipay.com.au/)
-[http://docs.oxipay.co.nz/](http://docs.oxipay.co.nz/)
-Note: All of the views for widgets are located at main Oxipay Website
+Guide: Installation guide is located at [http://docs.shophumm.com.au/](http://docs.shophumm.com.au/)
+Note: All of the views for widgets are located at main Humm Website
 
 ### Local Test:
 To switch between local testing and online deployment, you will make changes in the following 2 places:
@@ -86,6 +85,6 @@ sass -s compressed css/humm-branding.scss:css/humm-branding.css
 1. Create a new page in your online store
 2. Paste the following code to the created page:  
 ```html
-<script id="oxipay-landing-page" src="https://s3-ap-southeast-2.amazonaws.com/widgets.oxipay.com.au/content/scripts/landing-page.js"></script></pre>
+<script id="humm-landing-page" src="https://s3-ap-southeast-2.amazonaws.com/widgets.shophumm.com.au/content/scripts/landing-page.js"></script></pre>
 
 ```

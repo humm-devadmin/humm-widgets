@@ -29,17 +29,17 @@
 //     font-style: normal;
 // }
 
-$OXIPAY_ORANGE: #f6771c;
-$OXIPAY_GRAY: #ecedee;
-$OXIPAY_LIGHT_GRAY: #f9f9f9;
-$OXIPAY_DARK_GRAY: #515565;
+$HUMM_ORANGE: #f6771c;
+$HUMM_GRAY: #ecedee;
+$HUMM_LIGHT_GRAY: #f9f9f9;
+$HUMM_DARK_GRAY: #515565;
 
-#oxipay-landing-content {
+#humm-landing-content {
   font-family: 'Montserrat';
   font-weight: 400;
   font-size: 14px !important;
   line-height: 1.43 !important;
-  color: $OXIPAY_DARK_GRAY;
+  color: $HUMM_DARK_GRAY;
   background-color: #FFF;
 
   .branding-area {
@@ -58,7 +58,7 @@ $OXIPAY_DARK_GRAY: #515565;
     position: relative;
     z-index: 100;
     width: 100%;
-    // background-color: $OXIPAY_ORANGE;
+    // background-color: $HUMM_ORANGE;
     // border-bottom-left-radius:50%;
     // border-bottom-right-radius:50%;
     text-align: center;
@@ -134,7 +134,7 @@ $OXIPAY_DARK_GRAY: #515565;
   .signup-btn {
     color: white;
     font-weight: 500;
-    background: $OXIPAY_ORANGE;
+    background: $HUMM_ORANGE;
     padding: 0.5em 4.5em;
     border-radius: 18px;
     line-height: 225% !important;
@@ -147,7 +147,7 @@ $OXIPAY_DARK_GRAY: #515565;
   }
 
   .light-gray {
-    background-color: $OXIPAY_LIGHT_GRAY;
+    background-color: $HUMM_LIGHT_GRAY;
   }
 
   // Bootstrap styles
