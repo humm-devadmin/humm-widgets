@@ -1,9 +1,7 @@
 // for deploying to server:
 // $baseURL: "https://widgets.shophumm.com.au";
 // for local test (AU)
-$baseURL: "/dist/au";
-// for local test (NZ)
-// $baseURL: "/dist/nz";
+$baseURL: "./dist/au";
 
 // for remote test:
 // $baseURL: "http://54.252.245.32/dist/au";
