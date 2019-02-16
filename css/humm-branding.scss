@@ -13,16 +13,19 @@ $HUMM_GRAY: #666666;
 $HUMM_LIGHT_GRAY: #999999;
 $HUMM_DARK_GRAY: #333333;
 
-.humm-img{
-    background-image: url($baseURL + "/content/images/logo-orange.svg");
-    padding: 0px 38px;
-    margin-right: 10px;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
+.humm-price-info-widget {
+    .humm-img {
+        background-image: url($baseURL + "/content/images/logo-orange.svg");
+        padding: 0px 38px;
+        margin-right: 10px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 
-.description {
-    vertical-align: middle;
+    .description {
+        vertical-align: middle;
+        white-space: nowrap;
+    }
 }
 
 
