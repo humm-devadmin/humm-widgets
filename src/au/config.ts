@@ -12,12 +12,12 @@ export class Config {
     public static registerInterestModalId = 'humm-modal-signup';
     public static registerInterestUrl = Config.baseContentUrl + '/content/html/signup.html';
 
-    // price-info-less modal
-    public static priceInfoLessModalId = 'humm-modal-less-info_1';
-    public static priceInfoLessUrl = Config.baseContentUrl + '/content/html/priceInfoModal.html';
+    // price-info modal
+    public static priceInfoModalId = 'humm-price-info-modal';
+    public static priceInfoUrl = Config.baseContentUrl + '/content/html/priceInfoModal.html';
 
     // price-info-more modal
-    public static priceInfoMoreModalId = 'humm-modal-more-info_1';
+    public static priceInfoMoreModalId = 'humm-price-info-more-modal';
     public static priceInfoMoreUrl = Config.baseContentUrl + '/content/html/priceInfoMoreModal.html';
 
     // more-info modal

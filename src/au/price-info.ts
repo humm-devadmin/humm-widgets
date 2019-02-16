@@ -69,8 +69,8 @@ let widget;
         // because we have been provided the price we can't bind to events on 
         // the element containing the price. We just inject the template
         const template: string = generateWidget(productPrice, noLogo, min, max, used_in);
-        widgetUrl = productPrice<=2000? Config.priceInfoLessUrl : Config.priceInfoMoreUrl;
-        widgetId = productPrice<=2000? Config.priceInfoLessModalId : Config.priceInfoMoreModalId;
+        widgetUrl = productPrice<=2000? Config.priceInfoUrl : Config.priceInfoMoreUrl;
+        widgetId = productPrice<=2000? Config.priceInfoModalId : Config.priceInfoMoreModalId;
 
         widget.injectBanner(template, widgetUrl, widgetId, element);
 
@@ -89,8 +89,8 @@ let widget;
             productPrice = extractPrice(el);
 
             if (productPrice) {
-                widgetUrl = productPrice<=2000? Config.priceInfoLessUrl : Config.priceInfoMoreUrl;
-                widgetId = productPrice<=2000? Config.priceInfoLessModalId : Config.priceInfoMoreModalId;
+                widgetUrl = productPrice<=2000? Config.priceInfoUrl : Config.priceInfoMoreUrl;
+                widgetId = productPrice<=2000? Config.priceInfoModalId : Config.priceInfoMoreModalId;
                 widget.injectBanner(generateWidget(productPrice, noLogo, min, max, used_in), widgetUrl, widgetId, element);
             }
 
@@ -127,7 +127,7 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
     let template;
     let templateCheckout;
     let templatenologo;
-    let widgetId = productPrice<=2000? Config.priceInfoLessModalId : Config.priceInfoMoreModalId;
+    let widgetId = productPrice<=2000? Config.priceInfoModalId : Config.priceInfoMoreModalId;
 
     if (productPrice < min){
         template = `<a id="humm-tag-02" data-remodal-target="${widgetId}">
@@ -196,8 +196,8 @@ function updatePrice(el: JQuery, jq: JQueryStatic, noLogo: boolean, min: number,
     let productPrice = extractPrice(el);
     let template = generateWidget(productPrice, noLogo, min, max, used_in);
     let parent =  jq(getCurrentScript()).parent();
-    let widgetUrl = productPrice<=2000? Config.priceInfoLessUrl : Config.priceInfoMoreUrl;
-    let widgetId = productPrice<=2000? Config.priceInfoLessModalId : Config.priceInfoMoreModalId;
+    let widgetUrl = productPrice<=2000? Config.priceInfoUrl : Config.priceInfoMoreUrl;
+    let widgetId = productPrice<=2000? Config.priceInfoModalId : Config.priceInfoMoreModalId;
     widget.injectBanner(template, widgetUrl, widgetId, parent);
 }
 
