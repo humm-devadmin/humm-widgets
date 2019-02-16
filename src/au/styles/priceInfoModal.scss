@@ -47,7 +47,7 @@ body {
             width: 33%;
             float: left;
             text-align: center;
-            padding: 2rem;
+            padding: 2rem 0.6rem;
             box-sizing: border-box;
             .title {
                 color: $HUMM_ORANGE;
@@ -57,6 +57,10 @@ body {
             img {
                 width: 66%;
                 margin: 20px auto;
+            }
+            .content {
+                max-width: 130px;
+                margin: 0 auto;
             }
         }
     }
