@@ -35,21 +35,6 @@ $HUMM_DARK_GRAY: #333333;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Montserrat-Regular';
-    src: url($baseURL + "/content/fonts/montserrat-v12-latin-regular.eot");
-    src: local("☺"), url($baseURL + "/content/fonts/montserrat-v12-latin-regular.woff") format("woff"), url($baseURL + "/content/fonts/montserrat-v12-latin-regular.woff2") format("woff2"), url($baseURL + "/content/fonts/montserrat-v12-latin-regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat-Bold';
-    src: url($baseURL + "/content/fonts/montserrat-v12-latin-700.eot");
-    src: local("☺"), url($baseURL + "/content/fonts/montserrat-v12-latin-700.woff") format("woff"), url($baseURL + "/content/fonts/montserrat-v12-latin-700.woff2") format("woff2"), url($baseURL + "/content/fonts/montserrat-v12-latin-700.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
 /** Modal **/
 div[id^="humm-modal-"] {
     padding: 0;
@@ -335,7 +320,7 @@ div[id^="humm-modal-"] {
             display: none;
         }
         .light {
-            font-family: 'Montserrat-Regular';
+            font-family: 'Montserrat-Regular', 'arial', sans-serif;
         }
     }
     .orange-area {
