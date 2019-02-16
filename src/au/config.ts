@@ -10,29 +10,21 @@ export class Config {
 
     // register interest modal
     public static registerInterestModalId = 'humm-modal-signup';
-    public static registerInterestUrl = Config.baseContentUrl + '/content/html/Signup.html';
-
-
-    // public static priceInfoModalId = 'humm-modal-more-info_1';
-    // public static priceInfoUrl = Config.baseContentUrl + '/content/html/PriceInfoMore.html';
+    public static registerInterestUrl = Config.baseContentUrl + '/content/html/signup.html';
 
     // price-info-less modal
-    public static priceInfoModalLessId = 'humm-modal-less-info_1';
-    public static priceInfoLessUrl = Config.baseContentUrl + '/content/html/PriceInfoLess.html';
+    public static priceInfoLessModalId = 'humm-modal-less-info_1';
+    public static priceInfoLessUrl = Config.baseContentUrl + '/content/html/priceInfoModal.html';
 
     // price-info-more modal
-    public static priceInfoModalMoreId = 'humm-modal-more-info_1';
-    public static priceInfoMoreUrl = Config.baseContentUrl + '/content/html/PriceInfoMore.html';
+    public static priceInfoMoreModalId = 'humm-modal-more-info_1';
+    public static priceInfoMoreUrl = Config.baseContentUrl + '/content/html/priceInfoMoreModal.html';
 
-    // more-info modal (current)
-    public static moreInfoModalId = 'humm-modal-more-info_1';
-    public static moreInfoUrlNew = Config.baseContentUrl + '/content/html/MoreInfo-modal.html';
-
-    // more-info modal (future)
-    public static hummMoreInfoGeneralModalId = 'humm-modal-more-info_1';
-    public static hummMoreInfoGeneralModalUrl = Config.baseContentUrl + '/content/html/MoreInfo-modal.html';
+    // more-info modal
+    public static moreInfoModalId = Config.priceInfoMoreModalId;
+    public static moreInfoUrlNew = Config.priceInfoMoreUrl;
 
     // top-banner modal
-    public static hummBannerTopModalId = 'humm-modal-more-info_1';
-    public static hummBannerTopModalUrl = Config.baseContentUrl + '/content/html/MoreInfo-modal.html';
+    public static hummBannerTopModalId = Config.priceInfoMoreModalId;
+    public static hummBannerTopModalUrl = Config.priceInfoMoreUrl;
 }

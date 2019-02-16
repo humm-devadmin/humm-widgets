@@ -75,7 +75,7 @@ To switch between local testing and online deployment, you will make changes in 
 All .scss files in /src/au/styles and /src/nz/styles have to be compile into .min.css files.
 To do so, go to project root folder and use command:
 ```
-sass -s compressed src/au/styles/ExternalModal.scss:src/au/styles/ExternalModal.min.css src/au/styles/MoreInfo-modal.scss:src/au/styles/MoreInfo-modal.min.css src/au/html/landing-page/styles/landing.scss:src/au/html/landing-page/styles/landing.css 
+sass -s compressed src/au/styles/externalModal.scss:src/au/styles/externalModal.min.css src/au/styles/priceInfoModal.scss:src/au/styles/priceInfoModal.min.css src/au/html/landing-page/styles/landing.scss:src/au/html/landing-page/styles/landing.css 
 sass -s compressed css/humm-branding.scss:css/humm-branding.css 
 
 ```

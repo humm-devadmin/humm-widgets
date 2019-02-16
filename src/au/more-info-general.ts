@@ -4,7 +4,7 @@ import { Config } from './config';
 
 (($: JQueryStatic) => {
     const template =
-        `<a id="humm-more-info-general" data-remodal-target="${Config.hummMoreInfoGeneralModalId}">
+        `<a id="humm-more-info-general" data-remodal-target="${Config.moreInfoModalId}">
             <div class="logo">
                 <img alt="humm" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
             </div>
@@ -22,5 +22,5 @@ import { Config } from './config';
             </div>
         </a>`;
     const widget = new ModalInjector($);
-    widget.injectBanner(template,  Config.hummMoreInfoGeneralModalUrl, Config.hummMoreInfoGeneralModalId);
+    widget.injectBanner(template,  Config.moreInfoUrlNew, Config.moreInfoModalId);
 })(jq);
