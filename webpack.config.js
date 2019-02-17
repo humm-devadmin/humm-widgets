@@ -43,19 +43,19 @@ module.exports = {
                 to : './au/content/styles'
             }
         ]),
-        // new webpack.SourceMapDevToolPlugin({
-        //     test: /\.js$/,
-        //     filename: "[name].map.js"
-        // }),
-        // new webpack.optimize.UglifyJsPlugin({
-        //     compress: {
-        //         warnings: false,
-        //     },
-        //     output: {
-        //         comments: false,
-        //     },
-        //     mangle: false,
-        //     sourceMap: true
-        // }),
+        new webpack.SourceMapDevToolPlugin({
+            test: /\.js$/,
+            filename: "[name].map.js"
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false,
+            },
+            output: {
+                comments: false,
+            },
+            mangle: false,
+            sourceMap: true
+        }),
     ]
 }
