@@ -34,26 +34,6 @@ on_success:
           Write-S3Object -BucketName $bucketName -Directory $objectName -KeyPrefix $objectName -Recurse
         }
       }
-      ## NZ deploy
-      # $bucketName = "widgets.Humm.co.nz"
-      # $existingItems = Get-S3Object -BucketName $bucketName
-      # Write-Host "Removing objects from '$bucketName'"
-      # foreach($s3object in $existingItems) {
-      #   Remove-S3Object -BucketName $bucketName -Key $s3object.Key -Force:$true
-      # }
-      # cd ..
-      # cd ..
-      # cd dist/nz
-      # $itemsToUpload = Get-ChildItem -exclude *.map -Path (pwd).path
-      # Write-Host "Uploading site to '$bucketName'"
-      # foreach($itemToUpload in $itemsToUpload) {
-      #   $objectName = $itemToUpload.FullName -replace [Regex]::Escape((Get-Item -Path ".\" -Verbose).FullName+"\"), ""
-      #   if ($objectName -like "*.*") {
-      #     Write-S3Object -BucketName $bucketName -File $objectName -Key $objectName
-      #   } else {
-      #     Write-S3Object -BucketName $bucketName -Directory $objectName -KeyPrefix $objectName -Recurse
-      #   }
-      # }
 
 notifications:
   - provider: Email
