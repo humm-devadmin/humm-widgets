@@ -8,7 +8,7 @@ $HUMM_DARK_GRAY: #333333;
 
 body {
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
     color: $HUMM_GRAY;
 }
 
@@ -21,17 +21,15 @@ body {
     overflow-x: hidden;
     top: 5vh !important;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 25px 0 30px;
 
     .header {
         text-align: center;
+        font-weight: 800;
         .title {
-            font-size: 38px;
+            font-size: 45px;
             color: $HUMM_ORANGE;
-            font-weight: 800;
-        }
-        .sub-title {
-            font-weight: 600;
+            letter-spacing: -1px;
         }
     }
 
@@ -49,13 +47,14 @@ body {
                 color: $HUMM_ORANGE;
                 font-size: 20px;
                 font-weight: 800;
+                letter-spacing: -0.5px;
             }
             img {
-                width: 66%;
-                margin: 20px auto;
+                width: 50%;
+                margin: 10px auto;
             }
             .content {
-                max-width: 130px;
+                max-width: 145px;
                 margin: 0 auto;
             }
         }
@@ -63,15 +62,18 @@ body {
 
     footer {
         .footer {
-            max-width: 200px;
+            max-width: 210px;
             margin: 8px auto;
             .logo {
                 float: left;
                 margin-right: -10px;
             }
             .content {
-                font-weight: 600;
-                padding-top: 30px;
+                font-size: 21px;
+                line-height: 0.85;
+                font-weight: 800;
+                padding-top: 28px;
+                letter-spacing: -0.5px;
             }
         }
     }
