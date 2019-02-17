@@ -1,31 +1,19 @@
 // proxima-nova font
 @import url("https://use.typekit.net/plq2clw.css");
 
-// for deploying to server:
-// $baseURL: "https://widgets.shophumm.com.au";
-// for local test (AU)
-$baseURL: "./dist/au";
-
-// for remote test:
-// $baseURL: "http://54.252.245.32/dist/au";
-
 $HUMM_ORANGE: #FF6C00;
 $HUMM_GRAY: #666666;
 $HUMM_LIGHT_GRAY: #999999;
 $HUMM_DARK_GRAY: #333333;
 
 .humm-price-info-widget {
-    .humm-img {
-        background-image: url($baseURL + "/content/images/logo-orange.svg");
-        padding: 0px 38px;
-        margin-right: 10px;
-        background-repeat: no-repeat;
-        background-size: contain;
+    img.humm-logo {
+        margin-right: 6px;
+        height: 15px;
+        float: none !important;
     }
 
     .description {
-        vertical-align: middle;
-        white-space: nowrap;
     }
 }
 
@@ -480,7 +468,7 @@ div[id^="humm-modal-"] {
     text-decoration: underline;
     font-size: 0.7em;
     vertical-align: middle;
-    margin-left: 10px;
+    margin-left: 6px;
 }
 
 div[id^="humm-more-info-"]:hover .more-info-btn {
