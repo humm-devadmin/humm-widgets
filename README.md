@@ -23,10 +23,6 @@ This will result in a folder structure as build output like following :
         * [styles](./dir2)
 
 scripts folder will contains following files:
-- register-interest-large.js
-- register-interest-large.map.js
-- register-interest-small.js
-- register-interest-small.map.js
 - more-info-small.js
 - more-info-small.map.js
 - more-info-large.js

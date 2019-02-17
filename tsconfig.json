@@ -10,8 +10,6 @@
   },
   "files": [
     "./src/au/modal-injector.ts",
-    "./src/au/register-interest-small.ts",
-    "./src/au/register-interest-large.ts",
     "./src/au/more-info-large.ts",
     "./src/au/more-info-small.ts",
     "./src/au/more-info-general.ts",

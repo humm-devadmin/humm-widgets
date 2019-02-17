@@ -8,10 +8,6 @@ export class Config {
     // public static baseContentUrl = 'https://widgets.shophumm.com.au';    // for remote deploy
     public static baseContentUrl = './dist/au';       // for local testing
 
-    // register interest modal
-    public static registerInterestModalId = 'humm-modal-signup';
-    public static registerInterestUrl = Config.baseContentUrl + '/content/html/signup.html';
-
     // price-info modal
     public static priceInfoModalId = 'humm-price-info-modal';
     public static priceInfoUrl = Config.baseContentUrl + '/content/html/priceInfoModal.html';
