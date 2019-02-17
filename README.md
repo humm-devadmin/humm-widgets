@@ -9,14 +9,6 @@ This will result in a folder structure as build output like following :
 
 * [au](./dir2)
     * [Content](./dir2)
-        * [fonts](./dir2)
-        * [html](./dir2)
-        * [js](./dir2)
-        * [scripts](./dir2)
-        * [styles](./dir2)
-* [nz](./dir2)
-    * [Content](./dir2)
-        * [fonts](./dir2)
         * [html](./dir2)
         * [js](./dir2)
         * [scripts](./dir2)
@@ -27,6 +19,10 @@ scripts folder will contains following files:
 - more-info-small.map.js
 - more-info-large.js
 - more-info-large.map.js
+- more-info-general.js
+- more-info-general.map.js
+- top-banner.js
+- top-banner.map.js
 - price-info.js
 - price-info.map.js
 
@@ -45,31 +41,32 @@ In the location you require the banner, use the following markup:
 
 ```HTML
 <!-- Price Info -->
-<script id="humm-price-info" src="price-info.js?productPrice=0"></script>
+<script src="price-info.js?productPrice=0"></script>
 
-<!-- More Info Large-->
-<script id='humm-banner' src="more-info-large.js"></script>
+<!-- More Info Large -->
+<script src="more-info-large.js"></script>
 
-<!-- More Info Small-->
-<script id='humm-banner' src="more-info-small.js"></script>
+<!-- More Info Small -->
+<script src="more-info-small.js"></script>
+
+<!-- More Info General -->
+<script src="more-info-general.js"></script>
+
+<!-- Top Banner -->
+<script src="top-banner.js"></script>
 ```
 The script will bring in all of its CSS and dependencies, and register the button click events
 Guide: Installation guide is located at [http://docs.shophumm.com.au/](http://docs.shophumm.com.au/)
 Note: All of the views for widgets are located at main Humm Website
 
 ### Local Test:
-To switch between local testing and online deployment, you will make changes in the following 2 places:
-1. in /src/au/config.ts (/src/nz/config.ts for New Zealand):
+To switch between local testing and online deployment, you will make changes in /src/au/config.ts:
 
     change "baseContentUrl"
 
-2. in /css/humm-branding.scss:
-
-    change font-face url (in all 3 font-faces)
-    change #humm-img background-image url
-
-All .scss files in /src/au/styles and /src/nz/styles have to be compile into .min.css files.
-To do so, go to project root folder and use command:
+All .scss files have to be compile into .min.css files.  
+This is automatically done when you run **npm run build**.  
+Otherwise, you can go to project root folder and use command:
 ```
 sass -s compressed src/au/styles/externalModal.scss:src/au/styles/externalModal.min.css src/au/styles/priceInfoModal.scss:src/au/styles/priceInfoModal.min.css src/au/html/landing-page/styles/landing.scss:src/au/html/landing-page/styles/landing.css 
 sass -s compressed css/humm-branding.scss:css/humm-branding.css 
