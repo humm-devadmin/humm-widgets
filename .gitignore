@@ -2,14 +2,7 @@ node_modules/
 
 /dist/
 .sass-cache/
-css/humm-branding.css.map
 
 package-lock\.json
-
-demo\.html
-
-demoFullWidth\.html
-
-demoPartWidth\.html
 
 \.idea/
