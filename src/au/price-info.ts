@@ -163,7 +163,7 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
                             <img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
                             <span class="description">
                                 with 5 fortnightly payments of 
-                                <b>$${roundedDownProductPrice.toFixed(2)}</b>
+                                <span class="price">$${roundedDownProductPrice.toFixed(2)}</span>
                                 <span class="more-info">more info</span>
                             </span>
                         </a>`;
@@ -172,7 +172,7 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
                             <img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
                             <span class="description">
                                 with 5 fortnightly payments of 
-                                <b>$${roundedDownProductPrice.toFixed(2)}</b>
+                                <span class="price">$${roundedDownProductPrice.toFixed(2)}</span>
                                 <span class="more-info">more info</span>
                             </span>
                         </a>`;
@@ -180,7 +180,7 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
             templatenologo = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
                                 <span class="description">
                                     with 5 fortnightly payments of 
-                                    <b>$${roundedDownProductPrice.toFixed(2)}</b>
+                                    <span class="price">$${roundedDownProductPrice.toFixed(2)}</span>
                                     <span class="more-info">more info</span>
                                 </span>
                             </a>`;
@@ -188,7 +188,7 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
     else if (productPrice <= max) {
         template = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
                         <img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
-                        <span>
+                        <span class="description">
                             streeetch your payments
                             <span class="more-info">more info</span>
                         </span>
@@ -196,14 +196,14 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
 
         templateCheckout = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
                         <img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
-                        <span>
+                        <span class="description">
                             streeetch your payments
                             <span class="more-info">more info</span>
                         </span>
                     </a>`;
 
         templatenologo = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
-                            <span>
+                            <span class="description">
                                 streeetch your payments
                                 <span class="more-info">more info</span>
                             </span>

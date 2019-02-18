@@ -14,6 +14,17 @@ $HUMM_DARK_GRAY: #333333;
     }
 
     .description {
+        font-size: 17px;
+        font-weight: 300;
+        .price {
+            font-weight: 600;
+        }
+        .more-info {
+            text-decoration: underline;
+            font-size: 0.7em;
+            vertical-align: middle;
+            margin-left: 6px;
+        }
     }
 }
 
@@ -464,12 +475,7 @@ div[id^="humm-modal-"] {
     vertical-align: bottom;
 }
 
-.more-info {
-    text-decoration: underline;
-    font-size: 0.7em;
-    vertical-align: middle;
-    margin-left: 6px;
-}
+
 
 div[id^="humm-more-info-"]:hover .more-info-btn {
     text-decoration: underline;
