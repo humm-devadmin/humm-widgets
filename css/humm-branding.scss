@@ -6,6 +6,19 @@ $HUMM_GRAY: #666666;
 $HUMM_LIGHT_GRAY: #999999;
 $HUMM_DARK_GRAY: #333333;
 
+.humm-modal-iframe {
+    width: 100%;
+    height: 500px;
+    max-height: 84vh;
+    border: none;
+}
+
+@media (max-width: 500px) {
+    .humm-modal-iframe {
+        height: 84vh;
+    }
+}
+
 .humm-price-info-widget {
     img.humm-logo {
         margin-right: 6px;
@@ -46,12 +59,6 @@ div[id^="humm-modal-"] {
     }
 }
 
-#humm-external {
-    width: 100%;
-    height: 500px;
-    max-height: 84vh;
-    border: none;
-}
 
 /** Banner 01 (more info large) **/
 
