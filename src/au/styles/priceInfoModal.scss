@@ -54,7 +54,7 @@ body {
             box-sizing: border-box;
             .title {
                 color: $HUMM_ORANGE;
-                font-size: 21px;
+                font-size: 22px;
                 font-weight: 800;
                 letter-spacing: -0.5px;
             }
@@ -70,18 +70,10 @@ body {
     }
 
     .footer {
-        max-width: 210px;
-        margin: 8px auto;
-        .logo {
-            float: left;
-            margin-right: -10px;
-        }
-        .content {
-            font-size: 21px;
-            line-height: 0.85;
-            font-weight: 800;
-            padding-top: 28px;
-            letter-spacing: -0.5px;
+        margin: 10px auto;
+        max-width: 200px;
+        img {
+            width: 100%;
         }
     }
 
@@ -116,18 +108,14 @@ body {
                 max-width: 250px;
                 padding-top: 1rem;
                 padding-bottom: 0.5rem;
+                img {
+                    width: 50%;
+                }
             }
         }
         .footer {
             margin-top: 20px;
-            max-width: 150px;
-            .logo img {
-                width: 100px;
-            }
-            .content {
-                padding-top: 18px;
-                font-size: 16px;
-            }
+            max-width: 120px;
         }
     }
 }

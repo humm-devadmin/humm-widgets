@@ -21,14 +21,15 @@ $HUMM_DARK_GRAY: #333333;
 
 .humm-price-info-widget {
     img.humm-logo {
-        margin-right: 6px;
+        margin-right: 2px;
         height: 15px;
         float: none !important;
     }
 
     .description {
-        font-size: 17px;
+        font-size: 16px;
         font-weight: 300;
+        vertical-align: text-bottom;
         .price {
             font-weight: 600;
         }
