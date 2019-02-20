@@ -1,4 +1,4 @@
-﻿import * as jq from 'jquery';
+import * as jq from 'jquery';
 import { ModalInjector } from './modal-injector';
 import { Config } from './config';
 
@@ -126,97 +126,35 @@ function extractPrice(el: any) {
 
 function generateWidget(productPrice: number, noLogo: boolean, min: number, max: number, used_in: string): string {
     let template;
-    let templateCheckout;
-    let templatenologo;
-    let widgetId = productPrice<=2000? Config.priceInfoModalId : Config.priceInfoMoreModalId;
+    let widgetId = productPrice <= 2000 ? Config.priceInfoModalId : Config.priceInfoMoreModalId;
 
-    if (productPrice < min){
-        template = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
-                            <img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
-                            <span class="description">
-                                with 5 fortnightly payments
-                                <span class="more-info">more info</span>
-                            </span>
-                        </a>`;
+    let logo_html = noLogo ? '' : `<img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />`;
+    let main_html = '';
+    let price_breakdown_html = '';
 
-        templateCheckout = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
-                            <img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
-                            <span class="description">
-                                with 5 fortnightly payments
-                                <span class="more-info">more info</span>
-                            </span>
-                        </a>`;
-
-        templatenologo = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
-                                <span class="description">
-                                    with 5 fortnightly payments
-                                    <span class="more-info">more info</span>
-                                </span>
-                            </a>`;
-    }
-    else if (productPrice <= 1000 && productPrice <= max) {
-            let productPriceDividedByFour = productPrice / 5;
-
-            // Banking Rounding
-            let roundedDownProductPrice = Math.floor( productPriceDividedByFour * Math.pow(10, 2) ) / Math.pow(10, 2);
-            template = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
-                            <img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
-                            <span class="description">
-                                with 5 fortnightly payments of 
-                                <span class="price">$${roundedDownProductPrice.toFixed(2)}</span>
-                                <span class="more-info">more info</span>
-                            </span>
-                        </a>`;
-
-            templateCheckout = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
-                            <img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
-                            <span class="description">
-                                with 5 fortnightly payments of 
-                                <span class="price">$${roundedDownProductPrice.toFixed(2)}</span>
-                                <span class="more-info">more info</span>
-                            </span>
-                        </a>`;
-
-            templatenologo = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
-                                <span class="description">
-                                    with 5 fortnightly payments of 
-                                    <span class="price">$${roundedDownProductPrice.toFixed(2)}</span>
-                                    <span class="more-info">more info</span>
-                                </span>
-                            </a>`;
-    }
-    else if (productPrice <= max) {
-        template = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
-                        <img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
-                        <span class="description">
-                            streeetch your payments
-                            <span class="more-info">more info</span>
-                        </span>
-                    </a>`;
-
-        templateCheckout = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
-                        <img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
-                        <span class="description">
-                            streeetch your payments
-                            <span class="more-info">more info</span>
-                        </span>
-                    </a>`;
-
-        templatenologo = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
-                            <span class="description">
-                                streeetch your payments
-                                <span class="more-info">more info</span>
-                            </span>
-                        </a>`;
-    }
-    else {
+    if (productPrice < min) {
+        main_html = 'with 5 fortnightly payments';
+    } else if (productPrice <= 1000 && productPrice <= max) {
+        main_html = 'with 5 fortnightly payments';
+        let productPriceDividedByFour = productPrice / 5;
+        // Banking Rounding
+        let roundedDownProductPrice = Math.floor(productPriceDividedByFour * Math.pow(10, 2)) / Math.pow(10, 2);
+        price_breakdown_html = `of <span class="price">$${roundedDownProductPrice.toFixed(2)}</span>`
+    } else if (productPrice <= max) {
+        main_html = 'streeetch your payments';
+    } else {
         return '<a id="humm-tag-02" class="humm-price-info-widget"></a>'
     }
-    if(used_in == "checkout"){
-        return templateCheckout;
-    }else {
-        return (noLogo) ? templatenologo : template;
-    }
+    
+    template = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
+            ${logo_html}
+            <span class="description">
+                ${main_html} ${price_breakdown_html}
+                <span class="more-info">more info</span>
+            </span>
+        </a>`;
+
+    return template;
 }
 
 function getCurrentScript(): any {
