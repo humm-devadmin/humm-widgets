@@ -19,25 +19,45 @@ $HUMM_DARK_GRAY: #333333;
     }
 }
 
+/** price info widget **/
+
 .humm-price-info-widget {
+    display: block;
+    padding: 5px 0;
+    font-family: "proxima-nova", sans-serif;
+    font-size: 14px;
+    color: #3d4246 !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    overflow: hidden;
+
     img.humm-logo {
+        display: inline-block;
         margin-right: 2px;
         height: 15px;
         float: none !important;
     }
 
     .description {
+        display: inline-block;
         font-size: 16px;
         font-weight: 300;
         vertical-align: text-bottom;
-        .price {
-            font-weight: 600;
+        .main {
+            margin-right: 6px;
+            white-space: nowrap;
+            .price {
+                font-weight: 600;
+            }
         }
         .more-info {
+            display: inline-block;
+            margin-top: -3px;
             text-decoration: underline;
             font-size: 0.7em;
             vertical-align: middle;
-            margin-left: 6px;
+            white-space: nowrap;
         }
     }
 }
@@ -187,31 +207,6 @@ div[id^="humm-modal-"] {
     text-decoration: underline;
 }
 
-/** Tag 02 (price info) **/
-
-#humm-tag-02 {
-    font-family: "proxima-nova", sans-serif;
-    font-size:14px;
-    color: #3d4246 !important;
-    text-decoration: none !important;
-    display: block;
-    border-bottom: none !important;
-    box-shadow: none !important;
-    overflow: hidden;
-    &:hover {
-        text-decoration: none !important;
-    }
-    & > p {
-        margin-top: 1em !important;
-        margin-bottom: 1em !important;
-        &:nth-child(2){
-            margin-top: -0.7em !important;
-        }
-    }
-    &.whiteText {
-        color: #EEE !important;
-    }
-}
 
 /* new more-info large */
 

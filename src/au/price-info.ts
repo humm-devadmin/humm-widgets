@@ -127,7 +127,6 @@ function extractPrice(el: any) {
 function generateWidget(productPrice: number, noLogo: boolean, min: number, max: number, used_in: string): string {
     let template;
     let widgetId = productPrice <= 2000 ? Config.priceInfoModalId : Config.priceInfoMoreModalId;
-
     let logo_html = noLogo ? '' : `<img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />`;
     let main_html = '';
     let price_breakdown_html = '';
@@ -145,11 +144,12 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
     } else {
         return '<a id="humm-tag-02" class="humm-price-info-widget"></a>'
     }
-    
-    template = `<a id="humm-tag-02" class="humm-price-info-widget" data-remodal-target="${widgetId}">
+
+    template = `
+        <a class="humm-price-info-widget" data-remodal-target="${widgetId}">
             ${logo_html}
             <span class="description">
-                ${main_html} ${price_breakdown_html}
+                <span class="main">${main_html} ${price_breakdown_html}</span>
                 <span class="more-info">more info</span>
             </span>
         </a>`;
