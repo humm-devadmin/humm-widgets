@@ -127,7 +127,7 @@ function extractPrice(el: any) {
 function generateWidget(productPrice: number, noLogo: boolean, min: number, max: number, used_in: string): string {
     let template;
     let widgetId = productPrice <= 2000 ? Config.priceInfoModalId : Config.priceInfoMoreModalId;
-    let logo_html = noLogo ? '' : `<img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />`;
+    let logo_html = noLogo ? '' : `<div class="logo"><img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" /></div>`;
     let main_html = '';
     let price_breakdown_html = '';
 

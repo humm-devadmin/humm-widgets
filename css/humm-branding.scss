@@ -22,7 +22,8 @@ $HUMM_DARK_GRAY: #333333;
 /** price info widget **/
 
 .humm-price-info-widget {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     padding: 5px 0;
     font-family: "proxima-nova", sans-serif;
     font-size: 14px;
