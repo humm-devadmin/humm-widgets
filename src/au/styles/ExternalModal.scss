@@ -1,0 +1,129 @@
+﻿@font-face {
+    font-family: 'AvenirLTStd-Medium';
+    src: url('../fonts/AvenirLTStd-Medium.eot');
+    src: local('☺'), url('../fonts/AvenirLTStd-Medium.woff') format('woff'), url('../fonts/AvenirLTStd-Medium.ttf') format('truetype'), url('../fonts/AvenirLTStd-Medium.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin:0;
+}
+div[id^="oxipay-modal-"] {
+    font-family: 'AvenirLTStd-Medium';
+    max-width: 600px;
+    padding: 30px;
+    background: #FFF;
+    overflow: visible;
+    max-height: 90vh;
+    top: 5vh !important;
+    margin: 0 auto;
+
+    .logo {
+        margin: -30px -30px 20px;
+        background-color: #1A1C28;
+        height: 110px;
+
+        img {
+            height: 100%;
+            max-width: 200px;
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    h1 {
+        font-family: 'AvenirLTStd-Medium';
+        color: #1A1C28;
+        font-size: 1.5rem;
+        line-height: 1em;
+        text-transform: none;
+        font-weight:normal;
+    }
+
+    a {
+        color: #e68821;
+        text-decoration: none;
+    }
+    p {
+        font-weight:100;
+        color:#333;
+    }
+
+    .modal_close {
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        max-width: 200px;
+        margin: 10px auto 0;
+        display: block;
+        padding: 10px;
+        background-color: #252525;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    div[id^="oxipay-modal-"] {
+        top: 5vh !important;
+        left: 0 !important;
+    }
+}
+
+#use-oxipay {
+    width: 100%;
+    background: #252525;
+    color: white;
+    margin-top: 20px;
+    padding: 10px;
+    display: block;
+    overflow: hidden;
+
+    img {
+        height: 20px;
+        margin-bottom: -6px;
+    }
+
+    span {
+        float: right;
+        color: white;
+    }
+}
+$btn-color: #e68821;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+.btn {
+    letter-spacing: 0px;
+    @include border-radius(2px);
+    font-size: 1.2em;
+
+}
+.btn-primary {
+    color: #fff;
+    background-color: $btn-color;
+    border-color: $btn-color;
+    float:right;
+    margin-right:20px;
+    &:hover {
+        background-color: darken($btn-color, 10);
+        border-color: darken($btn-color, 10);
+    }
+    @media screen and (max-width: 414px) {
+        margin:0 auto;
+        float:none;
+        display:block;
+    }
+
+}
+.btn-lg {
+    padding: 14px 28px 13px 28px;
+    font-size: 1rem;
+}
+
+.btn:focus,.btn:hover{
+    outline: 0;
+    color:#fff;
+}

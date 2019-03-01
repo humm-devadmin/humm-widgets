@@ -1,0 +1,95 @@
+@import url('bootstrap.min.css');
+
+
+@font-face {
+    font-family: 'AvenirLTStd-Medium';
+    src: url('../fonts/AvenirLTStd-Medium.eot');
+    src: local('☺'), url('../fonts/AvenirLTStd-Medium.woff') format('woff'), url('../fonts/AvenirLTStd-Medium.ttf') format('truetype'), url('../fonts/AvenirLTStd-Medium.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+$primary-color: #1A1C28;
+
+body {
+    margin:0;
+    color:$primary-color;
+}
+
+#info-banner{
+        text-align:center;
+        background-color:#ECECEA;
+        padding: 1px;
+}
+
+div[id^="oxipay-price-info"] {
+    font-family: 'AvenirLTStd-Medium';
+    min-width: 100%;
+    background: #FFF;
+    overflow: visible;
+    max-height: 90vh;
+    top: 5vh !important;
+    margin:0 auto;
+
+
+    .logo {
+        padding:5px;
+        background-color: $primary-color;
+        height: 40px;
+
+        img {
+            position: relative;
+            height: 100%;
+            max-width: 100px;
+            width: 100%;
+            float:left;
+            left:30px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    h1 {
+        font-family: 'AvenirLTStd-Medium';
+        color: #252525;
+        font-size: 1.5rem;
+        line-height: 1em;
+        text-transform: none;
+        font-weight:normal;
+    }
+
+    h3{
+    color:$primary-color;
+    }
+
+    h4{
+    margin-top:0px;
+    }
+
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+    }
+    p {
+        font-weight:100;
+        color:#333;
+    }
+
+    .modal_close {
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        max-width: 200px;
+        margin: 10px auto 0;
+        display: block;
+        padding: 10px;
+        background-color: #252525;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    div[id^="oxipay-modal-"] {
+        top: 5vh !important;
+        left: 0 !important;
+    }
+}

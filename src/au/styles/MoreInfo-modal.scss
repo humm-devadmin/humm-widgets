@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url("../fonts/montserrat-v12-latin-regular.eot");
+    src: local("☺"), url("../fonts/montserrat-v12-latin-regular.woff") format("woff"), url("../fonts/montserrat-v12-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v12-latin-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url("../fonts/montserrat-v12-latin-700.eot");
+    src: local("☺"), url("../fonts/montserrat-v12-latin-700.woff") format("woff"), url("../fonts/montserrat-v12-latin-700.woff2") format("woff2"), url("../fonts/montserrat-v12-latin-700.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url("../fonts/montserrat-v12-latin-600.eot");
+    src: local("☺"), url("../fonts/montserrat-v12-latin-600.woff") format("woff"), url("../fonts/montserrat-v12-latin-600.woff2") format("woff2"), url("../fonts/montserrat-v12-latin-600.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url("../fonts/montserrat-v12-latin-200.eot");
+    src: local("☺"), url("../fonts/montserrat-v12-latin-200.woff") format("woff"), url("../fonts/montserrat-v12-latin-200.woff2") format("woff2"), url("../fonts/montserrat-v12-latin-200.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+$OXIPAY_ORANGE: #f6771c;
+$OXIPAY_GRAY: #ecedee;
+$OXIPAY_LIGHT_GRAY: #f9f9f9;
+$OXIPAY_DARK_GRAY: #515565;
+
+body {
+    margin: 0;
+    font-size: 14px;
+    color: $OXIPAY_DARK_GRAY;
+}
+
+#oxipay-modal-more-info_1 {
+    font-family: 'Montserrat-Regular';
+    line-height: 1.3;
+    max-width: 50rem;
+    background: white;
+    overflow: visible;
+    overflow-x: hidden;
+    top: 5vh !important;
+    margin: 0 auto;
+
+    header {
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
+
+    .branding-area {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        font-family: "Montserrat-Bold";
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        img.logo {
+            width: 150px;
+            max-width: 50%;
+            margin-bottom: 0.8rem;
+        }
+        p.large {
+            font-size: 1.4rem;
+            color: white;
+            margin: 0;
+        }
+        p.small {
+            font-size: 1.1rem;
+            color: white;
+            margin: 0;
+        }
+    }
+
+    .curve {
+        width: 100%;
+        height: 160px;
+        position: absolute;
+        z-index: 0;
+        text-align: center;
+        background: url("../images/curve.svg"), no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+    }
+    #top {
+        overflow: hidden;
+        margin: 1.6rem auto 0.6rem;
+        font-family: 'Montserrat-Medium';
+        max-width: 38rem;
+        .card {
+            width: 33%;
+            float: left;
+            text-align: center;
+            padding: 0 0.6rem;
+            box-sizing: border-box;
+            img {
+                width: 56%;
+                margin: 0 auto;
+            }
+            p {
+                padding: 0;
+                text-align: center;
+            }
+        }
+    }
+
+    #middle {
+        font-size: 1.5rem;
+        padding: 0.5em;
+        background: $OXIPAY_GRAY;
+        font-family: "Montserrat-Bold";
+        color: $OXIPAY_ORANGE;
+        p {
+            max-width: 14em;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.4em;
+        }
+    }
+
+    #bottom {
+        padding: 1.4rem 0;
+        p {
+            max-width: 22em;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.9em;
+            font-size: 1.05em;
+        }
+    }
+
+    .modal_close {
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        max-width: 200px;
+        margin: 10px auto 0;
+        display: block;
+        padding: 10px;
+        background-color: #252525;
+    }
+
+    footer {
+        bottom: 0;
+        background-color: $OXIPAY_DARK_GRAY;
+        color: white;
+        font-weight:100;
+        padding: 1em 1em;
+        p {
+            max-width: 30rem;
+            margin: 0 auto;
+            a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        }
+    }
+    .text-center {
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .small {
+        font-size: 0.85em;
+    }
+
+    .font-light {
+        font-family: Montserrat-Light;
+    }
+}
+
