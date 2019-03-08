@@ -5,8 +5,8 @@
 //   baseContentUrl = 'https://YOUR-URL'
 
 export class Config {
-    // public static baseContentUrl = 'https://widgets.shophumm.com.au';    // for remote deploy
-    public static baseContentUrl = './dist/au';       // for local testing
+    public static baseContentUrl = 'https://widgets.shophumm.com.au';    // for remote deploy
+    // public static baseContentUrl = './dist/au';       // for local testing
 
     // price-info modal
     public static priceInfoModalId = 'humm-price-info-modal';
