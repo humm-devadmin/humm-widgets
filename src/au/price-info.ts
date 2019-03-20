@@ -140,7 +140,7 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
         let roundedDownProductPrice = Math.floor(productPriceDividedByFour * Math.pow(10, 2)) / Math.pow(10, 2);
         price_breakdown_html = `of <span class="price">$${roundedDownProductPrice.toFixed(2)}</span>`
     } else if (productPrice <= max) {
-        main_html = 'streeetch your payments';
+        main_html = 'Pay in slices. No interest ever.';
     } else {
         return '<a id="humm-tag-02" class="humm-price-info-widget"></a>'
     }

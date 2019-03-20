@@ -8,7 +8,7 @@ $HUMM_DARK_GRAY: #333333;
 
 body {
     margin: 0;
-    font-size: 16px;
+    font-size: 17px;
     color: $HUMM_GRAY;
     -ms-overflow-style: none;
 }
@@ -30,26 +30,28 @@ body {
     overflow-x: hidden;
     top: 5vh !important;
     margin: 0 auto;
-    padding: 25px 20px 30px;
+    padding: 30px 20px 10px;
 
     .header {
         text-align: center;
         font-weight: 800;
         margin: 0 auto;
+        margin-bottom: 20px;
         .title {
-            font-size: 45px;
+            font-size: 49px;
             color: $HUMM_ORANGE;
             letter-spacing: -1px;
+            margin-bottom: -3px;
         }
     }
 
     .main {
         display: flex;
         margin: 0 auto;
-        max-width: 38rem;
+        max-width: 35rem;
         .card {
             text-align: center;
-            padding: 2rem 0.6rem;
+            padding: 2.5rem 0;
             margin: 0 auto;
             box-sizing: border-box;
             .title {
@@ -59,21 +61,26 @@ body {
                 letter-spacing: -0.5px;
             }
             img {
-                width: 60%;
-                margin: 10px auto;
+                width: 65%;
+                margin-bottom: 15px;
             }
             .content {
-                max-width: 144px;
+                max-width: 160px;
                 margin: 0 auto;
+                white-space: nowrap;
             }
         }
     }
 
     .footer {
         margin: 10px auto;
-        max-width: 200px;
+        text-align: center;
         img {
-            width: 100%;
+            max-width: 180px;
+            margin: 15px auto;
+        }
+        .fine-print {
+            font-size: 0.75rem;
         }
     }
 
@@ -96,6 +103,11 @@ body {
     clear: both;
 }
 
+.text-humm {
+    color: $HUMM_ORANGE;
+    font-weight: 800;
+}
+
 @media (max-width: 500px) {
     .humm-price-info-modal {
         .header {
@@ -115,7 +127,7 @@ body {
         }
         .footer {
             margin-top: 20px;
-            max-width: 120px;
+            max-width: 280px;
         }
     }
 }
