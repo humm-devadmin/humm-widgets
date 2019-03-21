@@ -34,6 +34,9 @@ let widget;
     // to insert widget after which element
     let element: any;
 
+    // merchants type (bigThings only, littleThings only, or both)
+    let type: string;
+
     /**
      * The extracted product price from either parsing the content from HTML (via css selector)
      * or a specifically passed in value
@@ -59,6 +62,16 @@ let widget;
     max = scriptElement.dataset.max || 999999;
     used_in = (getParameterByName('used_in', srcString));
     element = (getParameterByName('element', srcString)) ? jq(getParameterByName('element', srcString)) : jq(scriptElement);
+    if (getParameterByName('BigThings', srcString) !== null && getParameterByName('LittleThings', srcString) !== null) {
+        type = 'both';
+    } else if (getParameterByName('BigThings', srcString) !== null) {
+        type = 'bigThings';
+    } else if (getParameterByName('LittleThings', srcString) !== null) {
+        type = 'littleThings';
+    } else {
+        type = 'both';
+    }
+
 
     let priceStr = getParameterByName('productPrice', srcString);
 
@@ -69,14 +82,20 @@ let widget;
         // just render the widget
         // because we have been provided the price we can't bind to events on 
         // the element containing the price. We just inject the template
-        const template: string = generateWidget(productPrice, noLogo, min, max, used_in);
         let widgetUrl = productPrice <= 2000 ? Config.priceInfoUrl : Config.priceInfoMoreUrl;
         let widgetId = productPrice <= 2000 ? Config.priceInfoModalId : Config.priceInfoMoreModalId;
-
+        if (type == 'bigThings') {
+            widgetUrl = Config.priceInfoMoreUrl;
+            widgetId = Config.priceInfoMoreModalId;
+        }
+        if (type == 'littleThings') {
+            widgetUrl = Config.priceInfoUrl;
+            widgetId = Config.priceInfoModalId;
+        }
+        const template: string = generateWidget(productPrice, noLogo, min, max, used_in, widgetId, type);
         widget.injectBanner(template, widgetUrl, widgetId, element);
 
     } else {
-
         // we haven't been passed a URL, try to get the css selector for
         let selector = getParameterByName('price-selector', srcString);
         if (!selector) {
@@ -92,18 +111,27 @@ let widget;
             if (productPrice) {
                 let widgetUrl = productPrice <= 2000 ? Config.priceInfoUrl : Config.priceInfoMoreUrl;
                 let widgetId = productPrice <= 2000 ? Config.priceInfoModalId : Config.priceInfoMoreModalId;
-                widget.injectBanner(generateWidget(productPrice, noLogo, min, max, used_in), widgetUrl, widgetId, element);
+                if (type == 'bigThings') {
+                    widgetUrl = Config.priceInfoMoreUrl;
+                    widgetId = Config.priceInfoMoreModalId;
+                }
+                if (type == 'littleThings') {
+                    widgetUrl = Config.priceInfoUrl;
+                    widgetId = Config.priceInfoModalId;
+                }
+                const template: string = generateWidget(productPrice, noLogo, min, max, used_in, widgetId, type);
+                widget.injectBanner(template, widgetUrl, widgetId, element);
             }
 
             // register event handler to update the price
             if (monitor) {
                 setInterval(function () {
                     let el = jq(selector, document.body);
-                    updatePrice(el, jq, noLogo, min, max, used_in);
+                    updatePrice(el, jq, noLogo, min, max, used_in, type);
                 }, 1000);
             } else {
                 el.on("DOMSubtreeModified", function (e) {
-                    updatePrice(jq(e.target), jq, noLogo, min, max, used_in);
+                    updatePrice(jq(e.target), jq, noLogo, min, max, used_in, type);
                 });
             }
         }
@@ -124,25 +152,33 @@ function extractPrice(el: any) {
     return parseFloat(textValue);
 }
 
-function generateWidget(productPrice: number, noLogo: boolean, min: number, max: number, used_in: string): string {
+function generateWidget(productPrice: number, noLogo: boolean, min: number, max: number, used_in: string, widgetId: string, type: string): string {
     let template;
-    let widgetId = productPrice <= 2000 ? Config.priceInfoModalId : Config.priceInfoMoreModalId;
     let logo_html = noLogo ? '' : `<div class="logo"><img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" /></div>`;
     let main_html = '';
     let price_breakdown_html = '';
 
-    if (productPrice < min) {
-        main_html = 'with 5 fortnightly payments';
-    } else if (productPrice <= 1000 && productPrice <= max) {
-        main_html = 'with 5 fortnightly payments';
-        let productPriceDividedByFour = productPrice / 5;
-        // Banking Rounding
-        let roundedDownProductPrice = Math.floor(productPriceDividedByFour * Math.pow(10, 2)) / Math.pow(10, 2);
-        price_breakdown_html = `of <span class="price">$${roundedDownProductPrice.toFixed(2)}</span>`
-    } else if (productPrice <= max) {
-        main_html = 'Pay in slices. No interest ever.';
+    if (type == 'littleThings' && (!max || max > 2000)) {
+        max = 2000;
+    }
+    if (productPrice > max) {
+        return '<a id="humm-tag-02" class="humm-price-info-widget"></a>';
     } else {
-        return '<a id="humm-tag-02" class="humm-price-info-widget"></a>'
+        if (type == 'bigThings') {
+            main_html = 'Pay in slices. No interest ever.';
+        } else {
+            if (productPrice < min) {
+                main_html = 'with 5 fortnightly payments';
+            } else if ((productPrice <= 1000 && productPrice <= max) || type == 'littleThings') {
+                main_html = 'with 5 fortnightly payments';
+                let productPriceDividedByFour = productPrice / 5;
+                // Banking Rounding
+                let roundedDownProductPrice = Math.floor(productPriceDividedByFour * Math.pow(10, 2)) / Math.pow(10, 2);
+                price_breakdown_html = `of <span class="price">$${roundedDownProductPrice.toFixed(2)}</span>`
+            } else if (productPrice <= max) {
+                main_html = 'Pay in slices. No interest ever.';
+            }
+        }
     }
 
     template = `
@@ -167,12 +203,12 @@ function getCurrentScript(): any {
     return currentScript;
 }
 
-function updatePrice(el: JQuery, jq: JQueryStatic, noLogo: boolean, min: number, max: number, used_in: string) {
+function updatePrice(el: JQuery, jq: JQueryStatic, noLogo: boolean, min: number, max: number, used_in: string, type: string) {
     let productPrice = extractPrice(el);
-    let template = generateWidget(productPrice, noLogo, min, max, used_in);
     let parent = jq(getCurrentScript()).parent();
     let widgetUrl = productPrice <= 2000 ? Config.priceInfoUrl : Config.priceInfoMoreUrl;
     let widgetId = productPrice <= 2000 ? Config.priceInfoModalId : Config.priceInfoMoreModalId;
+    let template = generateWidget(productPrice, noLogo, min, max, used_in, widgetId, type);
     widget.injectBanner(template, widgetUrl, widgetId, parent);
 }
 
