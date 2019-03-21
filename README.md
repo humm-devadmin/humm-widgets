@@ -59,6 +59,17 @@ The script will bring in all of its CSS and dependencies, and register the butto
 Guide: Installation guide is located at [http://docs.shophumm.com.au/](http://docs.shophumm.com.au/)
 Note: All of the views for widgets are located at main Humm Website
 
+#### parameters for the price-info widget
+| parameter | meaning  | usage |
+|-----------|--------| --- |
+| monitor | refresh the price widget every 1 second | &monitor |
+| debug | output debug message | \<script src='...' debug\> |
+| used_in | | |
+| element | select the html element that contains the price | &element=.price_class / &element=%23price_id |
+| min/max | price < min: show "Pay in slices"; price > max: hide | \<script src='...' data-min='100' data-max='10000'\> |
+| BigThings/LittleThings | for merchants who only signed up with BigThings or LittleThings | &BigThings / &LittleThings |
+
+
 ### Local Test:
 To switch between local testing and online deployment, you will make changes in /src/au/config.ts:
 
