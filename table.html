@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+    </style>
+    <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;border-color:#aabcfe;}
+        .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#669;background-color:#e8edff;}
+        .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#039;background-color:#b9c9fe;}
+        .tg .tg-phtq{background-color:#D2E4FC;border-color:inherit;vertical-align:top}
+        .tg .tg-ydyv{background-color:#D2E4FC;border-color:inherit;vertical-align:top}
+        .tg .tg-0pky{border-color:inherit;vertical-align:top}
+        .tg .tg-dvpl{border-color:inherit;vertical-align:top}
+    </style>
+    <!-- Latest compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <title>Test Template</title>
+</head>
+<body>
+<table class="tg">
+    <tr>
+        <th class="tg-0pky"></th>
+        <th class="tg-0pky">< 1000</th>
+        <th class="tg-0pky">1000 - 2000</th>
+        <th class="tg-0pky">> 2000</th>
+    </tr>
+    <tr>
+        <td class="tg-phtq">normal</td>
+        <td class="tg-phtq">
+            default, productPrice=200
+            <script src="dist/au/content/scripts/price-info.js?productPrice=200"></script>
+        </td>
+        <td class="tg-ydyv">
+            default, productPrice=1500
+            <script src="dist/au/content/scripts/price-info.js?productPrice=1500"></script></td>
+        <td class="tg-ydyv">
+            default, productPrice=4500
+            <script src="dist/au/content/scripts/price-info.js?productPrice=4500"></script>
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-0pky">BigThings</td>
+        <td class="tg-0pky">
+            BigThings, productPrice=200
+            <script src="dist/au/content/scripts/price-info.js?productPrice=200&BigThings"></script>
+        </td>
+        <td class="tg-dvpl">
+            BigThings, productPrice=1500
+            <script src="dist/au/content/scripts/price-info.js?productPrice=1500&BigThings"></script></td>
+        <td class="tg-dvpl">
+            BigThings, productPrice=4500
+            <script src="dist/au/content/scripts/price-info.js?productPrice=4500&BigThings"></script>
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-phtq">LittleThings</td>
+        <td class="tg-phtq">
+            LittleThings, productPrice=200
+            <script src="dist/au/content/scripts/price-info.js?productPrice=200&LittleThings"></script>
+        </td>
+        <td class="tg-ydyv">
+            LittleThings, productPrice=1500
+            <script src="dist/au/content/scripts/price-info.js?productPrice=1500&LittleThings"></script>
+        </td>
+        <td class="tg-ydyv">
+            LittleThings, productPrice=4500
+            <script src="dist/au/content/scripts/price-info.js?productPrice=4500&LittleThings"></script>
+        </td>
+    </tr>
+</table>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+</body>
+</html>
