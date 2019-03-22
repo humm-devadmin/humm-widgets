@@ -169,7 +169,7 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
         } else {
             if (productPrice < min) {
                 main_html = 'with 5 fortnightly payments';
-            } else if ((productPrice <= 1000 && productPrice <= max) || type == 'littleThings') {
+            } else if ((productPrice <= 1000 && productPrice <= max)) {
                 main_html = 'with 5 fortnightly payments';
                 let productPriceDividedByFour = productPrice / 5;
                 // Banking Rounding
