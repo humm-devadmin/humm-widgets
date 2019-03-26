@@ -22,6 +22,7 @@ $HUMM_DARK_GRAY: #333333;
 /** price info widget **/
 
 .humm-price-info-widget {
+    all: initial;
     display: flex;
     flex-wrap: wrap;
     padding: 5px 0;
@@ -34,6 +35,7 @@ $HUMM_DARK_GRAY: #333333;
     overflow: hidden;
 
     img.humm-logo {
+        all: unset;
         display: inline-block;
         margin-right: 8px;
         height: 15px !important;
