@@ -37,6 +37,7 @@ body {
         font-weight: 800;
         margin: 0 auto;
         margin-bottom: 20px;
+
         .title {
             font-size: 49px;
             color: $HUMM_ORANGE;
@@ -49,21 +50,25 @@ body {
         display: flex;
         margin: 0 auto;
         max-width: 35rem;
+
         .card {
             text-align: center;
             padding: 2.5rem 0;
             margin: 0 auto;
             box-sizing: border-box;
+
             .title {
                 color: $HUMM_ORANGE;
                 font-size: 22px;
                 font-weight: 800;
                 letter-spacing: -0.5px;
             }
+
             img {
                 width: 65%;
                 margin-bottom: 15px;
             }
+
             .content {
                 max-width: 160px;
                 margin: 0 auto;
@@ -75,10 +80,12 @@ body {
     .footer {
         margin: 10px auto;
         text-align: center;
+
         img {
             max-width: 180px;
             margin: 15px auto;
         }
+
         .fine-print {
             font-size: 0.75rem;
         }
@@ -113,18 +120,22 @@ body {
         .header {
             max-width: 300px;
         }
+
         .main {
             flex-flow: column;
             max-width: 300px;
+
             .card {
                 max-width: 250px;
                 padding-top: 1rem;
                 padding-bottom: 0.5rem;
+
                 img {
                     width: 50%;
                 }
             }
         }
+
         .footer {
             margin-top: 20px;
             max-width: 280px;

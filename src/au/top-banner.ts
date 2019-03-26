@@ -1,6 +1,6 @@
 import * as jq from 'jquery';
-import { ModalInjector } from './modal-injector';
-import { Config } from './config';
+import {ModalInjector} from './modal-injector';
+import {Config} from './config';
 
 (($: JQueryStatic) => {
     let element: any;
@@ -15,7 +15,7 @@ import { Config } from './config';
     }
 
     srcString = scriptElement.getAttribute('src');
-    element = (getParameterByName('element', srcString))? jq(getParameterByName('element', srcString)) : jq(scriptElement);
+    element = (getParameterByName('element', srcString)) ? jq(getParameterByName('element', srcString)) : jq(scriptElement);
 
     const template =
         `<a id="humm-banner-top" data-remodal-target="${Config.hummBannerTopModalId}">
@@ -36,12 +36,12 @@ import { Config } from './config';
             </div>
         </a>`;
     const widget = new ModalInjector($);
-    widget.injectBanner(template,  Config.hummBannerTopModalUrl, Config.hummBannerTopModalId, element);
+    widget.injectBanner(template, Config.hummBannerTopModalUrl, Config.hummBannerTopModalId, element);
 
 
     function getCurrentScript(): any {
 
-        let currentScript = document.currentScript || (function() {
+        let currentScript = document.currentScript || (function () {
             const scripts = document.getElementsByTagName('script');
             return scripts[scripts.length - 1];
         })();
