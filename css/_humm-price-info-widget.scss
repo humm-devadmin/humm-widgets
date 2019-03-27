@@ -1,0 +1,65 @@
+/** price info widget **/
+
+.humm-price-info-widget {
+    all: initial;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 0;
+    font-family: "proxima-nova", sans-serif;
+    line-height: 20px;
+    color: #3d4246 !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    overflow: hidden;
+
+    img.humm-logo {
+        all: unset;
+        display: inline-block;
+        margin-right: 8px;
+        height: 15px !important;
+        float: none !important;
+        width: auto;
+        vertical-align: baseline;
+    }
+
+    .description {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 300;
+        vertical-align: baseline;
+
+        .main {
+            margin-right: 6px;
+            white-space: nowrap;
+
+            .price {
+                font-weight: 600;
+            }
+        }
+
+        .more-info {
+            display: inline-block;
+            margin-top: -3px;
+            text-decoration: underline;
+            font-size: 0.7em;
+            vertical-align: middle;
+            white-space: nowrap;
+            line-height: 1.23;
+        }
+    }
+}
+
+#humm-price-info-more-modal, #humm-price-info-modal {
+    padding: 0;
+    max-width: 660px;
+    background-color: rgba(0, 0, 0, 0);
+
+    .remodal-close {
+        color: $HUMM_GRAY;
+
+        &:hover {
+            color: $HUMM_DARK_GRAY;
+        }
+    }
+}
