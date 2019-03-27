@@ -50,13 +50,16 @@ $BACKGROUND_GRAY: #F8FAF7;
         font-size: 16px;
         font-weight: 300;
         vertical-align: baseline;
+
         .main {
             margin-right: 6px;
             white-space: nowrap;
+
             .price {
                 font-weight: 600;
             }
         }
+
         .more-info {
             display: inline-block;
             margin-top: -3px;
@@ -72,15 +75,17 @@ $BACKGROUND_GRAY: #F8FAF7;
 /** Modal **/
 div[id^="humm-modal-"] {
     padding: 0;
-    max-width:660px;
+    max-width: 660px;
 }
 
 #humm-price-info-more-modal, #humm-price-info-modal {
     padding: 0;
     max-width: 660px;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
+
     .remodal-close {
         color: $HUMM_GRAY;
+
         &:hover {
             color: $HUMM_DARK_GRAY;
         }
@@ -202,6 +207,7 @@ div[id^="humm-modal-"] {
     overflow: hidden;
     text-decoration: none;
     box-sizing: border-box;
+
     .logo {
         display: flex;
         flex: 1 0 280px;
@@ -210,10 +216,12 @@ div[id^="humm-modal-"] {
         justify-content: center;
         margin: 0 auto;
         border-right: $HUMM_DARK_GRAY 1px solid;
+
         img {
             max-width: 180px;
         }
     }
+
     .title {
         display: flex;
         flex: 2 1 auto;
@@ -226,17 +234,21 @@ div[id^="humm-modal-"] {
         margin: 0 0 0 20px;
         font-size: 1.56em;
         line-height: 135%;
+
         div {
             display: inline-block;
             vertical-align: middle;
         }
+
         #narrow-screen {
             display: none;
         }
+
         .light {
             font-family: "proxima-nova", sans-serif;
         }
     }
+
     .orange-area {
         display: flex;
         flex: 1 0 256px;
@@ -252,12 +264,15 @@ div[id^="humm-modal-"] {
     max-width: 1147px;
     margin-left: auto;
     margin-right: auto;
+
     .logo {
         flex: 1 1 250px;
+
         img {
             max-width: 160px;
         }
     }
+
     .orange-area {
         flex: 1 1 200px;
         width: 176px;
@@ -267,6 +282,7 @@ div[id^="humm-modal-"] {
 @media screen and (max-width: 1100px) {
     #humm-banner-top {
         font-size: 12px;
+
         .orange-area {
             flex: 1 1 200px;
             width: 176px;
@@ -278,11 +294,13 @@ div[id^="humm-modal-"] {
     #humm-banner-top {
         .logo {
             flex: 1 1 150px;
+
             img {
                 max-width: 110px;
                 margin-right: 12px;
             }
         }
+
         .orange-area {
             display: none;
         }
@@ -292,6 +310,7 @@ div[id^="humm-modal-"] {
 @media screen and (max-width: 625px) {
     #humm-banner-top {
         font-size: 10.5px;
+
         .title {
             margin-left: 8px;
         }
@@ -301,21 +320,26 @@ div[id^="humm-modal-"] {
 @media screen and (min-width: 596px) and (max-width: 1196px) {
     #humm-more-info-general {
         padding: 32px;
+
         #wide-screen {
             display: none;
         }
+
         .logo {
             width: 50%;
             flex: 1 1 auto;
+
             img {
                 max-width: 350px;
                 margin-right: 32px;
             }
         }
+
         .placeholder {
             width: 8%;
             flex: 1 1 auto;
         }
+
         .title {
             display: block;
             width: 42%;
@@ -323,22 +347,25 @@ div[id^="humm-modal-"] {
             margin-left: 0;
             text-align: left;
             font-size: 30px;
+
             div {
                 display: block;
                 white-space: nowrap;
             }
+
             #narrow-screen {
                 display: block;
                 margin-top: 0.5em;
             }
         }
+
         #wide-screen {
             display: none;
         }
     }
 }
 
-@media screen and (max-width: 595px){
+@media screen and (max-width: 595px) {
     #humm-more-info-general {
         padding: 32px;
         flex-direction: column;
@@ -347,31 +374,38 @@ div[id^="humm-modal-"] {
         min-width: 300px;
         margin-left: auto;
         margin-right: auto;
+
         #wide-screen {
             display: none;
         }
+
         #narrow-screen {
             display: block !important;
         }
+
         .logo {
             flex: 0 0 auto;
             width: 100%;
             padding: 30px 0 50px;
             border-right: none;
             border-bottom: $HUMM_DARK_GRAY 1px solid;
+
             img {
                 width: 90%;
                 max-width: 390px;
             }
         }
+
         .title {
             display: block;
             font-size: 32px;
             margin: 3rem -15px 0;
+
             div {
                 display: block;
                 margin: 0 auto;
             }
+
             #narrow-screen {
                 margin-top: 1em;
                 margin-bottom: 0.65em;
@@ -395,7 +429,6 @@ div[id^="humm-modal-"] {
 }
 
 
-
 div[id^="humm-more-info-"]:hover .more-info-btn {
     text-decoration: underline;
 }
@@ -410,10 +443,11 @@ div[id^="humm-more-info-"]:hover .more-info-btn {
     padding: 12.8px 24px;
     display: block;
     overflow: hidden;
-    text-decoration:none;
+    text-decoration: none;
     box-sizing: border-box;
     max-width: 1070px;
     min-width: 705px;
+
     p {
         font-family: "proxima-nova", sans-serif;
         font-weight: bold;
@@ -422,16 +456,18 @@ div[id^="humm-more-info-"]:hover .more-info-btn {
         margin: 0 5.5em 0 5em;
         text-align: center;
     }
+
     img.logo {
         height: 32px !important;
         width: auto !important;
         float: left;
     }
+
     .more-info-btn {
         float: right;
     }
 }
 
-a[data-remodal-target]{
+a[data-remodal-target] {
     cursor: pointer;
 }
