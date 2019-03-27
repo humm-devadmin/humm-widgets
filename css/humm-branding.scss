@@ -5,6 +5,7 @@ $HUMM_ORANGE: #FF6C00;
 $HUMM_GRAY: #666666;
 $HUMM_LIGHT_GRAY: #999999;
 $HUMM_DARK_GRAY: #333333;
+$BACKGROUND_GRAY: #F8FAF7;
 
 .humm-modal-iframe {
     width: 100%;
@@ -88,68 +89,105 @@ div[id^="humm-modal-"] {
 
 /* new more-info large */
 
-#humm-more-info-large {
+.humm-more-info-large {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: stretch;
     border: 1px solid darkgray;
     font-size: 16px;
-    background: white;
     color: $HUMM_DARK_GRAY;
-    padding: 12.5px 24px;
+    padding: 8px 24px;
     overflow: hidden;
     text-decoration: none;
     box-sizing: border-box;
-    max-width: 1070px;
-    .title {
-        flex: 1 1 auto;
-        font-family: "proxima-nova", sans-serif;
-        font-weight: bold;
-        font-size: 35px;
-        text-align: center;
-        margin: 26px 10px 26px 0;
-        line-height: 135%;
-        span {
-            text-align: center;
-            display: inline-block;
-        }
-    }
-    .orange-area {
-        flex: 0 0 176px;
+    font-family: "proxima-nova", sans-serif;
+    text-align: center;
+    background-color: $BACKGROUND_GRAY;
+    position: relative;
+    //min-width: 790px;
+
+    .inside {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 176px;
-        margin: 0 auto;
-        img {
-            width: 176px;
-            height: 50px;
-            margin-bottom: 10px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        width: 100%;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .main {
+            display: flex;
+            flex-direction: row;
+
+            .text-area {
+                .title {
+                    flex: 1 1 auto;
+                    font-size: 35px;
+                    margin: 26px 10px 26px 0;
+                    line-height: 120%;
+
+                    .strong {
+                        font-weight: 900;
+                    }
+
+                }
+
+                .tandc {
+                    text-align: center;
+                    font-size: 10px;
+                    margin-top: -6px;
+                }
+            }
+        }
+
+        .logo {
+            align-self: center;
+            img {
+                height: 85px;
+            }
         }
     }
 }
 
-@media screen and (max-width: 595px){
-    #humm-more-info-large {
-        flex-direction: column;
-        text-align: center;
-        max-width: 450px;
-        min-width: 266px;
-        margin-left: auto;
-        margin-right: auto;
-        .title {
-            font-size: 40px;
-            margin-left: auto;
-            margin-right: auto;
+.humm-more-info-large-slices {
+    .inside {
+        padding-right: 120px;
+
+        .elephant {
+            height: 160px;
+            margin-top: -8px;
+            margin-bottom: -8px;
         }
-        .orange-area {
-            flex: 0 0 auto;
-            margin-bottom: 16px;
+
+        .logo img {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            height: 65px;
         }
     }
 }
+
+//@media screen and (max-width: 595px) {
+//    .humm-more-info-large {
+//        flex-direction: column;
+//        text-align: center;
+//        max-width: 450px;
+//        min-width: 266px;
+//        margin-left: auto;
+//        margin-right: auto;
+//
+//        .title {
+//            font-size: 40px;
+//            margin-left: auto;
+//            margin-right: auto;
+//        }
+//
+//        .orange-area {
+//            flex: 0 0 auto;
+//            margin-bottom: 16px;
+//        }
+//    }
+//}
 
 #humm-banner-top, #humm-more-info-general {
     display: flex;

@@ -4,12 +4,13 @@ import {Config} from './config';
 
 (($: JQueryStatic) => {
     const template =
-        `<a class="humm-more-info-large" data-remodal-target="${Config.moreInfoModalId}">
+        `<a class="humm-more-info-large humm-more-info-large-slices" data-remodal-target="${Config.moreInfoModalId}">
             <div class="inside">
                 <div class="main">
-                    <div class="text-area">
+                    <img class="elephant" src="${Config.baseContentUrl}/content/images/elephant.png" alt="sliced pink elephant">
+                        <div class="text-area">
                         <div class='title'>
-                            <div class="strong">Little things. Big things. Everything.</div>
+                            <div class="strong">Pay in slices.</div>
                             <div>No interest ever.</div>
                         </div>
                         <div class="tandc">T&Cs apply. See shophumm.com.au</div>

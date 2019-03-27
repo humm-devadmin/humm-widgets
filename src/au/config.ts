@@ -17,10 +17,10 @@ export class Config {
     public static priceInfoMoreUrl = Config.baseContentUrl + '/content/html/priceInfoMoreModal.html';
 
     // more-info modal
-    public static moreInfoModalId = Config.priceInfoMoreModalId;
-    public static moreInfoUrlNew = Config.priceInfoMoreUrl;
+    public static moreInfoModalId = 'humm-more-info-modal';
+    public static moreInfoUrlNew = Config.baseContentUrl + '/content/html/moreInfoModal.html';
 
     // top-banner modal
-    public static hummBannerTopModalId = Config.priceInfoMoreModalId;
-    public static hummBannerTopModalUrl = Config.priceInfoMoreUrl;
+    public static hummBannerTopModalId = Config.moreInfoModalId;
+    public static hummBannerTopModalUrl = Config.moreInfoUrlNew;
 }
