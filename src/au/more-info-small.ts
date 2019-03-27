@@ -4,10 +4,21 @@ import {Config} from './config';
 
 (($: JQueryStatic) => {
     const template =
-        `<a id="humm-more-info-small" data-remodal-target="${Config.moreInfoModalId}">
-            <img class="logo" alt="Humm" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
-            <span class="more-info-btn">MORE INFO</span>
-            <p>Get it now. Pay over time.</p>
+        `<a class="humm-more-info-widget humm-more-info-small" data-remodal-target="${Config.moreInfoModalId}">
+            <div class="inside">
+                <div class="main">
+                    <div class="text-area">
+                        <div class='title'>
+                            <div class="strong">Little things. Big things. Everything.</div>
+                            <div>No interest ever.</div>
+                        </div>
+                        <div class="tandc">T&Cs apply. See shophumm.com.au</div>
+                    </div>
+                </div>
+                <div class="logo">
+                    <img alt="Humm" src="${Config.baseContentUrl}/content/images/bird-humm.svg" />
+                </div>
+            </div>
         </a>`;
 
     const widget = new ModalInjector($);

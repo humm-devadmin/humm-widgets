@@ -94,7 +94,7 @@ div[id^="humm-modal-"] {
 
 /* new more-info large */
 
-.humm-more-info-large {
+.humm-more-info-widget {
     display: flex;
     border: 1px solid darkgray;
     font-size: 16px;
@@ -122,6 +122,8 @@ div[id^="humm-modal-"] {
         .main {
             display: flex;
             flex-direction: row;
+            flex-grow: 1;
+            justify-content: center;
 
             .text-area {
                 .title {
@@ -146,6 +148,7 @@ div[id^="humm-modal-"] {
 
         .logo {
             align-self: center;
+
             img {
                 height: 85px;
             }
@@ -163,11 +166,15 @@ div[id^="humm-modal-"] {
             margin-bottom: -8px;
         }
 
-        .logo img {
-            position: absolute;
-            right: 10px;
-            bottom: 10px;
-            height: 65px;
+        .logo {
+            flex-grow: 0;
+
+            img {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                height: 65px;
+            }
         }
     }
 }
@@ -435,36 +442,46 @@ div[id^="humm-more-info-"]:hover .more-info-btn {
 
 /* new more-info small */
 
-#humm-more-info-small {
-    border: 1px solid darkgray;
-    font-size: 16px;
-    background: white;
-    color: $HUMM_DARK_GRAY;
-    padding: 12.8px 24px;
-    display: block;
-    overflow: hidden;
-    text-decoration: none;
-    box-sizing: border-box;
-    max-width: 1070px;
-    min-width: 705px;
+.humm-more-info-small {
+    .inside {
+        max-width: 1200px;
+        padding-right: 60px;
 
-    p {
-        font-family: "proxima-nova", sans-serif;
-        font-weight: bold;
-        font-size: 25px;
-        line-height: 32px;
-        margin: 0 5.5em 0 5em;
-        text-align: center;
-    }
+        .main {
 
-    img.logo {
-        height: 32px !important;
-        width: auto !important;
-        float: left;
-    }
+            .text-area {
+                .title {
+                    margin: 0;
 
-    .more-info-btn {
-        float: right;
+                    & > div {
+                        display: inline;
+                    }
+
+                    .strong {
+                        font-weight: 900;
+                    }
+
+                }
+
+                .tandc {
+                    text-align: center;
+                    font-size: 10px;
+                    margin-top: 0px;
+                }
+            }
+        }
+
+        .logo {
+            align-self: center;
+            height: 50px;
+            flex-grow: 0;
+
+            img {
+                height: 50px;
+                position: absolute;
+                right: 10px;
+            }
+        }
     }
 }
 
