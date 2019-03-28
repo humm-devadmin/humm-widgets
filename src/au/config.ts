@@ -6,6 +6,7 @@
 
 export class Config {
     public static baseContentUrl = 'https://widgets.shophumm.com.au';    // for remote deploy
+    // public static baseContentUrl = 'https://s3-ap-southeast-2.amazonaws.com/widgets.shophumm.com.au/dist/au';    // for remote demo
     // public static baseContentUrl = './dist/au';       // for local testing
 
     // price-info modal
