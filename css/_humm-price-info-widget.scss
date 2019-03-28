@@ -50,16 +50,10 @@
     }
 }
 
-#humm-price-info-more-modal, #humm-price-info-modal {
-    padding: 0;
-    max-width: 660px;
-    background-color: rgba(0, 0, 0, 0);
+.remodal-close {
+    color: $HUMM_GRAY;
 
-    .remodal-close {
-        color: $HUMM_GRAY;
-
-        &:hover {
-            color: $HUMM_DARK_GRAY;
-        }
+    &:hover {
+        color: $HUMM_DARK_GRAY;
     }
 }

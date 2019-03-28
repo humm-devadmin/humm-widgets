@@ -11,25 +11,33 @@ $BACKGROUND_GRAY: #F8FAF7;
 @import "humm-price-info-widget";
 @import "humm-banner-top";
 
-.humm-modal-iframe {
+.remodal {
+    background: transparent;
+    padding: 0;
+    max-width: 780px;
+}
+
+#humm-modal-iframe,
+#humm-price-info-modal,
+#humm-price-info-more-modal {
     width: 100%;
     height: 500px;
     max-height: 84vh;
     border: none;
-}
-
-@media (max-width: 500px) {
-    .humm-modal-iframe {
+    @media (max-width: 500px) {
         height: 84vh;
     }
 }
 
-/** Modal **/
-div[id^="humm-modal-"] {
-    padding: 0;
-    max-width: 660px;
+#humm-more-info-modal {
+    width: 100%;
+    height: 760px;
+    max-height: 84vh;
+    border: none;
+    @media (max-width: 500px) {
+        height: 84vh;
+    }
 }
-
 
 a[data-remodal-target] {
     cursor: pointer;

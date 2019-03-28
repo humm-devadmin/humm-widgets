@@ -46,8 +46,8 @@ export class ModalInjector {
     private injectModal(url: string, modalId: string): void {
         const bodyTag = 'body';
         const modalDiv =
-            `<div id='${modalId}' class='remodal' data-remodal-id='${modalId}'>
-                <iframe class='humm-modal-iframe' src='${url}'></iframe>
+            `<div class='remodal' data-remodal-id='${modalId}'>
+                <iframe id='${modalId}' src='${url}'></iframe>
                 <button data-remodal-action="close" class="remodal-close"></button>
             </div>`;
         const body = this.jQuery(bodyTag);
