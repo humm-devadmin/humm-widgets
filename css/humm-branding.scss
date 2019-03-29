@@ -42,3 +42,15 @@ $BACKGROUND_GRAY: #F8FAF7;
 a[data-remodal-target] {
     cursor: pointer;
 }
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+}

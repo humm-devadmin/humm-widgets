@@ -9,8 +9,8 @@ import {Config} from './config';
                 <div class="main">
                     <div class="text-area">
                         <div class='title'>
-                            <div class="strong">Pay in slices.</div>
-                            <div>No interest ever.</div>
+                            <div class="strong nowrap">Pay in slices.</div>
+                            <div class="nowrap">No interest ever.</div>
                         </div>
                         <div class="tandc">T&Cs apply. See shophumm.com.au</div>
                     </div>
