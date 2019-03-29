@@ -57,7 +57,7 @@ let widget;
     srcString = scriptElement.getAttribute('src');
     noLogo = (getParameterByName('noLogo', srcString) !== null);
     monitor = (getParameterByName('monitor', srcString) !== null);
-    debug = scriptElement.getAttribute('debug') ? true : false;
+    debug = !!scriptElement.getAttribute('debug');
     min = scriptElement.dataset.min || 0;
     max = scriptElement.dataset.max || 999999;
     used_in = (getParameterByName('used_in', srcString));
@@ -195,12 +195,10 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
 
 function getCurrentScript(): any {
 
-    let currentScript = document.currentScript || (function () {
+    return document.currentScript || (function () {
         const scripts = document.getElementsByTagName('script');
         return scripts[scripts.length - 1];
     })();
-
-    return currentScript;
 }
 
 function updatePrice(el: JQuery, jq: JQueryStatic, noLogo: boolean, min: number, max: number, used_in: string, type: string) {

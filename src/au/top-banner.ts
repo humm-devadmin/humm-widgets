@@ -41,12 +41,10 @@ import {Config} from './config';
 
     function getCurrentScript(): any {
 
-        let currentScript = document.currentScript || (function () {
+        return document.currentScript || (function () {
             const scripts = document.getElementsByTagName('script');
             return scripts[scripts.length - 1];
         })();
-
-        return currentScript;
     }
 
     function getParameterByName(name: string, url: string): string {
