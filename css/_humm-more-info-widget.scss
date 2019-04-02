@@ -1,6 +1,10 @@
 /* new more-info large */
 
 .humm-more-info-widget {
+    &:hover {
+        color: $HUMM_DARK_GRAY !important;
+    }
+    all: unset;
     display: flex;
     border: 1px solid darkgray;
     font-size: 16px;
@@ -15,6 +19,7 @@
     position: relative;
 
     .inside {
+        all: unset;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -25,25 +30,31 @@
         margin-right: auto;
 
         .main {
+            all: unset;
             display: flex;
             flex-direction: row;
             flex-grow: 1;
             justify-content: center;
 
             .text-area {
+                all: unset;
                 .title {
+                    all: unset;
                     flex: 1 1 auto;
                     font-size: 35px;
                     margin: 26px 10px 26px 0;
                     line-height: 120%;
 
                     .strong {
+                        all: unset;
                         font-weight: 900;
                     }
 
                 }
 
                 .tandc {
+                    all: unset;
+                    display: block;
                     text-align: center;
                     font-size: 10px;
                     margin-top: -6px;
@@ -52,10 +63,12 @@
         }
 
         .logo {
+            all: unset;
             align-self: center;
 
             img {
-                height: 85px;
+                all: unset;
+                height: 85px !important;
             }
         }
     }
@@ -66,8 +79,8 @@
         padding-right: 120px;
 
         .elephant {
-            height: 160px;
-            width: 273px;
+            height: 160px !important;
+            width: 273px !important;
             margin-top: -8px;
             margin-bottom: -8px;
         }
@@ -79,7 +92,7 @@
                 position: absolute;
                 right: 10px;
                 bottom: 10px;
-                height: 65px;
+                height: 65px !important;
             }
         }
     }
@@ -99,7 +112,13 @@
         }
 
         .logo img {
-            height: 40px;
+            height: 40px !important;
+        }
+    }
+
+    .humm-more-info-small {
+        .inside .main .text-area .title {
+            font-size: 25px;
         }
     }
 }
@@ -112,7 +131,7 @@
 
         .logo img {
             margin-left: -20px;
-            height: 70px;
+            height: 70px !important;
         }
     }
 
@@ -133,13 +152,7 @@
         }
 
         .logo img {
-            height: 40px;
-        }
-    }
-
-    .humm-more-info-small {
-        .inside .main .text-area .title {
-            font-size: 25px;
+            height: 40px !important;
         }
     }
 }
@@ -153,7 +166,6 @@
         padding-right: 60px;
 
         .main {
-
             .text-area {
                 .title {
                     margin: 0;
@@ -178,11 +190,11 @@
 
         .logo {
             align-self: center;
-            height: 50px;
+            height: 50px !important;
             flex-grow: 0;
 
             img {
-                height: 50px;
+                height: 50px !important;
                 position: absolute;
                 right: 10px;
             }
@@ -197,7 +209,7 @@
     margin-right: auto;
 
     img {
-        height: 90px;
+        height: 90px !important;
         width: 100%;
     }
 }
