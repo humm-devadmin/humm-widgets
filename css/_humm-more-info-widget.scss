@@ -92,6 +92,7 @@
                 margin-left: -24px;
                 margin-right: -24px;
             }
+
             .text-area .title {
                 font-size: 30px;
             }
@@ -104,35 +105,35 @@
 }
 
 @media screen and (max-width: 500px) {
-    .humm-more-info-large {
-        flex-direction: column;
+    .humm-more-info-large .inside {
+        .main .text-area .title {
+            font-size: 30px;
+        }
 
-        .inside .logo img {
+        .logo img {
             margin-left: -20px;
             height: 70px;
         }
     }
 
-    .humm-more-info-large-slices {
-        .inside {
-            .main {
-                flex-direction: column;
+    .humm-more-info-large-slices .inside {
+        .main {
+            flex-direction: column;
 
-                img.elephant {
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-
-                .text-area .title {
-                    margin-top: 10px;
-                    margin-bottom: 32px;
-                    font-size: 35px;
-                }
+            img.elephant {
+                margin-left: auto;
+                margin-right: auto;
             }
 
-            .logo img {
-                height: 40px;
+            .text-area .title {
+                margin-top: 10px;
+                margin-bottom: 32px;
+                font-size: 35px;
             }
+        }
+
+        .logo img {
+            height: 40px;
         }
     }
 
