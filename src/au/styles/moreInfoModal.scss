@@ -104,6 +104,10 @@ body {
         }
     }
 
+    _:-ms-lang(x), .main { 
+        justify-content: space-around;
+    }
+
     .download {
         margin: 25px auto 20px;
         text-align: center;
