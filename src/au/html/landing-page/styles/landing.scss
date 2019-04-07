@@ -1,17 +1,24 @@
-$HUMM_ORANGE: #f6771c;
+$HUMM_ORANGE: #FF6C00;
 $HUMM_GRAY: #ecedee;
 $HUMM_LIGHT_GRAY: #f9f9f9;
-$HUMM_DARK_GRAY: #515565;
+$HUMM_DARK_GRAY: #333;
 
 #humm-landing-content {
   font-family: 'Montserrat';
   font-weight: 400;
-  font-size: 14px !important;
+  font-size: 16px !important;
   line-height: 1.43 !important;
   color: $HUMM_DARK_GRAY;
   background-color: #FFF;
 
+  h1, h2, h3, h4, h5, h6, .title {
+    letter-spacing: -0.04em;
+    line-height: 1.3!important;
+  }
+
   .branding-area {
+    background-image: url("/dist/au/content/images/header.png");
+    height: 655px;
     .curve {
       margin-top: -30px;
       width: 100%;
@@ -51,53 +58,142 @@ $HUMM_DARK_GRAY: #515565;
     }
   }
 
-  #top {
-    overflow: hidden;
-    margin: 65px auto 25px;
-    font-family: 'Montserrat';
-    font-weight: 500;
-    max-width: 52em;
+  .little-big {
+    padding: 19px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: #FFFFFF;
+
     .card {
-      @media (max-width: 600px) {
-        width: 33%;
-        &:nth-child(4), &:nth-child(5) {
-          display: none;
-        }
+      img.icon-little {
+        height: 25px;
+        margin-top: 7px;
       }
-      width: 20%;
-      float: left;
-      text-align: center;
-      padding: 0 15px;
-      box-sizing: border-box;
-      img {
-        width: 56%;
-        margin: 0 auto 1em;
+
+      img.icon-big {
+        height: 32px;
       }
-      p {
-        padding: 0;
-        text-align: center;
-        font-size: 0.85em;
-        font-weight: 500;
+
+      .title {
+        font-weight: 700;
+        font-size: 25px;
+        margin: 5px 0;
+      }
+
+      .content {
+        padding: 0 20px;
+        line-height: 1.35;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 420px;
       }
     }
   }
 
-  #q-and-a {
-    max-width: 37em;
+  @media (max-width: 600px) {
+    .little-big {
+      flex-direction: column;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      .card {
+        max-width: 330px;
+        img.icon-little{
+          height: 35px;
+          margin-top: 15px;
+        }
+        img.icon-big {
+          height: 50px;
+        }
+        .content {
+          line-height: 1.5;
+        }
+      }
+      .card.little-things {
+        margin: 2em auto;
+      }
+      .card.big-things {
+        margin: 2em auto;
+      }
+    }
+  }
+
+  .main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+
+    .card {
+      text-align: center;
+      box-sizing: border-box;
+      padding: 20px 0;
+
+      img {
+        height: 60px;
+        margin-bottom: 12px;
+      }
+
+      .title {
+        max-width: 160px;
+        margin: 0 auto;
+        white-space: nowrap;
+        font-size: 21px;
+        font-weight: 800;
+      }
+      .small {
+        max-width: 11em;
+        margin: 10px auto 0;
+      }
+    }
+  }
+
+  #intro, #q-and-a {
     margin-top: 3.3em;
     margin-bottom: 2.5em;
     h3 {
       font-family: 'Montserrat';
       font-weight: 600;
-      font-size: 1.1em;
+      font-size: 21px;
+      margin-bottom: 25px;
     }
     p {
-      font-size: 14px !important;
+      font-size: 16px !important;
+      margin-bottom: 20px;
     }
+  }
+
+  #q-and-a {
+    margin-bottom: 0;
+    p, ul {
+      margin-bottom: 50px;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+  }
+
+  .width-limit {
+    max-width: 64em;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important;
   }
 
   .white-bg {
     background-color: #FFF;
+  }
+
+  .gray-bg {
+    background-color: #F1F2EE;
+  }
+
+  .orange-bg {
+    background-color: $HUMM_ORANGE;
+  }
+
+  .small-number {
+    font-size: 0.6em;
+    vertical-align: top;
+    padding-left: 0.2em;
   }
 
   .signup-btn {
@@ -118,6 +214,24 @@ $HUMM_DARK_GRAY: #515565;
   .light-gray {
     background-color: $HUMM_LIGHT_GRAY;
   }
+
+  .footer {
+    padding-left: 12px;
+    max-width: 52em;
+    margin-bottom: 2.5em;
+    img {
+      height: 20px;
+    }
+    .fine-print {
+      font-size: 9px;
+      text-indent: -2.5em;
+      line-height: 1.6;
+    }
+  }
+
+
+
+
 
   // Bootstrap styles
   html {
