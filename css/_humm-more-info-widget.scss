@@ -4,6 +4,7 @@
     &:hover {
         color: $HUMM_DARK_GRAY !important;
     }
+
     all: unset;
     display: flex;
     border: 1px solid darkgray;
@@ -38,15 +39,14 @@
 
             .text-area {
                 all: unset;
+
                 .title {
-                    all: unset;
                     flex: 1 1 auto;
                     font-size: 35px;
                     margin: 26px 10px 26px 0;
                     line-height: 120%;
 
                     .strong {
-                        all: unset;
                         font-weight: 900;
                     }
 
