@@ -1,6 +1,7 @@
 ///<reference path="../../typings/jquery/jquery.d.ts"/>
 
 import * as jq from 'jquery';
+import {Config} from './config';
 
 class PageInjector {
     constructor(private jQuery: JQueryStatic) {
@@ -24,5 +25,6 @@ class PageInjector {
 
 (($: JQueryStatic) => {
     const widget = new PageInjector($);
-    widget.injectPage("https://s3-ap-southeast-2.amazonaws.com/widgets.shophumm.com.au/content/html/landing-page/landing-page-content.html", "#humm-landing-page");
+    const htmlLink = Config.baseContentUrl + "/content/html/landing-page/landing-page-content.html";
+    widget.injectPage(htmlLink, "#humm-landing-page");
 })(jq);
