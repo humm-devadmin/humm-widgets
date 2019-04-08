@@ -16,8 +16,7 @@
     "webpack": "^1.13.3"
   },
   "scripts": {
-    "css": "sass -s compressed src/au/styles/priceInfoModal.scss:src/au/styles/priceInfoModal.min.css src/au/styles/moreInfoModal.scss:src/au/styles/moreInfoModal.min.css src/au/html/landing-page/styles/landing.scss:src/au/html/landing-page/styles/landing.css css/humm-branding.scss:css/humm-branding.css",
-    "build": "npm run css && webpack",
+    "build": "webpack",
     "watch": "webpack --watch"
   },
   "author": "Humm",
