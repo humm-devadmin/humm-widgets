@@ -17,8 +17,8 @@ $HUMM_DARK_GRAY: #333;
   }
 
   .branding-area {
-    background-image: url("/dist/au/content/images/header.png");
-    height: 655px;
+    background-color: #C8BDA4;
+    height: 600px;
     color: #FFF;
 
     position: relative;
@@ -33,8 +33,15 @@ $HUMM_DARK_GRAY: #333;
       height: 73px;
     }
 
+    img.humm-header {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
     .text {
-      margin-top: 157px;
+      position: absolute;
+      margin-top: 130px;
       font-size: 34px;
 
       .title {
@@ -45,15 +52,54 @@ $HUMM_DARK_GRAY: #333;
       p {
         line-height: 1.35;
         .font-light {
-          font-size: 36px;
           font-weight: 100;
+        }
+      }
+      p.wide-only {
+        display: block;
+      }
+      p.narrow-only {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 900px) {
+    .branding-area {
+      height: 680px;
+      img.humm-header {
+        max-width: 90%;
+      }
+      .text {
+        font-size: 30px;
+        margin-top: 10px;
+        .title {
+          font-size: 100px;
         }
       }
     }
   }
 
-  @media (max-width: 767px) {
-
+  @media (max-width: 599px) {
+    .branding-area {
+      height: 500px;
+      img.humm-header {
+        max-width: 90%;
+      }
+      .text {
+        font-size: 20px;
+        margin-top: 10px;
+        .title {
+          font-size: 64px;
+        }
+        p.wide-only {
+          display: none;
+        }
+        p.narrow-only {
+          display: block;
+        }
+      }
+    }
   }
 
   .little-big {
