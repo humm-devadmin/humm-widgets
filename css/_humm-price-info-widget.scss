@@ -12,6 +12,7 @@
     border-bottom: none !important;
     box-shadow: none !important;
     overflow: hidden;
+	height: 2.4em;
 
     img.humm-logo {
         all: unset;
@@ -35,6 +36,9 @@
 
             .price {
                 font-weight: 600;
+				font-size: 16px;
+				display: inline-block;
+				vertical-align: baseline;
             }
         }
 
