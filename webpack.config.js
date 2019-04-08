@@ -8,9 +8,9 @@ module.exports = {
         "au/content/scripts/more-info-small": "./src/au/more-info-small.ts",
         "au/content/scripts/more-info-small-slices": "./src/au/more-info-small-slices.ts",
         "au/content/scripts/more-info-mini": "./src/au/more-info-mini.ts",
-        // "au/content/scripts/more-info-general": "./src/au/more-info-general.ts",
+        "au/content/scripts/more-info-general": "./src/au/more-info-general.ts",
         "au/content/scripts/price-info": "./src/au/price-info.ts",
-        // "au/content/scripts/landing-page": "./src/au/landing-page.ts",
+        "au/content/scripts/landing-page": "./src/au/landing-page.ts",
         // "au/content/scripts/top-banner": "./src/au/top-banner.ts"
     },
 
@@ -46,19 +46,19 @@ module.exports = {
                 to : './au/content/styles'
             }
         ]),
-        // new webpack.SourceMapDevToolPlugin({
-        //     test: /\.js$/,
-        //     filename: "[name].map.js"
-        // }),
-        // new webpack.optimize.UglifyJsPlugin({
-        //     compress: {
-        //         warnings: false,
-        //     },
-        //     output: {
-        //         comments: false,
-        //     },
-        //     mangle: false,
-        //     sourceMap: true
-        // }),
+        new webpack.SourceMapDevToolPlugin({
+            test: /\.js$/,
+            filename: "[name].map.js"
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false,
+            },
+            output: {
+                comments: false,
+            },
+            mangle: false,
+            sourceMap: true
+        }),
     ]
 }
