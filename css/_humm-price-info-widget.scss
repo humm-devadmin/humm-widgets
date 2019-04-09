@@ -14,7 +14,7 @@
     overflow: hidden;
 	height: 2.4em;
 
-    img.humm-logo {
+    .humm-widget-logo {
         all: unset;
         display: inline-block;
         margin-right: 8px;
@@ -24,25 +24,25 @@
         vertical-align: baseline;
     }
 
-    .description {
+    .humm-description {
         display: inline-block;
         font-size: 16px;
         font-weight: 300;
         vertical-align: baseline;
 
-        .main {
+        .humm-main {
             margin-right: 6px;
             white-space: nowrap;
 
-            .price {
+            .humm-price {
                 font-weight: 600;
-				font-size: 16px;
+				font-size: 16px !important;
 				display: inline-block;
 				vertical-align: baseline;
             }
         }
 
-        .more-info {
+        .humm-more-info {
             display: inline-block;
             margin-top: -3px;
             text-decoration: underline;

@@ -154,7 +154,7 @@ function extractPrice(el: any) {
 
 function generateWidget(productPrice: number, noLogo: boolean, min: number, max: number, used_in: string, widgetId: string, type: string): string {
     let template;
-    let logo_html = noLogo ? '' : `<div class="logo"><img alt="Humm" class="humm-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" /></div>`;
+    let logo_html = noLogo ? '' : `<div><img alt="Humm" class="humm-widget-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" /></div>`;
     let main_html = '';
     let price_breakdown_html = '';
 
@@ -174,7 +174,7 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
                 let productPriceDividedByFour = productPrice / 5;
                 // Banking Rounding
                 let roundedDownProductPrice = Math.floor(productPriceDividedByFour * Math.pow(10, 2)) / Math.pow(10, 2);
-                price_breakdown_html = `of <span class="price">$${roundedDownProductPrice.toFixed(2)}</span>`
+                price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
             } else if (productPrice <= max) {
                 main_html = 'Pay in slices. No interest ever.';
             }
@@ -184,9 +184,9 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
     template = `
         <a class="humm-price-info-widget" data-remodal-target="${widgetId}">
             ${logo_html}
-            <span class="description">
-                <span class="main">${main_html} ${price_breakdown_html}</span>
-                <span class="more-info">more info</span>
+            <span class="humm-description">
+                <span class="humm-main">${main_html} ${price_breakdown_html}</span>
+                <span class="humm-more-info">more info</span>
             </span>
         </a>`;
 
