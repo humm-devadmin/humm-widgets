@@ -124,7 +124,7 @@
 }
 
 @media screen and (max-width: 500px) {
-    .humm-more-info-large .inside {
+    .humm-more-info-large .humm-inside {
         .humm-main .humm-text-area .humm-title {
             font-size: 30px;
         }
@@ -135,7 +135,7 @@
         }
     }
 
-    .humm-more-info-large-slices .inside {
+    .humm-more-info-large-slices .humm-inside {
         .humm-main {
             flex-direction: column;
 
