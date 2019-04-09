@@ -5,21 +5,21 @@ import {Config} from './config';
 (($: JQueryStatic) => {
     const template =
         `<a class="humm-more-info-widget humm-more-info-small" data-remodal-target="${Config.moreInfoModalId}">
-            <div class="inside">
-                <div class="main">
-                    <div class="text-area">
-                        <div class='title'>
-                            <div class="strong">
-                                <span class="inline-block">Little things. </span>
-                                <span class="inline-block">Big things. </span>
-                                <span class="inline-block">Everything.</span>
+            <div class="humm-inside">
+                <div class="humm-main">
+                    <div class="humm-text-area">
+                        <div class='humm-title'>
+                            <div class="humm-strong">
+                                <span class="humm-inline-block">Little things. </span>
+                                <span class="humm-inline-block">Big things. </span>
+                                <span class="humm-inline-block">Everything.</span>
                             </div>
-                            <div class="nowrap">No interest ever.</div>
+                            <div class="humm-nowrap">No interest ever.</div>
                         </div>
-                        <div class="tandc">T&Cs apply. See shophumm.com.au</div>
+                        <div class="humm-tandc">T&Cs apply. See shophumm.com.au</div>
                     </div>
                 </div>
-                <div class="logo">
+                <div class="humm-logo">
                     <img alt="Humm" src="${Config.baseContentUrl}/content/images/bird-humm.svg" />
                 </div>
             </div>
