@@ -102,8 +102,8 @@
     .humm-more-info-large-slices .humm-inside {
         .humm-main {
             img.humm-elephant {
-                margin-left: -24px;
-                margin-right: -24px;
+                margin-left: -24px !important;
+                margin-right: -24px !important;
             }
 
             .humm-text-area .humm-title {
@@ -140,8 +140,8 @@
             flex-direction: column;
 
             img.humm-elephant {
-                margin-left: auto;
-                margin-right: auto;
+                margin-left: auto !important;
+                margin-right: auto !important;
             }
 
             .humm-text-area .humm-title {

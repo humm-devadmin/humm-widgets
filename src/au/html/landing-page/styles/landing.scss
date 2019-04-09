@@ -37,13 +37,15 @@ $HUMM_DARK_GRAY: #333;
     font-weight: 700;
 
     img.humm-logo {
-      height: 73px;
+      all: unset;
+      height: 73px !important;
     }
 
     img.humm-header {
-      position: absolute;
-      right: 0;
-      bottom: 0;
+      all: unset;
+      position: absolute !important;
+      right: 0 !important;
+      bottom: 0 !important;
     }
 
     .humm-text {
@@ -57,6 +59,7 @@ $HUMM_DARK_GRAY: #333;
       }
 
       p {
+        font-size: 34px !important;
         line-height: 1.35 !important;
         .humm-font-light {
           font-weight: 100 !important;
@@ -75,13 +78,17 @@ $HUMM_DARK_GRAY: #333;
     .humm-branding-area {
       height: 680px;
       img.humm-header {
-        max-width: 90%;
+        all: unset;
+        max-width: 90% !important;
       }
       .humm-text {
         font-size: 30px;
         margin-top: 10px;
         .humm-title {
           font-size: 100px;
+        }
+        p {
+          font-size: 30px;
         }
       }
     }
@@ -91,13 +98,17 @@ $HUMM_DARK_GRAY: #333;
     .humm-branding-area {
       height: 500px;
       img.humm-header {
-        max-width: 90%;
+        all: unset;
+        max-width: 90% !important;
       }
       .humm-text {
         font-size: 20px;
         margin-top: 10px;
         .humm-title {
           font-size: 64px;
+        }
+        p {
+          font-size: 20px;
         }
         p.humm-wide-only {
           display: none;
@@ -118,12 +129,14 @@ $HUMM_DARK_GRAY: #333;
 
     .humm-card {
       img.humm-icon-little {
-        height: 25px;
-        margin-top: 7px;
+        all: unset;
+        height: 25px !important;
+        margin-top: 7px !important;
       }
 
       img.humm-icon-big {
-        height: 32px;
+        all: unset;
+        height: 32px !important;
       }
 
       .humm-title {
@@ -149,11 +162,13 @@ $HUMM_DARK_GRAY: #333;
       .humm-card {
         max-width: 330px;
         img.humm-icon-little{
-          height: 35px;
-          margin-top: 15px;
+          all: unset;
+          height: 35px !important;
+          margin-top: 15px !important;
         }
         img.humm-icon-big {
-          height: 50px;
+          all: unset;
+          height: 50px !important;
         }
         .humm-content {
           line-height: 1.5;
@@ -179,6 +194,7 @@ $HUMM_DARK_GRAY: #333;
       padding: 20px 0;
 
       img {
+        all: unset;
         height: 60px !important;
         margin-bottom: 12px !important;
       }
@@ -260,7 +276,9 @@ $HUMM_DARK_GRAY: #333;
     max-width: 52em;
     margin-bottom: 2.5em;
     img {
+      all: unset;
       height: 20px !important;
+      vertical-align: middle !important;
     }
     .humm-fine-print {
       font-size: 9px;
