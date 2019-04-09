@@ -43,6 +43,7 @@ $HUMM_DARK_GRAY: #333;
 
     img.humm-header {
       all: unset;
+      max-width: 100% !important;
       position: absolute !important;
       right: 0 !important;
       bottom: 0 !important;
@@ -88,7 +89,7 @@ $HUMM_DARK_GRAY: #333;
           font-size: 100px;
         }
         p {
-          font-size: 30px;
+          font-size: 30px !important;
         }
       }
     }
@@ -108,7 +109,7 @@ $HUMM_DARK_GRAY: #333;
           font-size: 64px;
         }
         p {
-          font-size: 20px;
+          font-size: 20px !important;
         }
         p.humm-wide-only {
           display: none;
