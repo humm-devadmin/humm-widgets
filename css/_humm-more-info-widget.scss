@@ -49,7 +49,6 @@
                     .humm-strong {
                         font-weight: 900;
                     }
-
                 }
 
                 .humm-tandc {
@@ -67,7 +66,7 @@
             align-self: center;
 
             img {
-                all: unset;
+                all: unset !important;
                 height: 85px !important;
             }
         }
@@ -76,9 +75,10 @@
 
 .humm-more-info-large-slices {
     .humm-inside {
-        padding-right: 120px;
+        padding-right: 100px;
 
-        .humm-elephant {
+        img.humm-elephant {
+            all: unset;
             height: 160px !important;
             width: 273px !important;
             margin-top: -8px;
@@ -89,6 +89,7 @@
             flex-grow: 0;
 
             img {
+                all: unset;
                 position: absolute !important;
                 right: 10px !important;
                 bottom: 10px !important;
@@ -100,6 +101,8 @@
 
 @media screen and (max-width: 665px) {
     .humm-more-info-large-slices .humm-inside {
+        padding-right: 30px;
+
         .humm-main {
             img.humm-elephant {
                 margin-left: -24px !important;
@@ -126,7 +129,7 @@
 @media screen and (max-width: 500px) {
     .humm-more-info-large .humm-inside {
         .humm-main .humm-text-area .humm-title {
-            font-size: 30px;
+            font-size: 28px;
         }
 
         .humm-logo img {
