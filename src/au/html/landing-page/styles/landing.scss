@@ -1,11 +1,13 @@
-@import "bootstrap";
-
 $HUMM_ORANGE: #FF6C00;
 $HUMM_GRAY: #ecedee;
 $HUMM_LIGHT_GRAY: #f9f9f9;
 $HUMM_DARK_GRAY: #333;
 
 #humm-landing-content {
+  * {
+    box-sizing: border-box;
+  }
+
   font-family: 'Montserrat';
   font-weight: 400;
   font-size: 16px !important;
@@ -237,10 +239,11 @@ $HUMM_DARK_GRAY: #333;
 
   .humm-q-and-a {
     margin-bottom: 0;
-    p, ul {
+    p {
       margin-bottom: 50px !important;
     }
     ul {
+      margin-bottom: 50px !important;
       padding-left: 1.2em !important;
     }
   }
@@ -264,6 +267,10 @@ $HUMM_DARK_GRAY: #333;
     font-size: 0.6em;
     vertical-align: top;
     padding-left: 0.2em;
+  }
+
+  .humm-text-center {
+    text-align: center;
   }
 
   .humm-center-block {
