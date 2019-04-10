@@ -8,6 +8,10 @@ $HUMM_DARK_GRAY: #333;
     box-sizing: border-box;
   }
 
+  p {
+    margin: 0 0 10px;
+  }
+
   font-family: 'Montserrat';
   font-weight: 400;
   font-size: 16px !important;
@@ -60,19 +64,20 @@ $HUMM_DARK_GRAY: #333;
         font-size: 140px;
         margin-bottom: -12px;
       }
-
-      p {
+      p.humm-wide-only {
+        all: unset;
         font-size: 34px !important;
         line-height: 1.35 !important;
-        .humm-font-light {
-          font-weight: 100 !important;
-        }
-      }
-      p.humm-wide-only {
         display: block;
       }
       p.humm-narrow-only {
+        all: unset;
+        font-size: 34px !important;
+        line-height: 1.35 !important;
         display: none;
+      }
+      .humm-font-light {
+        font-weight: 100 !important;
       }
     }
   }
@@ -90,8 +95,15 @@ $HUMM_DARK_GRAY: #333;
         .humm-title {
           font-size: 100px;
         }
-        p {
+        p.humm-wide-only {
+          all: unset;
           font-size: 30px !important;
+          display: block;
+        }
+        p.humm-narrow-only {
+          all: unset;
+          font-size: 30px !important;
+          display: none;
         }
       }
     }
@@ -110,13 +122,14 @@ $HUMM_DARK_GRAY: #333;
         .humm-title {
           font-size: 64px;
         }
-        p {
-          font-size: 20px !important;
-        }
         p.humm-wide-only {
+          all: unset;
+          font-size: 20px !important;
           display: none;
         }
         p.humm-narrow-only {
+          all: unset;
+          font-size: 20px !important;
           display: block;
         }
       }
@@ -222,7 +235,7 @@ $HUMM_DARK_GRAY: #333;
     }
   }
 
-  .humm-intro, .humm-q-and-a {
+  .humm-intro {
     margin-top: 3.3em;
     margin-bottom: 2.5em;
     h3 {
@@ -232,17 +245,30 @@ $HUMM_DARK_GRAY: #333;
       margin-bottom: 25px !important;
     }
     p {
+      all: unset;
+      display: block;
       font-size: 16px !important;
       margin-bottom: 20px !important;
     }
   }
 
   .humm-q-and-a {
+    margin-top: 3.3em;
     margin-bottom: 0;
+    h3 {
+      font-family: 'Montserrat' !important;
+      font-weight: 600 !important;
+      font-size: 21px !important;
+      margin-bottom: 25px !important;
+    }
     p {
+      all: unset;
+      display: block;
+      font-size: 16px !important;
       margin-bottom: 50px !important;
     }
     ul {
+      //all: unset;
       margin-bottom: 50px !important;
       padding-left: 1.2em !important;
     }
