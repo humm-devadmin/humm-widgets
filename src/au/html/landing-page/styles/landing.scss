@@ -1,3 +1,6 @@
+// proxima-nova font
+@import url("https://use.typekit.net/plq2clw.css");
+
 $HUMM_ORANGE: #FF6C00;
 $HUMM_GRAY: #ecedee;
 $HUMM_LIGHT_GRAY: #f9f9f9;
@@ -13,7 +16,7 @@ $HUMM_DARK_GRAY: #333;
     margin: 0 0 10px;
   }
 
-  font-family: 'Montserrat';
+  font-family: "proxima-nova", sans-serif !important;
   font-weight: 400;
   font-size: 16px !important;
   line-height: 1.43 !important;
@@ -21,6 +24,7 @@ $HUMM_DARK_GRAY: #333;
   background-color: #FFF;
 
   h1, h2, h3, h4, h5, h6, .humm-title {
+    font-family: "proxima-nova", sans-serif !important;
     letter-spacing: -0.04em;
     line-height: 1.3!important;
   }
@@ -40,7 +44,7 @@ $HUMM_DARK_GRAY: #333;
     padding: 30px;
     margin-left: auto;
     margin-right: auto;
-    font-family: "Montserrat";
+    font-family: "proxima-nova", sans-serif !important;
     font-weight: 700;
 
     img.humm-logo {
@@ -62,22 +66,26 @@ $HUMM_DARK_GRAY: #333;
       font-size: 34px;
 
       .humm-title {
+        font-family: "proxima-nova", sans-serif !important;
         font-size: 140px;
         margin-bottom: -12px;
       }
       p.humm-wide-only {
         all: unset;
+        font-family: "proxima-nova", sans-serif !important;
         font-size: 34px !important;
         line-height: 1.35 !important;
         display: block;
       }
       p.humm-narrow-only {
         all: unset;
+        font-family: "proxima-nova", sans-serif !important;
         font-size: 34px !important;
         line-height: 1.35 !important;
         display: none;
       }
       .humm-font-light {
+        font-family: "proxima-nova", sans-serif !important;
         font-weight: 100 !important;
       }
     }
@@ -160,12 +168,14 @@ $HUMM_DARK_GRAY: #333;
       }
 
       .humm-title {
+        font-family: "proxima-nova", sans-serif !important;
         font-weight: 700;
         font-size: 25px;
         margin: 5px 0;
       }
 
       .humm-content {
+        font-family: "proxima-nova", sans-serif !important;
         padding: 0 20px;
         line-height: 1.35;
         color: rgba(255, 255, 255, 0.8);
@@ -216,6 +226,7 @@ $HUMM_DARK_GRAY: #333;
 
     .humm-card {
       text-align: center;
+      font-family: "proxima-nova", sans-serif !important;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       padding: 20px 0;
@@ -227,6 +238,7 @@ $HUMM_DARK_GRAY: #333;
       }
 
       .humm-title {
+        font-family: "proxima-nova", sans-serif !important;
         max-width: 160px;
         margin: 0 auto;
         white-space: nowrap;
@@ -234,6 +246,7 @@ $HUMM_DARK_GRAY: #333;
         font-weight: 800;
       }
       .humm-small {
+        font-family: "proxima-nova", sans-serif !important;
         max-width: 11em;
         margin: 10px auto 0;
       }
@@ -253,13 +266,14 @@ $HUMM_DARK_GRAY: #333;
     margin-top: 3.3em;
     margin-bottom: 2.5em;
     h3 {
-      font-family: 'Montserrat' !important;
+      font-family: "proxima-nova", sans-serif !important;
       font-weight: 600 !important;
       font-size: 21px !important;
       margin-bottom: 25px !important;
     }
     p {
       all: unset;
+      font-family: "proxima-nova", sans-serif !important;
       display: block;
       font-size: 16px !important;
       margin-bottom: 20px !important;
@@ -270,19 +284,20 @@ $HUMM_DARK_GRAY: #333;
     margin-top: 3.3em;
     margin-bottom: 0;
     h3 {
-      font-family: 'Montserrat' !important;
+      font-family: "proxima-nova", sans-serif !important;
       font-weight: 600 !important;
       font-size: 21px !important;
       margin-bottom: 25px !important;
     }
     p {
       all: unset;
+      font-family: "proxima-nova", sans-serif !important;
       display: block;
       font-size: 16px !important;
       margin-bottom: 50px !important;
     }
     ul {
-      //all: unset;
+      font-family: "proxima-nova", sans-serif !important;
       margin-bottom: 50px !important;
       padding-left: 1.2em !important;
     }
@@ -329,6 +344,7 @@ $HUMM_DARK_GRAY: #333;
       vertical-align: middle !important;
     }
     .humm-fine-print {
+      font-family: "proxima-nova", sans-serif !important;
       font-size: 9px;
       text-indent: -2.5em;
       line-height: 1.6;
