@@ -6,6 +6,8 @@
     }
 
     all: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     border: 1px solid darkgray;
     font-size: 16px;
@@ -13,6 +15,7 @@
     padding: 8px 24px;
     overflow: hidden;
     text-decoration: none;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: "proxima-nova", sans-serif;
     text-align: center;
@@ -21,9 +24,17 @@
 
     .humm-inside {
         all: unset;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
         align-items: stretch;
         width: 100%;
         max-width: 900px;
@@ -32,15 +43,26 @@
 
         .humm-main {
             all: unset;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
             flex-direction: row;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
             flex-grow: 1;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
 
             .humm-text-area {
                 all: unset;
 
                 .humm-title {
+                    -webkit-box-flex: 1;
+                    -ms-flex: 1 1 auto;
                     flex: 1 1 auto;
                     font-size: 35px;
                     margin: 26px 10px 26px 0;
@@ -63,6 +85,8 @@
 
         .humm-logo {
             all: unset;
+            -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
             align-self: center;
 
             img {
@@ -86,6 +110,8 @@
         }
 
         .humm-logo {
+            -webkit-box-flex: 0;
+            -ms-flex-positive: 0;
             flex-grow: 0;
 
             img {
@@ -140,6 +166,9 @@
 
     .humm-more-info-large-slices .humm-inside {
         .humm-main {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
 
             img.humm-elephant {
@@ -192,8 +221,12 @@
         }
 
         .humm-logo {
+            -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
             align-self: center;
             height: 50px !important;
+            -webkit-box-flex: 0;
+            -ms-flex-positive: 0;
             flex-grow: 0;
 
             img {

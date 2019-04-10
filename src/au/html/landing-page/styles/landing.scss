@@ -5,6 +5,7 @@ $HUMM_DARK_GRAY: #333;
 
 #humm-landing-content {
   * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
 
@@ -138,7 +139,10 @@ $HUMM_DARK_GRAY: #333;
 
   .humm-little-big {
     padding: 19px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     text-align: center;
     color: #FFFFFF;
@@ -172,6 +176,9 @@ $HUMM_DARK_GRAY: #333;
 
   @media (max-width: 600px) {
     .humm-little-big {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
       padding-top: 30px;
       padding-bottom: 30px;
@@ -200,12 +207,16 @@ $HUMM_DARK_GRAY: #333;
   }
 
   .humm-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     padding: 20px 0;
 
     .humm-card {
       text-align: center;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       padding: 20px 0;
 
@@ -231,6 +242,9 @@ $HUMM_DARK_GRAY: #333;
 
   @media (max-width: 600px) {
     .humm-main {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
     }
   }

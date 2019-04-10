@@ -43,7 +43,10 @@ body {
 
     .little-big {
         padding: 19px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
         background-color: $HUMM_ORANGE;
         text-align: center;
@@ -78,7 +81,11 @@ body {
     }
 
     .main {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
         background-color: #F1F2EE;
         color: $HUMM_DARK_GRAY;
@@ -88,6 +95,7 @@ body {
 
         .card {
             text-align: center;
+            -webkit-box-sizing: border-box;
             box-sizing: border-box;
             padding: 20px 0;
 
@@ -104,7 +112,8 @@ body {
         }
     }
 
-    _:-ms-lang(x), .main { 
+    _:-ms-lang(x), .main {
+        -ms-flex-pack: distribute;
         justify-content: space-around;
     }
 
@@ -171,6 +180,9 @@ body {
     .humm-more-info-modal {
 
         .main {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: column;
             flex-flow: column;
 
             .card {

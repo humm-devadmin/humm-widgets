@@ -2,7 +2,10 @@
 
 .humm-price-info-widget {
     all: initial;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 5px 0;
     font-family: "proxima-nova", sans-serif;
@@ -10,6 +13,7 @@
     color: #3d4246 !important;
     text-decoration: none !important;
     border-bottom: none !important;
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     overflow: hidden;
 
@@ -35,9 +39,9 @@
 
             .humm-price {
                 font-weight: 600;
-				font-size: 16px !important;
-				display: inline-block;
-				vertical-align: baseline;
+                font-size: 16px !important;
+                display: inline-block;
+                vertical-align: baseline;
             }
         }
 

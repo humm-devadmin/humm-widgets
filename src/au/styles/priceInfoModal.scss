@@ -45,6 +45,8 @@ body {
     }
 
     .main {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin: 0 auto;
         max-width: 35rem;
@@ -53,6 +55,7 @@ body {
             text-align: center;
             padding: 2.5rem 0;
             margin: 0 auto;
+            -webkit-box-sizing: border-box;
             box-sizing: border-box;
 
             .title {
@@ -125,6 +128,9 @@ body {
         }
 
         .main {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: column;
             flex-flow: column;
             max-width: 300px;
 

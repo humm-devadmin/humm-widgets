@@ -52,5 +52,7 @@ a[data-remodal-target] {
 }
 
 .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
