@@ -36,6 +36,8 @@ let widget;
 
     // merchants type (bigThings only, littleThings only, or both)
     let type: string;
+    let bigThings: boolean;
+    let littleThings: boolean;
 
     /**
      * The extracted product price from either parsing the content from HTML (via css selector)
@@ -62,11 +64,15 @@ let widget;
     max = scriptElement.dataset.max || 999999;
     used_in = (getParameterByName('used_in', srcString));
     element = (getParameterByName('element', srcString)) ? jq(getParameterByName('element', srcString)) : jq(scriptElement);
-    if (getParameterByName('BigThings', srcString) !== null && getParameterByName('LittleThings', srcString) !== null) {
+
+    bigThings = (getParameterByName('BigThings', srcString) !== null || getParameterByName('BigOnly', srcString) !== null);
+    littleThings = (getParameterByName('LittleThings', srcString) !== null || getParameterByName('LittleOnly', srcString) !== null);
+
+    if (bigThings && littleThings) {
         type = 'both';
-    } else if (getParameterByName('BigThings', srcString) !== null) {
+    } else if (bigThings) {
         type = 'bigThings';
-    } else if (getParameterByName('LittleThings', srcString) !== null) {
+    } else if (littleThings) {
         type = 'littleThings';
     } else {
         type = 'both';
