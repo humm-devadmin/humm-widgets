@@ -124,12 +124,16 @@ body {
         font-weight: 300;
         font-size: 26px;
 
-        img {
-            height: 45px;
-            margin: 22px auto 10px;
-
+        a {
+            text-decoration: none;
+            
             &:first-child {
-                margin-right: 20px;
+                margin-right: 15px;
+            }
+
+            img {
+                height: 45px;
+                margin: 22px auto 10px;
             }
         }
     }
