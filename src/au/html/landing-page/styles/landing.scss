@@ -22,10 +22,11 @@ $HUMM_DARK_GRAY: #333;
   line-height: 1.43 !important;
   color: $HUMM_DARK_GRAY;
   background-color: #FFF;
+  text-align: left;
 
   h1, h2, h3, h4, h5, h6, .humm-title {
     font-family: "proxima-nova", sans-serif !important;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
     line-height: 1.3!important;
   }
 
@@ -169,7 +170,7 @@ $HUMM_DARK_GRAY: #333;
 
       .humm-title {
         font-family: "proxima-nova", sans-serif !important;
-        font-weight: 700;
+        font-weight: 800;
         font-size: 25px;
         margin: 5px 0;
       }
@@ -267,8 +268,8 @@ $HUMM_DARK_GRAY: #333;
     margin-bottom: 2.5em;
     h3 {
       font-family: "proxima-nova", sans-serif !important;
-      font-weight: 600 !important;
-      font-size: 21px !important;
+      font-weight: 800 !important;
+      font-size: 23px !important;
       margin-bottom: 25px !important;
     }
     p {
@@ -285,8 +286,8 @@ $HUMM_DARK_GRAY: #333;
     margin-bottom: 0;
     h3 {
       font-family: "proxima-nova", sans-serif !important;
-      font-weight: 600 !important;
-      font-size: 21px !important;
+      font-weight: 800 !important;
+      font-size: 23px !important;
       margin-bottom: 25px !important;
     }
     p {
@@ -300,6 +301,10 @@ $HUMM_DARK_GRAY: #333;
       font-family: "proxima-nova", sans-serif !important;
       margin-bottom: 50px !important;
       padding-left: 1.2em !important;
+      li {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+      }
     }
   }
 
@@ -341,11 +346,11 @@ $HUMM_DARK_GRAY: #333;
     img {
       all: unset;
       height: 20px !important;
-      vertical-align: middle !important;
+      vertical-align: bottom !important;
     }
     .humm-fine-print {
       font-family: "proxima-nova", sans-serif !important;
-      font-size: 9px;
+      font-size: 11px;
       text-indent: -2.5em;
       line-height: 1.6;
     }

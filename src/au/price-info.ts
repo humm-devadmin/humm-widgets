@@ -168,7 +168,7 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
         max = 2000;
     }
     if (productPrice > max) {
-        return '<a id="humm-tag-02" class="humm-price-info-widget"></a>';
+        return '<a class="humm-price-info-widget"></a>';
     } else {
         if (type == 'bigThings') {
             main_html = 'Pay in slices. No interest ever.';
