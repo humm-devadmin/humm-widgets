@@ -1,4 +1,4 @@
-﻿import * as jq from 'jquery';
+import * as jq from 'jquery';
 import {ModalInjector} from './modal-injector';
 import {Config} from './config';
 
@@ -18,7 +18,7 @@ let widget;
     /* Choose if we want to render the Humm Logo or not */
     let noLogo: boolean;
 
-    /* Choose if we want to monitor price change ever second */
+    /* Choose if we want to monitor price change every second */
     let monitor: boolean;
 
     /* You can pass debug=true to the query string to enable console error messages */
@@ -102,7 +102,7 @@ let widget;
         widget.injectBanner(template, widgetUrl, widgetId, element);
 
     } else {
-        // we haven't been passed a URL, try to get the css selector for
+        // we haven't been passed a price in URL, try to get the css selector for price element
         let selector = getParameterByName('price-selector', srcString);
         if (!selector) {
             logDebug("Can't locate an element with selector :  " + selector);
@@ -173,7 +173,7 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
         if (type == 'bigThings') {
             main_html = 'Pay in slices. No interest ever.';
         } else {
-            if (productPrice < min) {
+            if (productPrice < min || productPrice == 0) {
                 main_html = 'with 5 fortnightly payments';
             } else if ((productPrice <= 1000 && productPrice <= max)) {
                 main_html = 'with 5 fortnightly payments';
