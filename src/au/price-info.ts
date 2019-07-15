@@ -173,7 +173,7 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
         if (type == 'bigThings') {
             main_html = 'Pay in slices. No interest ever.';
         } else {
-            if (productPrice < min) {
+            if (productPrice < min || productPrice == 0) {
                 main_html = 'with 5 fortnightly payments';
             } else if ((productPrice <= 1000 && productPrice <= max)) {
                 main_html = 'with 5 fortnightly payments';
