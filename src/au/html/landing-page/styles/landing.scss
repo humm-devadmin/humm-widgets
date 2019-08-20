@@ -24,6 +24,10 @@ $HUMM_DARK_GRAY: #333;
   background-color: #FFF;
   text-align: left;
 
+  .store-icons {
+    text-align: center;
+  }
+
   h1, h2, h3, h4, h5, h6, .humm-title {
     font-family: "proxima-nova", sans-serif !important;
     letter-spacing: -0.03em;
@@ -145,6 +149,7 @@ $HUMM_DARK_GRAY: #333;
       }
     }
   }
+
 
   .humm-little-big {
     padding: 19px;
