@@ -14,6 +14,7 @@ module.exports = {
         "au/content/scripts/landing-page-little-online": "./src/au/landing-page-little-online.ts",
         "au/content/scripts/landing-page-little-instore": "./src/au/landing-page-little-instore.ts",
         "au/content/scripts/landing-page-big-online": "./src/au/landing-page-big-online.ts",
+        "au/content/scripts/landing-page-big-instore": "./src/au/landing-page-big-instore.ts",
         "au/content/scripts/top-banner": "./src/au/more-info-small-slices.ts"
     },
 
