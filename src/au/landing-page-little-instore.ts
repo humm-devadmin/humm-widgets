@@ -25,6 +25,6 @@ class PageInjector {
 
 (($: JQueryStatic) => {
     const widget = new PageInjector($);
-    const htmlLink = Config.baseContentUrl + "/content/html/landing-page/landing-page-content-little-online.html";
-    widget.injectPage(htmlLink, "#humm-landing-page-little-online");
+    const htmlLink = Config.baseContentUrl + "/content/html/landing-page/landing-page-content-little-instore.html";
+    widget.injectPage(htmlLink, "#humm-landing-page-little-instore");
 })(jq);
