@@ -177,9 +177,9 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
                 main_html = 'with 5 fortnightly payments';
             } else if ((productPrice <= 1000 && productPrice <= max)) {
                 main_html = 'with 5 fortnightly payments';
-                let productPriceDividedByFour = productPrice / 5;
+                let productPriceDividedByFive = productPrice / 5;
                 // Banking Rounding
-                let roundedDownProductPrice = Math.floor(productPriceDividedByFour * Math.pow(10, 2)) / Math.pow(10, 2);
+                let roundedDownProductPrice = Math.floor(productPriceDividedByFive * Math.pow(10, 2)) / Math.pow(10, 2);
                 price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
             } else if (productPrice <= max) {
                 main_html = 'Pay in slices. No interest ever.';
