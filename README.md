@@ -92,3 +92,6 @@ sass -s compressed css/humm-branding.scss:css/humm-branding.css
 <script id="humm-landing-page" src="https://s3-ap-southeast-2.amazonaws.com/widgets.shophumm.com.au/content/scripts/landing-page.js"></script></pre>
 
 ```
+### Special instructions for testing landing pages locally
+1. Follow the general local test instructions.
+2. Different from the other widget, the landing page widgets are inserted into web pages without an iframe. Therefore, all addresses in the landing pages content html have to be absolute URLs instead of relative ones. Please keep this in mind and make your own decision whether you need to temporarilly change all absolute URLs (images etc) to you local addresses or not.
