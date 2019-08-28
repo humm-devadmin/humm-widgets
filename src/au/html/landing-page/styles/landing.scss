@@ -267,6 +267,44 @@ $HUMM_DARK_GRAY: #333;
     }
   }
 
+  .humm-break-down {
+    padding-left: 20px;
+    padding-right: 20px;
+    .humm-title {
+      font-family: "proxima-nova", sans-serif !important;
+      font-weight: 900 !important;
+      padding-top: 25px !important;
+      padding-bottom: 25px !important;
+      font-size: 38px !important;
+      border-top: 0.5px $HUMM_ORANGE solid;
+      border-bottom: 1.5px $HUMM_ORANGE solid;
+    }
+    table.humm-break-down-table{
+      width: 100%;
+      border-spacing: 0;
+      tr {
+        th {
+          text-align: left;
+          border-bottom: 1px $HUMM_DARK_GRAY solid;
+          font-family: "proxima-nova",sans-serif !important;
+          font-weight: 800 !important;
+          font-size: 18px !important;
+        }
+        td {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          text-align: center;
+          border-bottom: 1px $HUMM_DARK_GRAY solid;
+        }
+      }
+      tr:last-child{
+        th, td {
+          border-bottom: 1.5px $HUMM_ORANGE solid;
+        }
+      }
+    }
+  }
+
   .humm-intro {
     margin-top: 3.3em;
     margin-bottom: 2.5em;
