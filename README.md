@@ -65,7 +65,8 @@ Note: All of the views for widgets are located at main Humm Website
 | monitor | refresh the price widget every 1 second | &monitor |
 | debug | output debug message | \<script src='...' debug\> |
 | used_in | | |
-| element | select the html element that contains the price | &element=.price_class / &element=%23price_id |
+| price-selector | select the html element that contains the price | &price-selector=.price_class / &price-selector=%23price_id |
+| element | select the html element the widget body inserts to | &element=%23humm_price_widget_target |
 | min/max | price < min: show "Pay in slices"; price > max: hide | \<script src='...' data-min='100' data-max='10000'\> |
 | BigThings/LittleThings | for merchants who only signed up with BigThings or LittleThings | &BigThings / &LittleThings |
 
