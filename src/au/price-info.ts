@@ -88,19 +88,7 @@ let widget;
         // just render the widget
         // because we have been provided the price we can't bind to events on 
         // the element containing the price. We just inject the template
-        let widgetUrl = productPrice <= 2000 ? Config.priceInfoUrl : Config.priceInfoMoreUrl;
-        let widgetId = productPrice <= 2000 ? Config.priceInfoModalId : Config.priceInfoMoreModalId;
-        if (type == 'bigThings') {
-            widgetUrl = Config.priceInfoMoreUrl;
-            widgetId = Config.priceInfoMoreModalId;
-        }
-        if (type == 'littleThings') {
-            widgetUrl = Config.priceInfoUrl;
-            widgetId = Config.priceInfoModalId;
-        }
-        const template: string = generateWidget(productPrice, noLogo, min, max, used_in, widgetId, type);
-        widget.injectBanner(template, widgetUrl, widgetId, element);
-
+        insert(productPrice, element, noLogo, min, max, used_in, type);
     } else {
         // we haven't been passed a price in URL, try to get the css selector for price element
         let selector = getParameterByName('price-selector', srcString);
@@ -115,18 +103,7 @@ let widget;
             productPrice = extractPrice(el);
 
             if (productPrice) {
-                let widgetUrl = productPrice <= 2000 ? Config.priceInfoUrl : Config.priceInfoMoreUrl;
-                let widgetId = productPrice <= 2000 ? Config.priceInfoModalId : Config.priceInfoMoreModalId;
-                if (type == 'bigThings') {
-                    widgetUrl = Config.priceInfoMoreUrl;
-                    widgetId = Config.priceInfoMoreModalId;
-                }
-                if (type == 'littleThings') {
-                    widgetUrl = Config.priceInfoUrl;
-                    widgetId = Config.priceInfoModalId;
-                }
-                const template: string = generateWidget(productPrice, noLogo, min, max, used_in, widgetId, type);
-                widget.injectBanner(template, widgetUrl, widgetId, element);
+                insert(productPrice, element, noLogo, min, max, used_in, type);
             }
 
             // register event handler to update the price
@@ -200,7 +177,6 @@ function generateWidget(productPrice: number, noLogo: boolean, min: number, max:
 }
 
 function getCurrentScript(): any {
-
     return document.currentScript || (function () {
         const scripts = document.getElementsByTagName('script');
         return scripts[scripts.length - 1];
@@ -210,10 +186,8 @@ function getCurrentScript(): any {
 function updatePrice(el: JQuery, jq: JQueryStatic, noLogo: boolean, min: number, max: number, used_in: string, type: string) {
     let productPrice = extractPrice(el);
     let parent = jq(getCurrentScript()).parent();
-    let widgetUrl = productPrice <= 2000 ? Config.priceInfoUrl : Config.priceInfoMoreUrl;
-    let widgetId = productPrice <= 2000 ? Config.priceInfoModalId : Config.priceInfoMoreModalId;
-    let template = generateWidget(productPrice, noLogo, min, max, used_in, widgetId, type);
-    widget.injectBanner(template, widgetUrl, widgetId, parent);
+
+    insert(productPrice, parent, noLogo, min, max, used_in, type);
 }
 
 function getParameterByName(name: string, url: string): string {
@@ -229,4 +203,19 @@ function getParameterByName(name: string, url: string): string {
     }
 
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+function insert(productPrice: number, element: JQuery, noLogo: boolean, min: number, max: number, used_in: string, type: string){
+    let widgetUrl = productPrice <= 2000 ? Config.priceInfoUrl : Config.priceInfoMoreUrl;
+    let widgetId = productPrice <= 2000 ? Config.priceInfoModalId : Config.priceInfoMoreModalId;
+    if (type == 'bigThings') {
+        widgetUrl = Config.priceInfoMoreUrl;
+        widgetId = Config.priceInfoMoreModalId;
+    }
+    if (type == 'littleThings') {
+        widgetUrl = Config.priceInfoUrl;
+        widgetId = Config.priceInfoModalId;
+    }
+    let template = generateWidget(productPrice, noLogo, min, max, used_in, widgetId, type);
+    widget.injectBanner(template, widgetUrl, widgetId, element);
 }
