@@ -2,8 +2,9 @@ import * as jq from 'jquery';
 import { ModalInjector } from './modal-injector';
 import { Config } from './config';
 
-(($: JQueryStatic) => {
+let hummCurrentScript = document.currentScript;
 
+jq(document).ready( ($: JQueryStatic) => {
     /**
      * The src attribute from the script we are executing e.g
      * <script src="http://widgets.shophumm.com.au/scripts/price-info.js?foo"
@@ -170,7 +171,7 @@ import { Config } from './config';
     }
 
     function getCurrentScript(): any {
-        return document.currentScript || (function() {
+        return hummCurrentScript || (function() {
             const scripts = document.getElementsByTagName('script');
             return scripts[scripts.length - 1];
         })();
@@ -218,5 +219,4 @@ import { Config } from './config';
             console.log(msg);
         }
     }
-})(jq);
-
+});
