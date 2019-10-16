@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+    </style>
+    <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;border-color:#aabcfe;}
+        .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#669;background-color:#e8edff;}
+        .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#039;background-color:#b9c9fe;}
+        .tg .tg-phtq{background-color:#D2E4FC;border-color:inherit;vertical-align:top}
+        .tg .tg-ydyv{background-color:#D2E4FC;border-color:inherit;vertical-align:top}
+        .tg .tg-0pky{border-color:inherit;vertical-align:top}
+        .tg .tg-dvpl{border-color:inherit;vertical-align:top}
+    </style>
+    <title>Test Template</title>
+</head>
+<body>
+<!--<script src="dist/nz/content/scripts/price-info.js?productPrice=30&LittleThings"></script>-->
+Little Things
+<table class="tg">
+    <tr>
+        <th class="tg-0pky">< 20 (productPrice=<strong>2</strong>)</th>
+        <th class="tg-0pky">20 - 1000 (productPrice=<strong>200</strong>)</th>
+        <th class="tg-0pky">> 1000 (productPrice=<strong>4500</strong>)</th>
+    </tr>
+    <tr>
+        <td class="tg-0pky">
+            <script src="dist/nz/content/scripts/price-info.js?productPrice=2&LittleThings"></script>
+        </td>
+        <td class="tg-0pky">
+            5F
+            <script src="dist/nz/content/scripts/price-info.js?productPrice=200&LittleThings&little=F5"></script>
+            10W
+            <script src="dist/nz/content/scripts/price-info.js?productPrice=200&LittleThings&little=W10"></script>
+        </td>
+        <td class="tg-dvpl">
+            <script src="dist/nz/content/scripts/price-info.js?productPrice=4500&LittleThings"></script>
+        </td>
+    </tr>
+</table>
+<br>
+Big Things
+<table class="tg">
+    <tr>
+        <th class="tg-0pky">< 80 (productPrice=<strong>2</strong>)</th>
+        <th class="tg-0pky">80 - 10k (productPrice=<strong>4500</strong>)</th>
+        <th class="tg-0pky">> 10k (productPrice=<strong>12000</strong>)</th>
+    </tr>
+    <tr>
+        <td class="tg-phtq">
+            <script src="dist/nz/content/scripts/price-info.js?productPrice=2"></script>
+        </td>
+        <td class="tg-ydyv">
+            6M
+            <script src="dist/nz/content/scripts/price-info.js?&productPrice=4500&big=M6"></script>
+            9M
+            <script src="dist/nz/content/scripts/price-info.js?&productPrice=4500&big=M9"></script>
+            12M
+            <script src="dist/nz/content/scripts/price-info.js?&productPrice=4500&big=M12"></script>
+            18M
+            <script src="dist/nz/content/scripts/price-info.js?&productPrice=4500&big=M18"></script>
+            24M
+            <script src="dist/nz/content/scripts/price-info.js?&productPrice=4500&big=M24"></script>
+        </td>
+        <td class="tg-ydyv">
+            <script src="dist/nz/content/scripts/price-info.js?&productPrice=12000&big=M6"></script>
+        </td>
+    </tr>
+</table>
+
+<hr>
+
+<!--<table class="tg">-->
+<!--    <tr>-->
+<!--        <th class="tg-0pky"><strong>Dynamic</strong></th>-->
+<!--        <th class="tg-0pky">-->
+<!--            <label>-->
+<!--                <strong id="blar" class="woocommerce-Price-amount amount">-->
+<!--                    <span class="woocommerce-Price-currencySymbol">$</span>-->
+<!--                    <span id="priceinfo">200</span>-->
+<!--                </strong>-->
+<!--                <select name="cars" onchange="priceChanged(value)">-->
+<!--                    <option value="200">200</option>-->
+<!--                    <option value="800">800</option>-->
+<!--                    <option value="1500">1500</option>-->
+<!--                    <option value="4500">4500</option>-->
+<!--                </select>-->
+<!--            </label>-->
+<!--        </th>-->
+<!--    </tr>-->
+
+<!--&lt;!&ndash;    <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td class="tg-phtq">normal</td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td class="tg-phtq">&ndash;&gt;-->
+<!--&lt;!&ndash;            default, price-selector=%23priceinfo&ndash;&gt;-->
+<!--&lt;!&ndash;            <script id="xx" src="dist/nz/content/scripts/price-info.js?price-selector=%23priceinfo"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;        </td>&ndash;&gt;-->
+<!--&lt;!&ndash;    </tr>&ndash;&gt;-->
+
+<!--    <tr>-->
+<!--        <td class="tg-0pky">BigThings</td>-->
+<!--        <td class="tg-0pky">-->
+<!--            BigThings, price-selector=%23priceinfo-->
+<!--            <script id="yy" src="dist/nz/content/scripts/price-info.js?price-selector=%23priceinfo&BigThings"></script>-->
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--&lt;!&ndash;    <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td class="tg-phtq">LittleThings</td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td class="tg-phtq">&ndash;&gt;-->
+<!--&lt;!&ndash;            LittleThings, price-selector=%23priceinfo&ndash;&gt;-->
+<!--&lt;!&ndash;            <script id="zz" src="dist/nz/content/scripts/price-info.js?price-selector=%23priceinfo&LittleThings"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;        </td>&ndash;&gt;-->
+<!--&lt;!&ndash;    </tr>&ndash;&gt;-->
+
+<!--</table>-->
+
+<script class="foo">
+    function priceChanged(value){
+        $("#priceinfo").html(value);
+    }
+    window.setTimeout(function() {
+        // update price
+        var foo = $("#blar");
+
+        var children = foo.contents().filter(function(){
+            return (this.nodeType == 3);
+        });
+
+        children.each(function(){
+            var txtVal = $(this).text().trim();
+            if (txtVal) {
+                this.data = '401.00';
+            } else {
+                console.log("Text should be empty : " + txtVal);
+            }
+        });
+
+        console.log("Price updated ");
+    }, 8000);
+
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+</body>
+</html>

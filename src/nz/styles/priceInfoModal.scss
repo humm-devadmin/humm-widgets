@@ -1,0 +1,143 @@
+// proxima-nova font
+@import url("https://use.typekit.net/plq2clw.css");
+
+$HUMM_ORANGE: #FF6C00;
+$HUMM_GRAY: #666666;
+$HUMM_LIGHT_GRAY: #999999;
+$HUMM_DARK_GRAY: #333333;
+
+body {
+    margin: 0;
+    font-size: 17px;
+    color: $HUMM_GRAY;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.humm-price-info-modal {
+    font-family: "proxima-nova", sans-serif;
+    line-height: 1.3;
+    background: white;
+    overflow: visible;
+    overflow-x: hidden;
+    top: 5vh !important;
+    margin: 0 auto;
+    padding: 30px 20px 10px;
+
+    .header {
+        text-align: center;
+        font-weight: 800;
+        margin: 0 auto 20px;
+
+        .title {
+            font-size: 49px;
+            color: $HUMM_ORANGE;
+            letter-spacing: -1px;
+            margin-bottom: -3px;
+        }
+    }
+
+    .main {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 0 auto;
+        max-width: 35rem;
+
+        .card {
+            text-align: center;
+            padding: 2.5rem 0;
+            margin: 0 auto;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+
+            .title {
+                color: $HUMM_ORANGE;
+                font-size: 22px;
+                font-weight: 800;
+                letter-spacing: -0.5px;
+            }
+
+            img {
+                width: 65%;
+                margin-bottom: 15px;
+            }
+
+            .content {
+                max-width: 160px;
+                margin: 0 auto;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .footer {
+        margin: 10px auto;
+        text-align: center;
+
+        img {
+            max-width: 180px;
+            margin: 20px auto;
+        }
+
+        .fine-print {
+            img {
+                height: 14px;
+                vertical-align: bottom;
+                margin: 0 6px 0 0;
+            }
+            font-size: 0.55rem;
+        }
+    }
+}
+
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.text-humm {
+    color: $HUMM_ORANGE;
+    font-weight: 800;
+}
+
+@media (max-width: 500px) {
+    .humm-price-info-modal {
+        .header {
+            max-width: 300px;
+        }
+
+        .main {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+            flex-flow: column;
+            max-width: 300px;
+
+            .card {
+                max-width: 250px;
+                padding-top: 1rem;
+                padding-bottom: 0.5rem;
+
+                img {
+                    width: 50%;
+                }
+            }
+        }
+
+        .footer {
+            margin-top: 20px;
+            max-width: 280px;
+        }
+    }
+}
