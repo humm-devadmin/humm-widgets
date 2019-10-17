@@ -2,9 +2,8 @@ import * as jq from 'jquery';
 import { ModalInjector } from './modal-injector';
 import { Config } from './config';
 
-let hummCurrentScript = document.currentScript;
+(($: JQueryStatic) => {
 
-jq(document).ready( ($: JQueryStatic) => {
     /**
      * The src attribute from the script we are executing e.g
      * <script src="http://widgets.shophumm.com.au/scripts/price-info.js?foo"
@@ -171,7 +170,7 @@ jq(document).ready( ($: JQueryStatic) => {
     }
 
     function getCurrentScript(): any {
-        return hummCurrentScript || (function() {
+        return document.currentScript || (function() {
             const scripts = document.getElementsByTagName('script');
             return scripts[scripts.length - 1];
         })();
@@ -219,4 +218,5 @@ jq(document).ready( ($: JQueryStatic) => {
             console.log(msg);
         }
     }
-});
+})(jq);
+
