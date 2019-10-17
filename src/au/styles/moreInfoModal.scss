@@ -155,16 +155,6 @@ body {
             }
         }
     }
-
-    .modal_close {
-        text-align: center;
-        text-transform: uppercase;
-        color: $HUMM_ORANGE;
-        max-width: 200px;
-        margin: 10px auto 0;
-        display: block;
-        padding: 10px;
-    }
 }
 
 .clearfix:after {
@@ -178,6 +168,12 @@ body {
 .text-humm {
     color: $HUMM_ORANGE;
     font-weight: 800;
+}
+
+.small-number {
+    font-size: 0.6em;
+    vertical-align: top;
+    padding-left: 0.2em;
 }
 
 @media (max-width: 500px) {
@@ -201,10 +197,4 @@ body {
             max-width: 280px;
         }
     }
-}
-
-.small-number {
-    font-size: 0.6em;
-    vertical-align: top;
-    padding-left: 0.2em;
 }
