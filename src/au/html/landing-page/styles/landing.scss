@@ -41,7 +41,7 @@ $HUMM_DARK_GRAY: #333;
     height: 600px;
     color: #FFF;
     position: relative;
-    z-index: 100;
+    z-index: 9;
     width: 100%;
     max-width: 1600px;
     text-align: left;
@@ -313,6 +313,7 @@ $HUMM_DARK_GRAY: #333;
       font-weight: 800 !important;
       font-size: 23px !important;
       margin-bottom: 25px !important;
+      color: $HUMM_DARK_GRAY;
     }
     p {
       all: unset;
@@ -331,6 +332,7 @@ $HUMM_DARK_GRAY: #333;
       font-weight: 800 !important;
       font-size: 23px !important;
       margin-bottom: 25px !important;
+      color: $HUMM_DARK_GRAY;
     }
     p {
       all: unset;
