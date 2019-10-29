@@ -1,17 +1,16 @@
 ///<reference path="../../typings/jquery/jquery.d.ts"/>
 
 import * as jq from 'jquery';
+import { Config } from "./config";
 
 export class PageInjector {
-    constructor(private jQuery: JQueryStatic) {
-    }
-
-    public injectPage(targetUrl: string, element?: JQuery) {
-
-        this.jQuery.ajax({
+    public static inject(url: string) {
+        const htmlLink = Config.baseContentUrl + url;
+        const element = jq(document.currentScript);
+        jq.ajax({
             dataType: "html",
-            url: targetUrl,
-            success: function (data) {
+            url: htmlLink,
+            success: function(data) {
                 if (element) {
                     element.after(data);
                 } else {
