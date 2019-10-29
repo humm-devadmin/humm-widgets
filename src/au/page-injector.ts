@@ -6,14 +6,14 @@ export class PageInjector {
     constructor(private jQuery: JQueryStatic) {
     }
 
-    public injectPage(targetUrl: string, element?: any) {
+    public injectPage(targetUrl: string, element?: JQuery) {
 
         this.jQuery.ajax({
             dataType: "html",
             url: targetUrl,
             success: function (data) {
                 if (element) {
-                    jq(element).after(data);
+                    element.after(data);
                 } else {
                     jq("body").append(data);
                 }
