@@ -20,7 +20,7 @@ export class Config {
 
     // more-info modal
     public static moreInfoModalId = 'humm-more-info-modal';
-    public static moreInfoUrlNew = Config.baseContentUrl + '/content/htofml/moreInfoModal.html';
+    public static moreInfoUrlNew = Config.baseContentUrl + '/content/html/moreInfoModal.html';
 
     // top-banner modal
     public static hummBannerTopModalId = Config.moreInfoModalId;

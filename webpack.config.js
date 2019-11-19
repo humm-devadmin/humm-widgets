@@ -18,11 +18,11 @@ module.exports = {
         "au/content/scripts/landing-page-little-big-online": "./src/au/landing-page-little-big-online.ts",
         "au/content/scripts/top-banner": "./src/au/more-info-small-slices.ts",
 
-        // "nz/content/scripts/more-info-large": "./src/nz/more-info-large.ts",
-        // "nz/content/scripts/more-info-large-slices": "./src/nz/more-info-large-slices.ts",
-        // "nz/content/scripts/more-info-small": "./src/nz/more-info-small.ts",
-        // "nz/content/scripts/more-info-small-slices": "./src/nz/more-info-small-slices.ts",
-        // "nz/content/scripts/more-info-mini": "./src/nz/more-info-mini.ts",
+        "nz/content/scripts/more-info-large": "./src/nz/more-info-large.ts",
+        "nz/content/scripts/more-info-large-slices": "./src/nz/more-info-large-slices.ts",
+        "nz/content/scripts/more-info-small": "./src/nz/more-info-small.ts",
+        "nz/content/scripts/more-info-small-slices": "./src/nz/more-info-small-slices.ts",
+        "nz/content/scripts/more-info-mini": "./src/nz/more-info-mini.ts",
         "nz/content/scripts/price-info": "./src/nz/price-info.ts",
         // "nz/content/scripts/landing-page": "./src/nz/landing-page.ts",
         // "nz/content/scripts/top-banner": "./src/nz/more-info-small-slices.ts"
