@@ -15,7 +15,7 @@ import {Config} from './config';
                         <div class="humm-tandc">Lending criteria, fees, T&C's apply. See shophumm.co.nz</div>
                     </div>
                 </div>
-                <div class="humm-logo">
+                <div class="humm-logo humm-nz">
                     <img alt="Humm" src="${Config.baseContentUrl}/content/images/bird-humm.svg" />
                 </div>
             </div>
