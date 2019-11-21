@@ -117,7 +117,20 @@
                 position: absolute !important;
                 right: 10px !important;
                 bottom: 10px !important;
+            }
+        }
+
+        .humm-logo.humm-nz {
+            -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+            height: 65px !important;
+
+            img {
                 height: 65px !important;
+                position: absolute !important;
+                right: 10px !important;
+                bottom: auto !important;
             }
         }
     }
