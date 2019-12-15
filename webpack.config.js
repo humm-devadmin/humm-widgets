@@ -28,7 +28,16 @@ module.exports = {
         "nz/content/scripts/more-info-small-slices": "./src/nz/more-info-small-slices.ts",
         "nz/content/scripts/more-info-mini": "./src/nz/more-info-mini.ts",
         "nz/content/scripts/price-info": "./src/nz/price-info.ts",
+
         // "nz/content/scripts/landing-page": "./src/nz/landing-page.ts",
+        "nz/content/scripts/landing-page-little-online": "./src/nz/landing-page-little-online.ts",
+        "nz/content/scripts/landing-page-little-instore": "./src/nz/landing-page-little-instore.ts",
+        "nz/content/scripts/landing-page-big-online": "./src/nz/landing-page-big-online.ts",
+        "nz/content/scripts/landing-page-big-instore": "./src/nz/landing-page-big-instore.ts",
+        "nz/content/scripts/landing-page-little-big-online": "./src/nz/landing-page-little-big-online.ts",
+        "nz/content/scripts/landing-page-little-big-instore": "./src/nz/landing-page-little-big-instore.ts",
+        "nz/content/scripts/landing-page-little-big-instore-online": "./src/nz/landing-page-little-big-instore-online.ts",
+
         // "nz/content/scripts/top-banner": "./src/nz/more-info-small-slices.ts"
     },
 
