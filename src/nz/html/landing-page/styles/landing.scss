@@ -237,12 +237,12 @@ $HUMM_DARK_GRAY: #333;
       font-family: "proxima-nova", sans-serif !important;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      padding: 20px 0;
+      padding: 25px 0;
 
       img {
         all: unset;
-        height: 60px !important;
-        margin-bottom: 12px !important;
+        height: 55px !important;
+        margin-bottom: 10px !important;
       }
 
       .humm-title {
@@ -250,11 +250,12 @@ $HUMM_DARK_GRAY: #333;
         max-width: 160px;
         margin: 0 auto;
         white-space: nowrap;
-        font-size: 21px;
+        font-size: 22px;
         font-weight: 800;
       }
       .humm-small {
         font-family: "proxima-nova", sans-serif !important;
+        font-size: 0.85em;
         max-width: 11em;
         margin: 10px auto 0;
       }
@@ -273,36 +274,43 @@ $HUMM_DARK_GRAY: #333;
   .humm-break-down {
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 30px;
     .humm-title {
       font-family: "proxima-nova", sans-serif !important;
       font-weight: 900 !important;
-      padding-top: 25px !important;
-      padding-bottom: 25px !important;
+      padding-top: 30px !important;
+      padding-bottom: 30px !important;
       font-size: 38px !important;
-      border-top: 0.5px $HUMM_ORANGE solid;
-      border-bottom: 1.5px $HUMM_ORANGE solid;
+      border-top: 1px $HUMM_ORANGE solid;
+      border-bottom: 1px $HUMM_ORANGE solid;
     }
     table.humm-break-down-table{
       width: 100%;
       border-spacing: 0;
+      margin-bottom: 1em;
+      font-size: 18px;
+      .humm-small {
+        font-size: 0.75em;
+      }
       tr {
         th {
           text-align: left;
-          border-bottom: 1px $HUMM_DARK_GRAY solid;
+          vertical-align: center !important;
+          border-bottom: 1px #888 solid;
           font-family: "proxima-nova",sans-serif !important;
           font-weight: 800 !important;
-          font-size: 18px !important;
         }
         td {
-          padding-top: 20px;
-          padding-bottom: 20px;
+          padding-top: 25px;
+          padding-bottom: 25px;
           text-align: center;
-          border-bottom: 1px $HUMM_DARK_GRAY solid;
+          vertical-align: center !important;
+          border-bottom: 1px #888 solid;
         }
       }
       tr:last-child{
         th, td {
-          border-bottom: 1.5px $HUMM_ORANGE solid;
+          border-bottom: 1px $HUMM_ORANGE solid;
         }
       }
     }
@@ -342,7 +350,7 @@ $HUMM_DARK_GRAY: #333;
       font-family: "proxima-nova", sans-serif !important;
       display: block;
       font-size: 16px !important;
-      margin-bottom: 50px !important;
+      margin-bottom: 1.6em !important;
     }
     ul {
       font-family: "proxima-nova", sans-serif !important;
@@ -384,6 +392,10 @@ $HUMM_DARK_GRAY: #333;
     display: block;
     margin-right: auto !important;
     margin-left: auto !important;
+  }
+
+  .humm-extra-bold {
+    font-weight: 800 !important;
   }
 
   .humm-footer {
