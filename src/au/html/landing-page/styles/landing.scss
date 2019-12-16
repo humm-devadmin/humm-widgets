@@ -295,6 +295,7 @@ $HUMM_DARK_GRAY: #333;
       tr {
         th {
           text-align: left;
+          vertical-align: center !important;
           border-bottom: 1px #888 solid;
           font-family: "proxima-nova",sans-serif !important;
           font-weight: 800 !important;
@@ -303,6 +304,7 @@ $HUMM_DARK_GRAY: #333;
           padding-top: 25px;
           padding-bottom: 25px;
           text-align: center;
+          vertical-align: center !important;
           border-bottom: 1px #888 solid;
         }
       }
