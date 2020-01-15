@@ -59,7 +59,7 @@ The script will bring in all of its CSS and dependencies, and register the butto
 Guide: Installation guide is located at [http://docs.shophumm.com.au/](http://docs.shophumm.com.au/)
 Note: All of the views for widgets are located at main Humm Website
 
-#### parameters for the price-info widget
+#### parameters for the price-info widget (AU)
 | parameter | meaning  | usage |
 |-----------|--------| --- |
 | monitor | refresh the price widget every 1 second | &monitor |
@@ -70,6 +70,19 @@ Note: All of the views for widgets are located at main Humm Website
 | min/max | price < min: show "Pay in slices"; price > max: hide | \<script src='...' data-min='100' data-max='10000'\> |
 | BigThings/LittleThings | for merchants who only signed up with BigThings or LittleThings | &BigThings / &LittleThings |
 
+#### parameters for the price-info widget (NZ)
+| parameter | meaning  | usage |
+|-----------|--------| --- |
+| monitor | refresh the price widget every 1 second | &monitor |
+| debug | output debug message | \<script src='...' debug\> |
+| used_in | | |
+| price-selector | select the html element that contains the price | &price-selector=.price_class / &price-selector=%23price_id |
+| element | select the html element the widget body inserts to | &element=%23humm_price_widget_target |
+| min/max | price < min: show "Pay in slices"; price > max: hide | \<script src='...' data-min='100' data-max='10000'\> |
+| big | payments schedule for BigThings (6/9/12/18/24 months) | &big=m6 / &big=m9 / &big=m12 / &big=m18 / &big=m24 |
+| little | payments schedule for LittleThings (5 fortnightly / 10 weekly) | &little=f5 / &little=w10 |
+##### NZ Oxipay -> humm switch behaviour
+When old oxipay widgets be redirected to shophumm domains, the new humm NZ price-info will be requested without big or little parameters. We are taking care of this situation by falling back to little=f5 so the behaviour will be similar to that of the Oxipay widget.
 
 ### Local Test:
 To switch between local testing and online deployment, you will make changes in /src/au/config.ts:
@@ -91,7 +104,6 @@ sass -s compressed css/humm-branding.scss:css/humm-branding.css
 2. Paste the following code to the created page:  
 ```html
 <script id="humm-landing-page" src="https://s3-ap-southeast-2.amazonaws.com/widgets.shophumm.com.au/content/scripts/landing-page.js"></script></pre>
-
 ```
 ### Special instructions for testing landing pages locally
 1. Follow the general local test instructions.

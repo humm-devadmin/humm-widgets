@@ -42,18 +42,18 @@ import { Config } from './config';
 
     // widget type in price range
     enum LittleThingOptions {
-        F5,
-        W10
+        f5,
+        w10
     }
 
     let littleThingChoice: LittleThingOptions;
 
     enum BigThingOptions {
-        M6 = 6,
-        M9 = 9,
-        M12 = 12,
-        M18 = 18,
-        M24 = 24
+        m6 = 6,
+        m9 = 9,
+        m12 = 12,
+        m18 = 18,
+        m24 = 24
     }
 
     let bigThingChoice: BigThingOptions;
@@ -84,15 +84,16 @@ import { Config } from './config';
     used_in = (getParameterByName('used_in', srcString));
     element = (getParameterByName('element', srcString)) ? jq(getParameterByName('element', srcString)) : jq(scriptElement);
 
-    let littleThings = (getParameterByName('LittleThings', srcString) !== null || getParameterByName('LittleOnly', srcString) !== null);
+    littleThingChoice = LittleThingOptions[getParameterByName('little', srcString) ? getParameterByName('little', srcString).toLowerCase() : null];
+    bigThingChoice = BigThingOptions[getParameterByName('big', srcString) ? getParameterByName('big', srcString).toLowerCase() : null];
 
-    littleThingChoice = LittleThingOptions[getParameterByName('little', srcString)];
-    bigThingChoice = BigThingOptions[getParameterByName('big', srcString)];
-
-    if (littleThings) {
-        type = Type.littleThings;
-    } else {
+    if (bigThingChoice) {
         type = Type.bigThings;
+    } else {
+        type = Type.littleThings;
+        if (!littleThingChoice) {
+            littleThingChoice = LittleThingOptions.f5
+        }
     }
 
     let priceStr = getParameterByName('productPrice', srcString);
@@ -160,7 +161,7 @@ import { Config } from './config';
 
         if (type === Type.littleThings) {
             if ((productPrice <= 1000 && productPrice <= max)) {
-                if (littleThingChoice === LittleThingOptions.F5) {
+                if (littleThingChoice === LittleThingOptions.f5) {
                     main_html = 'with 5 fortnightly payments';
                     let productPriceDividedByFive = productPrice / 5;
                     // Banking Rounding
@@ -186,11 +187,11 @@ import { Config } from './config';
         } else {
             if (productPrice >= min && productPrice <= max) {
                 let instalmentsList = {
-                    "M6": 13,
-                    "M9": 19,
-                    "M12": 26,
-                    "M18": 39,
-                    "M24": 52
+                    "m6": 13,
+                    "m9": 19,
+                    "m12": 26,
+                    "m18": 39,
+                    "m24": 52
                 };
                 numberOfInstalments = instalmentsList[BigThingOptions[bigThingChoice]];
 
