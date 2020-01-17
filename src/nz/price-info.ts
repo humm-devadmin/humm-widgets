@@ -79,8 +79,6 @@ import { Config } from './config';
     noLogo = (getParameterByName('noLogo', srcString) !== null);
     monitor = (getParameterByName('monitor', srcString) !== null);
     debug = !!scriptElement.getAttribute('debug');
-    min = scriptElement.dataset.min > 20 ? scriptElement.dataset.min : 20;
-    max = scriptElement.dataset.max < 10000 ? scriptElement.dataset.max : 10000;
     used_in = (getParameterByName('used_in', srcString));
     element = (getParameterByName('element', srcString)) ? jq(getParameterByName('element', srcString)) : jq(scriptElement);
 
@@ -89,8 +87,12 @@ import { Config } from './config';
 
     if (bigThingChoice) {
         type = Type.bigThings;
+        min = scriptElement.dataset.min > 80 ? scriptElement.dataset.min : 80;
+        max = scriptElement.dataset.max < 10000 ? scriptElement.dataset.max : 10000;
     } else {
         type = Type.littleThings;
+        min = scriptElement.dataset.min > 20 ? scriptElement.dataset.min : 20;
+        max = scriptElement.dataset.max < 1000 ? scriptElement.dataset.max : 1000;
         if (!littleThingChoice) {
             littleThingChoice = LittleThingOptions.f5
         }
