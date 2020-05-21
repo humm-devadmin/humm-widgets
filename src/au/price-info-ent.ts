@@ -199,15 +199,16 @@ import { Config } from './config';
     }
 
     function insert() {
-        let widgetUrl = productPrice <= 2000 ? Config.priceInfoUrl : Config.priceInfoMoreUrl;
-        let widgetId = productPrice <= 2000 ? Config.priceInfoModalId : Config.priceInfoMoreModalId;
+        let widgetUrl = productPrice <= 2000 ? Config.priceInfoEntUrl : Config.priceInfoMoreUrl;
+        let widgetId = productPrice <= 2000 ? Config.priceInfoEntModalId : Config.priceInfoMoreModalId;
+
         if (type == Type.bigThings) {
             widgetUrl = Config.priceInfoMoreUrl;
             widgetId = Config.priceInfoMoreModalId;
         }
         if (type == Type.littleThings) {
-            widgetUrl = Config.priceInfoUrl;
-            widgetId = Config.priceInfoModalId;
+            widgetUrl = Config.priceInfoEntUrl;
+            widgetId = Config.priceInfoEntModalId;
         }
         let template = generateWidget(widgetId);
         widget.injectBanner(template, widgetUrl, widgetId, element);
