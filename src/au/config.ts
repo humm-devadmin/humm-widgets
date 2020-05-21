@@ -19,8 +19,8 @@ export class Config {
     public static priceInfoMoreUrl = Config.baseContentUrl + '/content/html/priceInfoMoreModal.html';
 
     //price-info-ent modal
-    public static priceInfoEntModalId = 'humm-price-info-ent-modal';
-    public static priceInfoEntUrl = config.baseContentUrl + '/content/html/priceInfoEnt.html';
+    public static priceInfoV2ModalId = 'humm-price-info-v2-modal';
+    public static priceInfoV2Url = config.baseContentUrl + '/content/html/priceInfoV2.html';
 
     // more-info modal
     public static moreInfoModalId = 'humm-more-info-modal';

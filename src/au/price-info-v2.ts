@@ -146,7 +146,7 @@ import { Config } from './config';
         } else {
             if (productPrice < min || productPrice == 0) {
                 main_html = 'or 5 payments';
-            } else if ((productPrice <= 1000 && productPrice <= max)) {
+            } else if ((productPrice <= 2000 && productPrice <= max)) {
                 main_html = 'or 5 payments';
                 let productPriceDividedByFive = productPrice / 5;
                 // Banking Rounding
@@ -199,16 +199,16 @@ import { Config } from './config';
     }
 
     function insert() {
-        let widgetUrl = productPrice <= 2000 ? Config.priceInfoEntUrl : Config.priceInfoMoreUrl;
-        let widgetId = productPrice <= 2000 ? Config.priceInfoEntModalId : Config.priceInfoMoreModalId;
+        let widgetUrl = productPrice <= 2000 ? Config.priceInfoV2Url : Config.priceInfoMoreUrl;
+        let widgetId = productPrice <= 2000 ? Config.priceInfoV2ModalId : Config.priceInfoMoreModalId;
 
         if (type == Type.bigThings) {
             widgetUrl = Config.priceInfoMoreUrl;
             widgetId = Config.priceInfoMoreModalId;
         }
         if (type == Type.littleThings) {
-            widgetUrl = Config.priceInfoEntUrl;
-            widgetId = Config.priceInfoEntModalId;
+            widgetUrl = Config.priceInfoV2Url;
+            widgetId = Config.priceInfoV2ModalId;
         }
         let template = generateWidget(widgetId);
         widget.injectBanner(template, widgetUrl, widgetId, element);
