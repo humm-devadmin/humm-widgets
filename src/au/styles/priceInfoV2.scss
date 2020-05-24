@@ -1,0 +1,183 @@
+/* =========== Humm price info modal CSS ============= */
+
+.humm-price-info-modal {
+    font-family: "proxima-nova", sans-serif;
+    line-height: 1.3;
+    background: white;
+    overflow: visible;
+    overflow-x: hidden;
+    top: 5vh !important;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-top: 20px;
+  
+    .header {
+        text-align: center;
+        font-weight: 800;
+        margin: 0 auto 20px;
+    }
+}
+
+.humm-header {
+    width: 40%; 
+}
+
+.flow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    max-width: 40rem; 
+  
+    .card {
+        text-align: center;
+        padding: 1.5rem 0;
+        margin: 0 auto;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        max-width: 30%;
+      
+        .arrow-img {
+            margin-top: 70px;
+            padding: 0;
+        }
+    }
+}
+
+.sub-title {
+    font-size: 30px;
+    letter-spacing: -1px;
+    margin-bottom: -3px;
+}
+
+.summary {
+    background-color: #F1F2EE;
+}
+
+.summary-content {
+    font-size: 16px;
+    margin-left: 15%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  
+    li {
+        list-style-type: disc;  
+    }
+}
+
+.flow {
+    background-color: #FF6C00;
+}
+
+.footer {
+    background-color: #F1F2EE;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    max-width: 40rem;
+    line-height: 100%;
+}
+
+.content {
+    color: white;
+    font-weight: 550;
+    font-size: 20px;
+    text-align: center;
+}
+
+.card-text {
+    color: white;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.fine-print {
+    font-size: 12px;
+    padding: 20px 10px 10px 10px;
+    max-width: 20rem;
+    color: #4D4D4D;
+}
+
+.vert-line {
+    border-left: 1.5px solid #FF6C00;
+    height: 140px;
+    margin-top: 22px;
+}
+
+.eligibility {
+    font-size: 12px;
+    padding: 20px 10px 15px 10px;
+    //min-width: 26rem;
+}
+
+.discs {
+    padding-left: 14px;
+    color: #4D4D4D;
+    li {
+        list-style-type: disc; 
+    }
+}
+
+.question {
+    color: #FF6C00;
+    font-weight: 700;
+}
+
+@media (max-width: 500px) {
+  
+    .humm-header {
+        width: 85%; 
+    }
+  
+    .flow {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        max-width: 300px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      
+        .card {
+            max-width: 250px;
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+          
+            .card-img {
+                width: 20%; 
+            }
+          
+            .arrow-img {
+                display: none; 
+            }
+        }
+    }
+  
+    .footer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        max-width: 300px;
+           
+        .vert-line {
+            display: none; 
+        }
+      
+        hr {
+            color: #FF6C00;
+            background-color: #FF6C00; 
+            height: 2px;
+            border-style: solid;
+            margin: 0;
+            width: 70%;
+            margin-left: 35px;
+        }
+        
+        .eligibility {
+            max-width: 250px; 
+            padding: 10px;
+        }
+    }
+}
