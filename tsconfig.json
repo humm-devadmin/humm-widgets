@@ -15,6 +15,7 @@
     "./src/au/more-info-general.ts",
     "./src/au/top-banner.ts",
     "./src/au/price-info.ts",
+    "./src/au/price-info-v2.ts",
     "./src/au/config.ts",
     "./src/au/page-injector.ts",
   ],
