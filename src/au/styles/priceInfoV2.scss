@@ -129,10 +129,22 @@
     font-weight: 700;
 }
 
+hr {
+    display: none;
+}
+
+.hori-line {
+    display: none;
+}
+
 @media (max-width: 500px) {
   
     .humm-header {
         width: 85%; 
+    }
+
+    .summary-content {
+        padding-right: 10px;
     }
   
     .flow {

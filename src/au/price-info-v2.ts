@@ -130,7 +130,7 @@ import { Config } from './config';
 
     function generateWidget(widgetId): string {
         let template;
-        let logo_html = noLogo ? '' : `<div><img alt="Humm" class="humm-widget-logo" src="${Config.baseContentUrl}/content/images/logo-black.svg" /></div>`;
+        let logo_html = noLogo ? '' : `<img alt="Humm" class="humm-widget-logo" src="${Config.baseContentUrl}/content/images/logo-black.svg" />`;
         let main_html = '';
         let price_breakdown_html = '';
 
@@ -151,7 +151,7 @@ import { Config } from './config';
                 let productPriceDividedByFive = productPrice / 5;
                 // Banking Rounding
                 let roundedDownProductPrice = Math.floor(productPriceDividedByFive * Math.pow(10, 2)) / Math.pow(10, 2);
-                price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)} with</span>`
+                price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
             } else if (productPrice <= max) {
                 main_html = 'Pay in slices. No interest ever.';
             }
@@ -160,8 +160,7 @@ import { Config } from './config';
         template = `
         <a class="humm-price-info-widget" data-remodal-target="${widgetId}">
             <span class="humm-description">
-                <span class="humm-main">${main_html} ${price_breakdown_html}</span>
-                <span>${logo_html}</span>
+                <span class="humm-main">${main_html} ${price_breakdown_html} with ${logo_html}</span>
                 <span class="humm-more-info">more info</span>
             </span>
             
