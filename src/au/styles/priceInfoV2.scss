@@ -85,6 +85,11 @@
     line-height: 100%;
     min-width: 97%;
     margin-right: 3%;
+
+    hr {
+        border: 0;
+        border-bottom: 0;
+    }
 }
 
 .content {
@@ -132,14 +137,6 @@
     font-weight: 700;
 }
 
-hr {
-    display: none;
-}
-
-.hori-line {
-    display: none;
-}
-
 @media (max-width: 500px) {
   
     .humm-header {
@@ -147,7 +144,7 @@ hr {
     }
 
     .summary-content {
-        padding-right: 10px;
+        margin-right: 15%;
     }
   
     .flow {
@@ -186,6 +183,7 @@ hr {
         }
       
         hr {
+            visibility: visible;
             color: #FF6C00;
             background-color: #FF6C00; 
             height: 2px;
