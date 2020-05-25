@@ -161,7 +161,8 @@ import { Config } from './config';
         <a class="humm-price-info-widget" data-remodal-target="${widgetId}">
             <span class="humm-description">
                 <span class="humm-main">${main_html} ${price_breakdown_html}</span>
-                <span class="humm-more-info">more info ${logo_html}</span>
+                <span class="humm-more-info">more info</span>
+                ${logo_html}
             </span>
         </a>`;
 
