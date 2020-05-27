@@ -130,7 +130,7 @@ import { Config } from './config';
 
     function generateWidget(widgetId): string {
         let template;
-        let logo_html = noLogo ? '' : `<img alt="Humm" class="humm-widget-logo" src="${Config.baseContentUrl}/content/images/logo-black.svg" />`;
+        let logo_html = noLogo ? '' : `<img alt="Humm" class="humm-widget-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />`;
         let main_html = '';
         let price_breakdown_html = '';
 
@@ -147,13 +147,13 @@ import { Config } from './config';
             if (productPrice < min || productPrice == 0) {
                 main_html = 'or 5 payments';
             } else if ((productPrice <= 2000 && productPrice <= max && productPrice >= 1000)) {
-                main_html = 'or 10 payments';
+                main_html = '10 fortnightly payments';
                 let productPriceDividedByTen = productPrice / 10;
                 // Banking Rounding
                 let roundedDownProductPrice = Math.floor(productPriceDividedByTen * Math.pow(10, 2)) / Math.pow(10, 2);
                 price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
             } else if (productPrice <= 2000 && productPrice <= max) {
-                main_html = 'or 5 payments';
+                main_html = '5 fortnightly payments';
                 let productPriceDividedByFive = productPrice / 5;
                 // Banking Rounding
                 let roundedDownProductPrice = Math.floor(productPriceDividedByFive * Math.pow(10, 2)) / Math.pow(10, 2);
@@ -165,9 +165,10 @@ import { Config } from './config';
 
         template = `
         <a class="humm-price-info-widget" data-remodal-target="${widgetId}">
+            ${logo_html}
             <span class="humm-description">
-                <span class="humm-main">${main_html} ${price_breakdown_html} with ${logo_html}</span>
-                <span class="humm-more-info">more info</span>
+                <span class="humm-main">${main_html} ${price_breakdown_html}</span>
+                <span class="humm-more-info">More</span>
             </span>
             
         </a>`;
