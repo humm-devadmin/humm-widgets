@@ -1,6 +1,21 @@
 // proxima-nova font
 @import url("https://use.typekit.net/plq2clw.css");
 
+/*body {
+    margin: 0;
+    font-size: 17px;
+    color: #FF6C00;
+    -ms-overflow-style: none;
+}*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
 /* =========== Humm price info modal CSS ============= */
 
 .humm-price-info-modal {
@@ -13,6 +28,7 @@
     margin: 0 auto;
     padding-left: 20px;
     padding-top: 20px;
+    padding-right: 20px;
   
     .header {
         text-align: center;
@@ -55,7 +71,7 @@
 
 .summary {
     background-color: #F1F2EE;
-    margin-right: 3%;
+    margin-right: 0%;
 }
 
 .summary-content {
@@ -71,8 +87,8 @@
 
 .flow {
     background-color: #FF6C00;
-    min-width: 97%;
-    margin-right: 3%;
+    min-width: 100%;
+    margin-right: 0%;
 }
 
 .footer {
@@ -83,8 +99,8 @@
     margin: 0 auto;
     max-width: 40rem;
     line-height: 100%;
-    min-width: 97%;
-    margin-right: 3%;
+    min-width: 100%;
+    margin-right: 0%;
 
     hr {
         border: 0;
@@ -135,6 +151,11 @@
 .question {
     color: #FF6C00;
     font-weight: 700;
+}
+
+hr {
+
+    visibility: hidden;
 }
 
 @media (max-width: 500px) {
