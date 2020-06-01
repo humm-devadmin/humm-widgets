@@ -111,7 +111,7 @@ $HUMM_DARK_TEXT: #4D4D4D;
   .how-to-text {
   	color: white;
   	font-weight: 600;
-  	line-height: 1.1em;
+  	line-height: 1em;
   	font-size: 36px;
   	text-align: center;
   	padding-top: 40px;
@@ -145,6 +145,17 @@ $HUMM_DARK_TEXT: #4D4D4D;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 15px;
+  }
+
+  .vm-faq {
+    color: $HUMM_ORANGE;
+    font-weight: 600;
+    line-height: 1.1em;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    text-decoration: underline;
   }
 
   .spread-payment-text {
@@ -183,6 +194,7 @@ $HUMM_DARK_TEXT: #4D4D4D;
     border-collapse: collapse;
     border-spacing: 0;
     padding-top: 5px;
+    font-family: "proxima-nova", sans-serif !important;
   }
 
   .table-content {
@@ -213,7 +225,7 @@ $HUMM_DARK_TEXT: #4D4D4D;
     }
   }
 
-  @media (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     #humm-landing-content {
       .humm-summary {
         margin-left: 18%;
@@ -222,7 +234,7 @@ $HUMM_DARK_TEXT: #4D4D4D;
     }
   }
 
-  @media (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     .humm-little-big {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -238,113 +250,6 @@ $HUMM_DARK_TEXT: #4D4D4D;
           height: 35px !important;
           margin-top: 15px !important;
         }
-        img.humm-icon-big {
-          all: unset;
-          height: 50px !important;
-        }
-        .humm-content {
-          line-height: 1.5;
-        }
-      }
-      .humm-card.humm-little-things {
-        margin: 2em auto;
-      }
-      .humm-card.humm-big-things {
-        margin: 2em auto;
-      }
-    }
-  }
-
-  .humm-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    padding: 20px 0;
-
-    .humm-card {
-      text-align: center;
-      font-family: "proxima-nova", sans-serif !important;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 25px 0;
-
-      img {
-        all: unset;
-        height: 55px !important;
-        margin-bottom: 10px !important;
-      }
-
-      .humm-title {
-        font-family: "proxima-nova", sans-serif !important;
-        max-width: 160px;
-        margin: 0 auto;
-        white-space: nowrap;
-        font-size: 22px;
-        font-weight: 800;
-      }
-      .humm-small {
-        font-family: "proxima-nova", sans-serif !important;
-        font-size: 0.85em;
-        max-width: 11em;
-        margin: 10px auto 0;
-      }
-    }
-  }
-
-  @media (max-width: 600px) {
-    .humm-main {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-    }
-  }
-
-  .humm-intro {
-    margin-top: 3.3em;
-    margin-bottom: 2.5em;
-    h3 {
-      font-family: "proxima-nova", sans-serif !important;
-      font-weight: 800 !important;
-      font-size: 23px !important;
-      margin-bottom: 25px !important;
-      color: $HUMM_DARK_GRAY;
-    }
-    p {
-      all: unset;
-      font-family: "proxima-nova", sans-serif !important;
-      display: block;
-      font-size: 16px !important;
-      margin-bottom: 20px !important;
-    }
-  }
-
-  .humm-q-and-a {
-    margin-top: 3.3em;
-    margin-bottom: 0;
-    h3 {
-      font-family: "proxima-nova", sans-serif !important;
-      font-weight: 800 !important;
-      font-size: 23px !important;
-      margin-bottom: 25px !important;
-      color: $HUMM_DARK_GRAY;
-    }
-    p {
-      all: unset;
-      font-family: "proxima-nova", sans-serif !important;
-      display: block;
-      font-size: 16px !important;
-      margin-bottom: 1.6em !important;
-    }
-    ul {
-      font-family: "proxima-nova", sans-serif !important;
-      margin-bottom: 50px !important;
-      padding-left: 1.2em !important;
-      li {
-        padding-left: 0 !important;
-        margin-left: 0 !important;
       }
     }
   }
