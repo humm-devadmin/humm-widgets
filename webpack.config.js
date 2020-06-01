@@ -22,6 +22,7 @@ module.exports = {
         "au/content/scripts/landing-page-little-big-instore": "./src/au/landing-page-little-big-instore.ts",
         "au/content/scripts/landing-page-general": "./src/au/landing-page-general.ts",
         "au/content/scripts/landing-page-little-big-instore-online": "./src/au/landing-page-general.ts",
+        "au/content/scripts/landing-page-cotton-on": "./src/au/landing-page-cotton-on.ts",
 
         "au/content/scripts/top-banner": "./src/au/more-info-small-slices.ts",
 

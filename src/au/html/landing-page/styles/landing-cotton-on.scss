@@ -40,16 +40,75 @@ $HUMM_DARK_TEXT: #4D4D4D;
   .bnpl-title {
     font-family: "proxima-nova", sans-serif !important;
     color: $HUMM_DARK_TEXT;
-    font-weight: bolder;
+    font-weight: 800;
     text-align: center;
     letter-spacing: -0.03em;
     line-height: 1.3!important;
-    font-size: 2.4em;
+    font-size: 4em;
+    padding-top: 100px;
+  }
 
+  .bnpl-subtitle {
+    font-family: "proxima-nova", sans-serif !important;
+    color: $HUMM_DARK_TEXT;
+    text-align: center;
+    margin-top: 3px;
+    font-size: 20px;
+    padding-bottom: 100px;
   }
 
   .humm-header-background {
     background-color: #C8BDA4;
+  }
+
+  .humm-header-background-cotton-on {
+    background-color: #F1F2EE;
+  }
+
+  .humm-white-bg {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .cotton-on-humm-summary {
+    background-color: #F1F2EE;
+  }
+
+  .humm-summary {
+  	margin-left: 32%;
+  	padding-bottom: 20px;
+  	margin-block-end: 0px;
+  }
+
+  .humm-mouse-cotton-on {
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	padding-top: 20px;
+  	width: 38px;
+  }
+
+  .humm-header-grey {
+  	font-family: "proxima-nova", sans-serif !important;
+    color: $HUMM_DARK_TEXT;
+    text-align: center;
+    margin-top: 3px;
+    font-size: 1.8em;
+    font-weight: 800;
+  }
+
+  .humm-cards {
+  	background-color: $HUMM_ORANGE;
+  }
+
+  .how-to-text {
+  	color: white;
+  	font-weight: 800;
+  	line-height: 1.1em;
+  	font-size: 32px;
+  	text-align: center;
+  	padding-top: 20px;
   }
 
   .humm-branding-area {

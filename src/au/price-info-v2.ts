@@ -1,5 +1,5 @@
 import * as jq from 'jquery';
-import { ModalInjector } from './modal-injector';
+import { ModalInjector } from './modal-injector-v2';
 import { Config } from './config';
 
 (($: JQueryStatic) => {
