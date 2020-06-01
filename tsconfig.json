@@ -10,6 +10,7 @@
   },
   "files": [
     "./src/au/modal-injector.ts",
+    "./src/au/modal-injector-v2.ts",
     "./src/au/more-info-large.ts",
     "./src/au/more-info-small.ts",
     "./src/au/more-info-general.ts",
