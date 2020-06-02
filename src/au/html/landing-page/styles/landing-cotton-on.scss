@@ -31,6 +31,10 @@ $HUMM_DARK_TEXT: #4D4D4D;
     }
   }
 
+  .store-icon-img {
+    width: 130px;
+  }
+
   h1, h2, h3, h4, h5, h6, .humm-title {
     font-family: "proxima-nova", sans-serif !important;
     letter-spacing: -0.03em;
@@ -72,6 +76,8 @@ $HUMM_DARK_TEXT: #4D4D4D;
     font-family: "proxima-nova", sans-serif !important;
     font-size: 17px;
     color: #4D4D4D;
+    padding-left: 3%;
+    padding-right: 3%;
   }
 
   .cotton-on-humm-summary {
@@ -133,6 +139,7 @@ $HUMM_DARK_TEXT: #4D4D4D;
     color: white;
     text-align: center;
     font-size: 16px;
+    padding-bottom: 25px;
   }
 
   .frequently-asked {
@@ -143,7 +150,7 @@ $HUMM_DARK_TEXT: #4D4D4D;
     color: $HUMM_DARK_TEXT;
     font-weight: 600;
     line-height: 1.1em;
-    font-size: 28px;
+    font-size: 2.7em;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 15px;
@@ -187,7 +194,6 @@ $HUMM_DARK_TEXT: #4D4D4D;
 
     td {
       margin-left: 20%;
-
     }
   }
 
