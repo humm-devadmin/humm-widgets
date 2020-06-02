@@ -14,18 +14,18 @@ $HUMM_DARK_TEXT: #4D4D4D;
   }
 
   p {
-    margin: 0 0 10px;
+    margin: 5px;
+    font-family: ProximaNova,Roboto,sans-serif;
   }
 
   font-family: "proxima-nova", sans-serif !important;
-  font-weight: 400;
+  /*font-weight: 400;*/
   font-size: 16px !important;
   line-height: 1.43 !important;
   color: $HUMM_DARK_GRAY;
   background-color: #FFF;
 
   .store-icons {
-    text-align: center;
     a {
       text-decoration: none;
     }
@@ -67,10 +67,10 @@ $HUMM_DARK_TEXT: #4D4D4D;
 
   .humm-white-bg {
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     font-family: "proxima-nova", sans-serif !important;
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .cotton-on-humm-summary {
@@ -81,6 +81,7 @@ $HUMM_DARK_TEXT: #4D4D4D;
   	margin-left: 32%;
   	padding-bottom: 20px;
   	margin-block-end: 0px;
+    margin-right: auto;
   }
 
   .humm-mouse-cotton-on {
@@ -102,15 +103,35 @@ $HUMM_DARK_TEXT: #4D4D4D;
 
   .humm-cards {
   	background-color: $HUMM_ORANGE;
+
+    img {
+      width: 18px;
+    }
   }
 
   .how-to-text {
   	color: white;
   	font-weight: 600;
-  	line-height: 1.1em;
-  	font-size: 28px;
+  	line-height: 1em;
+  	font-size: 36px;
   	text-align: center;
-  	padding-top: 20px;
+  	padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .card-text {
+    color: white;
+    font-weight: 600;
+    line-height: 1.1em;
+    font-size: 1.3em;
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  .card-sub-text {
+    color: white;
+    text-align: center;
+    font-size: 16px;
   }
 
   .frequently-asked {
@@ -124,123 +145,70 @@ $HUMM_DARK_TEXT: #4D4D4D;
     font-size: 28px;
     text-align: center;
     padding-top: 20px;
+    padding-bottom: 15px;
   }
 
-  .humm-branding-area {
-    height: 600px;
-    color: #FFF;
-    position: relative;
-    z-index: 9;
-    width: 100%;
-    max-width: 1600px;
+  .vm-faq {
+    color: $HUMM_ORANGE;
+    font-weight: 600;
+    line-height: 1.1em;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    text-decoration: underline;
+  }
+
+  .spread-payment-text {
+    color: $HUMM_DARK_TEXT;
+    font-weight: 800;
+    line-height: 1.1em;
+    font-size: 2em;
     text-align: left;
-    padding: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    padding-bottom: 5px;
+  }
+
+  .spread-payment-sub-text {
+    color: $HUMM_DARK_TEXT;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    padding-bottom: 10px;
+    word-break: break-word;
+    line-height: 1.27em;
+  }
+
+  .spread-payments-table {
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 5%;
+
+    td {
+      margin-left: 20%;
+
+    }
+  }
+
+  table {
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding-top: 5px;
     font-family: "proxima-nova", sans-serif !important;
-    font-weight: 700;
-
-    img.humm-logo {
-      all: unset;
-      height: 73px !important;
-    }
-
-    img.humm-header {
-      all: unset;
-      max-width: 100% !important;
-      position: absolute !important;
-      right: 0 !important;
-      bottom: 0 !important;
-    }
-
-    .humm-text {
-      position: absolute;
-      margin-top: 130px;
-      font-size: 34px;
-
-      .humm-title {
-        font-family: "proxima-nova", sans-serif !important;
-        font-size: 140px;
-        margin-bottom: -12px;
-      }
-      p.humm-wide-only {
-        all: unset;
-        font-family: "proxima-nova", sans-serif !important;
-        font-size: 34px !important;
-        line-height: 1.35 !important;
-        display: block;
-      }
-      p.humm-narrow-only {
-        all: unset;
-        font-family: "proxima-nova", sans-serif !important;
-        font-size: 34px !important;
-        line-height: 1.35 !important;
-        display: none;
-      }
-      .humm-font-light {
-        font-family: "proxima-nova", sans-serif !important;
-        font-weight: 100 !important;
-      }
-    }
   }
 
-  @media (min-width: 600px) and (max-width: 900px) {
-    .humm-branding-area {
-      height: 680px;
-      img.humm-header {
-        all: unset;
-        max-width: 90% !important;
-      }
-      .humm-text {
-        font-size: 30px;
-        margin-top: 10px;
-        .humm-title {
-          font-size: 100px;
-        }
-        p.humm-wide-only {
-          all: unset;
-          font-size: 30px !important;
-          display: block;
-        }
-        p.humm-narrow-only {
-          all: unset;
-          font-size: 30px !important;
-          display: none;
-        }
-      }
-    }
+  .table-content {
+    text-align: left;
   }
 
-  @media (max-width: 599px) {
-    .humm-branding-area {
-      height: 500px;
-      img.humm-header {
-        all: unset;
-        max-width: 90% !important;
-      }
-      .humm-text {
-        font-size: 20px;
-        margin-top: 10px;
-        .humm-title {
-          font-size: 64px;
-        }
-        p.humm-wide-only {
-          all: unset;
-          font-size: 20px !important;
-          display: none;
-        }
-        p.humm-narrow-only {
-          all: unset;
-          font-size: 20px !important;
-          display: block;
-        }
-      }
-    }
+  .table-header {
+    color: $HUMM_ORANGE;
   }
-
 
   .humm-little-big {
     padding: 19px;
+    padding-bottom: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -248,33 +216,20 @@ $HUMM_DARK_TEXT: #4D4D4D;
     justify-content: space-around;
     text-align: center;
     color: #FFFFFF;
+    margin-left: 10%;
+    margin-right: 10%;
 
     .humm-card {
-      img.humm-icon-little {
-        all: unset;
-        height: 25px !important;
-        margin-top: 7px !important;
-      }
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      max-width: 20%;
+    }
+  }
 
-      img.humm-icon-big {
-        all: unset;
-        height: 32px !important;
-      }
-
-      .humm-title {
-        font-family: "proxima-nova", sans-serif !important;
-        font-weight: 800;
-        font-size: 25px;
-        margin: 5px 0;
-      }
-
-      .humm-content {
-        font-family: "proxima-nova", sans-serif !important;
-        padding: 0 20px;
-        line-height: 1.35;
-        color: rgba(255, 255, 255, 0.8);
-        max-width: 420px;
-      }
+  @media (max-width: 600px) {
+    .humm-summary {
+      margin-left: 18%;
+      margin-right: 10%;
     }
   }
 
@@ -286,6 +241,7 @@ $HUMM_DARK_TEXT: #4D4D4D;
       flex-direction: column;
       padding-top: 30px;
       padding-bottom: 30px;
+
       .humm-card {
         max-width: 330px;
         img.humm-icon-little{
@@ -293,158 +249,6 @@ $HUMM_DARK_TEXT: #4D4D4D;
           height: 35px !important;
           margin-top: 15px !important;
         }
-        img.humm-icon-big {
-          all: unset;
-          height: 50px !important;
-        }
-        .humm-content {
-          line-height: 1.5;
-        }
-      }
-      .humm-card.humm-little-things {
-        margin: 2em auto;
-      }
-      .humm-card.humm-big-things {
-        margin: 2em auto;
-      }
-    }
-  }
-
-  .humm-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    padding: 20px 0;
-
-    .humm-card {
-      text-align: center;
-      font-family: "proxima-nova", sans-serif !important;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 25px 0;
-
-      img {
-        all: unset;
-        height: 55px !important;
-        margin-bottom: 10px !important;
-      }
-
-      .humm-title {
-        font-family: "proxima-nova", sans-serif !important;
-        max-width: 160px;
-        margin: 0 auto;
-        white-space: nowrap;
-        font-size: 22px;
-        font-weight: 800;
-      }
-      .humm-small {
-        font-family: "proxima-nova", sans-serif !important;
-        font-size: 0.85em;
-        max-width: 11em;
-        margin: 10px auto 0;
-      }
-    }
-  }
-
-  @media (max-width: 600px) {
-    .humm-main {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-    }
-  }
-
-  .humm-break-down {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 30px;
-    .humm-title {
-      font-family: "proxima-nova", sans-serif !important;
-      font-weight: 900 !important;
-      padding-top: 30px !important;
-      padding-bottom: 30px !important;
-      font-size: 38px !important;
-      border-top: 1px $HUMM_ORANGE solid;
-      border-bottom: 1px $HUMM_ORANGE solid;
-    }
-    table.humm-break-down-table{
-      width: 100%;
-      border-spacing: 0;
-      margin-bottom: 1em;
-      font-size: 18px;
-      .humm-small {
-        font-size: 0.75em;
-      }
-      tr {
-        th {
-          text-align: left;
-          vertical-align: center !important;
-          border-bottom: 1px #888 solid;
-          font-family: "proxima-nova",sans-serif !important;
-          font-weight: 800 !important;
-        }
-        td {
-          padding-top: 25px;
-          padding-bottom: 25px;
-          text-align: center;
-          vertical-align: center !important;
-          border-bottom: 1px #888 solid;
-        }
-      }
-      tr:last-child{
-        th, td {
-          border-bottom: 1px $HUMM_ORANGE solid;
-        }
-      }
-    }
-  }
-
-  .humm-intro {
-    margin-top: 3.3em;
-    margin-bottom: 2.5em;
-    h3 {
-      font-family: "proxima-nova", sans-serif !important;
-      font-weight: 800 !important;
-      font-size: 23px !important;
-      margin-bottom: 25px !important;
-      color: $HUMM_DARK_GRAY;
-    }
-    p {
-      all: unset;
-      font-family: "proxima-nova", sans-serif !important;
-      display: block;
-      font-size: 16px !important;
-      margin-bottom: 20px !important;
-    }
-  }
-
-  .humm-q-and-a {
-    margin-top: 3.3em;
-    margin-bottom: 0;
-    h3 {
-      font-family: "proxima-nova", sans-serif !important;
-      font-weight: 800 !important;
-      font-size: 23px !important;
-      margin-bottom: 25px !important;
-      color: $HUMM_DARK_GRAY;
-    }
-    p {
-      all: unset;
-      font-family: "proxima-nova", sans-serif !important;
-      display: block;
-      font-size: 16px !important;
-      margin-bottom: 1.6em !important;
-    }
-    ul {
-      font-family: "proxima-nova", sans-serif !important;
-      margin-bottom: 50px !important;
-      padding-left: 1.2em !important;
-      li {
-        padding-left: 0 !important;
-        margin-left: 0 !important;
       }
     }
   }
