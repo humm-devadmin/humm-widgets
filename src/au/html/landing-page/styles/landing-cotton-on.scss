@@ -81,6 +81,7 @@ $HUMM_DARK_TEXT: #4D4D4D;
   	margin-left: 32%;
   	padding-bottom: 20px;
   	margin-block-end: 0px;
+    margin-right: auto;
   }
 
   .humm-mouse-cotton-on {
@@ -225,16 +226,14 @@ $HUMM_DARK_TEXT: #4D4D4D;
     }
   }
 
-  @media screen and (max-width: 600px) {
-    #humm-landing-content {
-      .humm-summary {
-        margin-left: 18%;
-        margin-right: 5%;
-      }
+  @media (max-width: 600px) {
+    .humm-summary {
+      margin-left: 18%;
+      margin-right: 10%;
     }
   }
 
-  @media screen and (max-width: 600px) {
+  @media (max-width: 600px) {
     .humm-little-big {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
