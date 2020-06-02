@@ -203,6 +203,14 @@ $HUMM_DARK_TEXT: #4D4D4D;
     border-spacing: 0;
     padding-top: 5px;
     font-family: "proxima-nova", sans-serif !important;
+    width: 55%;
+  }
+
+  @media (max-width: 600px) {
+    table {
+      width: 80%;
+      padding-top: 15px;
+    }
   }
 
   .table-content {
