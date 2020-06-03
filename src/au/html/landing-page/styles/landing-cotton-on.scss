@@ -31,6 +31,10 @@ $HUMM_DARK_TEXT: #4D4D4D;
     }
   }
 
+  .store-icon-img {
+    width: 130px;
+  }
+
   h1, h2, h3, h4, h5, h6, .humm-title {
     font-family: "proxima-nova", sans-serif !important;
     letter-spacing: -0.03em;
@@ -72,6 +76,8 @@ $HUMM_DARK_TEXT: #4D4D4D;
     font-family: "proxima-nova", sans-serif !important;
     font-size: 17px;
     color: #4D4D4D;
+    padding-left: 3%;
+    padding-right: 3%;
   }
 
   .cotton-on-humm-summary {
@@ -93,6 +99,11 @@ $HUMM_DARK_TEXT: #4D4D4D;
   	width: 38px;
   }
 
+  .spread-pay-cont {
+    margin-left: 15%; 
+    margin-right: 10%;
+  }
+
   .humm-header-grey {
   	font-family: "proxima-nova", sans-serif !important;
     color: $HUMM_DARK_TEXT;
@@ -104,10 +115,10 @@ $HUMM_DARK_TEXT: #4D4D4D;
 
   .humm-cards {
   	background-color: $HUMM_ORANGE;
+  }
 
-    img {
-      width: 18px;
-    }
+  .card-img {
+      width: 24px;
   }
 
   .how-to-text {
@@ -133,6 +144,7 @@ $HUMM_DARK_TEXT: #4D4D4D;
     color: white;
     text-align: center;
     font-size: 16px;
+    padding-bottom: 25px;
   }
 
   .frequently-asked {
@@ -143,7 +155,7 @@ $HUMM_DARK_TEXT: #4D4D4D;
     color: $HUMM_DARK_TEXT;
     font-weight: 600;
     line-height: 1.1em;
-    font-size: 28px;
+    font-size: 2.7em;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 15px;
@@ -187,7 +199,6 @@ $HUMM_DARK_TEXT: #4D4D4D;
 
     td {
       margin-left: 20%;
-
     }
   }
 
@@ -197,15 +208,24 @@ $HUMM_DARK_TEXT: #4D4D4D;
     border-spacing: 0;
     padding-top: 5px;
     font-family: "proxima-nova", sans-serif !important;
+    width: 55%;
+  }
+
+  @media (max-width: 600px) {
+    table {
+      width: 80%;
+      padding-top: 15px;
+    }
   }
 
   .table-content {
     text-align: left;
     color: #4D4D4D;
+    margin: 0.8em;
   }
 
   .table-header {
-    color: $HUMM_ORANGE;
+    color: #FF6900;
   }
 
   .humm-little-big {
