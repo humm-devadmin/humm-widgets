@@ -10,6 +10,7 @@ module.exports = {
         "au/content/scripts/more-info-mini": "./src/au/more-info-mini.ts",
         // "au/content/scripts/more-info-general": "./src/au/more-info-general.ts",
         "au/content/scripts/price-info": "./src/au/price-info.ts",
+        "au/content/scripts/price-info-5m": "./src/au/price-info-5m.ts",
 
         "au/content/scripts/landing-page": "./src/au/landing-page.ts",
         "au/content/scripts/landing-page-little-online": "./src/au/landing-page-little-online.ts",
