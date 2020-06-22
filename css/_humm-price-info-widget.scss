@@ -20,11 +20,13 @@
     img.humm-widget-logo {
         all: unset;
         display: inline-block;
-        margin-right: 8px;
+        margin-left: 6px;
+        margin-right: 5px;
         height: 15px !important;
         float: none !important;
         width: auto;
         vertical-align: baseline;
+        padding-top: 3px;
     }
 
     .humm-description {
@@ -60,6 +62,8 @@
 
 .remodal-close {
     color: $HUMM_GRAY;
+    margin-left: 5px;
+    margin-top: 5px;
 
     &:hover {
         color: $HUMM_DARK_GRAY;

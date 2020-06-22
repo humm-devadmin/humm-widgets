@@ -59,6 +59,12 @@ The script will bring in all of its CSS and dependencies, and register the butto
 Guide: Installation guide is located at [http://docs.shophumm.com.au/](http://docs.shophumm.com.au/)
 Note: All of the views for widgets are located at main Humm Website
 
+### Changes/Additions
+
+To **add** a new typescript file, you must add it to the config.ts file to compile
+
+To **add** a new CSS/SCSS file, you must compile it to .min.css by adding it in the webpack.json file for compiling
+
 #### parameters for the price-info widget (AU)
 | parameter | meaning  | usage |
 |-----------|--------| --- |

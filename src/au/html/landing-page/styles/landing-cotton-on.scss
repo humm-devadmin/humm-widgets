@@ -1,0 +1,329 @@
+// proxima-nova font
+@import url("https://use.typekit.net/plq2clw.css");
+
+$HUMM_ORANGE: #FF6C00;
+$HUMM_GRAY: #ecedee;
+$HUMM_LIGHT_GRAY: #f9f9f9;
+$HUMM_DARK_GRAY: #333;
+$HUMM_DARK_TEXT: #4D4D4D;
+
+#humm-landing-content {
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  p {
+    margin: 5px;
+    font-family: ProximaNova,Roboto,sans-serif;
+  }
+
+  font-family: "proxima-nova", sans-serif !important;
+  /*font-weight: 400;*/
+  font-size: 16px !important;
+  line-height: 1.43 !important;
+  color: $HUMM_DARK_GRAY;
+  background-color: #FFF;
+
+  .store-icons {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .store-icon-img {
+    width: 130px;
+  }
+
+  h1, h2, h3, h4, h5, h6, .humm-title {
+    font-family: "proxima-nova", sans-serif !important;
+    letter-spacing: -0.03em;
+    line-height: 1.3!important;
+  }
+
+  .bnpl-title {
+    font-family: "proxima-nova", sans-serif !important;
+    color: $HUMM_DARK_TEXT;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -0.03em;
+    line-height: 1.3!important;
+    font-size: 5em;
+    padding-top: 220px;
+  }
+
+  .bnpl-subtitle {
+    font-family: "proxima-nova", sans-serif !important;
+    color: $HUMM_DARK_TEXT;
+    text-align: center;
+    margin-top: 3px;
+    font-size: 35px;
+    padding-bottom: 220px;
+  }
+
+  .humm-header-background {
+    background-color: #C8BDA4;
+  }
+
+  .humm-header-background-cotton-on {
+    background-color: #F1F2EE;
+  }
+
+  .humm-white-bg {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: "proxima-nova", sans-serif !important;
+    font-size: 17px;
+    color: #4D4D4D;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .cotton-on-humm-summary {
+    background-color: #F1F2EE;
+  }
+
+  .humm-summary {
+  	margin-left: 32%;
+  	padding-bottom: 20px;
+  	margin-block-end: 0px;
+    margin-right: auto;
+  }
+
+  .humm-mouse-cotton-on {
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	padding-top: 20px;
+  	width: 38px;
+  }
+
+  .spread-pay-cont {
+    margin-left: 15%; 
+    margin-right: 10%;
+  }
+
+  .humm-header-grey {
+  	font-family: "proxima-nova", sans-serif !important;
+    color: $HUMM_DARK_TEXT;
+    text-align: center;
+    margin-top: 3px;
+    font-size: 1.8em;
+    font-weight: 800;
+  }
+
+  .humm-cards {
+  	background-color: $HUMM_ORANGE;
+  }
+
+  .card-img {
+      width: 24px;
+  }
+
+  .how-to-text {
+  	color: white;
+  	font-weight: 600;
+  	line-height: 1em;
+  	font-size: 36px;
+  	text-align: center;
+  	padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .card-text {
+    color: white;
+    font-weight: 600;
+    line-height: 1.1em;
+    font-size: 1.3em;
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  .card-sub-text {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 25px;
+  }
+
+  .frequently-asked {
+    background-color: #F1F2EE;
+  }
+
+  .faq {
+    color: $HUMM_DARK_TEXT;
+    font-weight: 600;
+    line-height: 1.1em;
+    font-size: 2.7em;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  .vm-faq {
+    color: $HUMM_ORANGE;
+    font-weight: 600;
+    line-height: 1.1em;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    text-decoration: underline;
+  }
+
+  .spread-payment-text {
+    color: $HUMM_DARK_TEXT;
+    font-weight: 800;
+    line-height: 1.1em;
+    font-size: 2em;
+    text-align: left;
+    padding-bottom: 5px;
+  }
+
+  .spread-payment-sub-text {
+    color: $HUMM_DARK_TEXT;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    padding-bottom: 10px;
+    word-break: break-word;
+    line-height: 1.27em;
+  }
+
+  .spread-payments-table {
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 5%;
+
+    td {
+      margin-left: 20%;
+    }
+  }
+
+  table {
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding-top: 5px;
+    font-family: "proxima-nova", sans-serif !important;
+    width: 55%;
+  }
+
+  @media (max-width: 600px) {
+    table {
+      width: 80%;
+      padding-top: 15px;
+    }
+  }
+
+  .table-content {
+    text-align: left;
+    color: #4D4D4D;
+    margin: 0.8em;
+  }
+
+  .table-header {
+    color: #FF6900;
+  }
+
+  .humm-little-big {
+    padding: 19px;
+    padding-bottom: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    .humm-card {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      max-width: 20%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .humm-summary {
+      margin-left: 18%;
+      margin-right: 10%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .humm-little-big {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      .humm-card {
+        max-width: 330px;
+        img.humm-icon-little{
+          all: unset;
+          height: 35px !important;
+          margin-top: 15px !important;
+        }
+      }
+    }
+  }
+
+  .humm-width-limit {
+    max-width: 64em;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important;
+  }
+
+  .humm-gray-bg {
+    background-color: #F1F2EE;
+  }
+
+  .humm-orange-bg {
+    background-color: $HUMM_ORANGE;
+  }
+
+  .humm-small-number {
+    font-size: 0.6em;
+    vertical-align: top;
+    padding-left: 0.2em;
+  }
+
+  .humm-text-center {
+    text-align: center;
+  }
+
+  .humm-center-block {
+    display: block;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .humm-extra-bold {
+    font-weight: 800 !important;
+  }
+
+  .humm-footer {
+    padding-left: 12px;
+    max-width: 52em;
+    margin-bottom: 2.5em;
+    img {
+      all: unset;
+      height: 20px !important;
+      vertical-align: bottom !important;
+    }
+    .humm-fine-print {
+      font-family: "proxima-nova", sans-serif !important;
+      font-size: 11px;
+      text-indent: -2.5em;
+      line-height: 1.6;
+    }
+  }
+}
