@@ -1,5 +1,5 @@
 import * as jq from 'jquery';
-import { ModalInjector } from './modal-injector';
+import { ModalInjector } from './modal-injector-v2';
 import { Config } from './config';
 
 (($: JQueryStatic) => {
@@ -130,7 +130,7 @@ import { Config } from './config';
 
     function generateWidget(widgetId): string {
         let template;
-        let logo_html = noLogo ? '' : `<div><img alt="Humm" class="humm-widget-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" /></div>`;
+        let logo_html = noLogo ? '' : `<img alt="Humm" class="humm-widget-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />`;
         let main_html = '';
         let price_breakdown_html = '';
 
@@ -142,28 +142,34 @@ import { Config } from './config';
         }
 
         if (type == Type.bigThings) {
-            main_html = 'Pay in slices. No interest ever.';
+            main_html = 'Pay in slices. No interest ever';
         } else {
             if (productPrice < min || productPrice == 0) {
-                main_html = 'with 5 fortnightly payments';
-            } else if ((productPrice <= 1000 && productPrice <= max)) {
-                main_html = 'with 5 fortnightly payments';
+                main_html = 'or 5 payments';
+            } else if ((productPrice <= 2000 && productPrice <= max && productPrice >= 1000)) {
+                main_html = '10 fortnightly payments';
+                let productPriceDividedByTen = productPrice / 10;
+                // Banking Rounding
+                let roundedDownProductPrice = Math.floor(productPriceDividedByTen * Math.pow(10, 2)) / Math.pow(10, 2);
+                price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
+            } else if (productPrice <= 2000 && productPrice <= max) {
+                main_html = '5 fortnightly payments';
                 let productPriceDividedByFive = productPrice / 5;
                 // Banking Rounding
                 let roundedDownProductPrice = Math.floor(productPriceDividedByFive * Math.pow(10, 2)) / Math.pow(10, 2);
                 price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
             } else if (productPrice <= max) {
-                main_html = 'Pay in slices. No interest ever.';
+                main_html = 'Pay in slices. No interest ever';
             }
         }
 
         template = `
         <a class="humm-price-info-widget" data-remodal-target="${widgetId}">
-            ${logo_html}
             <span class="humm-description">
-                <span class="humm-main">${main_html} ${price_breakdown_html}</span>
-                <span class="humm-more-info">more info</span>
+            <span class="humm-main">${main_html} ${price_breakdown_html} with ${logo_html}</span>
+            <span class="humm-more-info">more info</span>
             </span>
+
         </a>`;
 
         return template;
@@ -199,15 +205,17 @@ import { Config } from './config';
     }
 
     function insert() {
-        let widgetUrl = productPrice <= 2000 ? Config.priceInfoUrl : Config.priceInfoMoreUrl;
-        let widgetId = productPrice <= 2000 ? Config.priceInfoModalId : Config.priceInfoMoreModalId;
+        let widgetUrl = productPrice <= 2000 ? Config.priceInfoV2Url : Config.priceInfoMoreUrl;
+        let widgetId = productPrice <= 2000 ? Config.priceInfoV2ModalId : Config.priceInfoMoreModalId;
+
         if (type == Type.bigThings) {
             widgetUrl = Config.priceInfoMoreUrl;
             widgetId = Config.priceInfoMoreModalId;
         }
+        // Get the old widget to use the new modal
         if (type == Type.littleThings) {
-            widgetUrl = Config.priceInfoUrl;
-            widgetId = Config.priceInfoModalId;
+            widgetUrl = Config.priceInfoV2Url;
+            widgetId = Config.priceInfoV2ModalId;
         }
         let template = generateWidget(widgetId);
         widget.injectBanner(template, widgetUrl, widgetId, element);
