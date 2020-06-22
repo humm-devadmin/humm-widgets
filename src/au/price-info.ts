@@ -169,7 +169,6 @@ import { Config } from './config';
             <span class="humm-main">${main_html} ${price_breakdown_html} with ${logo_html}</span>
             <span class="humm-more-info">more info</span>
             </span>
-
         </a>`;
 
         return template;
@@ -227,4 +226,3 @@ import { Config } from './config';
         }
     }
 })(jq);
-
