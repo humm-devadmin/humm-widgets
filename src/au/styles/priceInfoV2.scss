@@ -38,7 +38,7 @@
 }
 
 .humm-header {
-    width: 40%; 
+    width: 30%; 
 }
 
 .flow {
@@ -50,23 +50,28 @@
   
     .card {
         text-align: center;
-        padding: 1.5rem 0;
+        padding: 1rem 0;
         margin: 0 auto;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         max-width: 30%;
+
+        .card-img {
+            width: 20%;
+            margin-bottom: 20px;
+        }
       
         .arrow-img {
-            margin-top: 70px;
+            margin-top: 60px;
             padding: 0;
         }
     }
 }
 
 .sub-title {
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: -1px;
-    margin-bottom: -3px;
+    margin-bottom: -10px;
 }
 
 .summary {
@@ -75,10 +80,10 @@
 }
 
 .summary-content {
-    font-size: 16px;
-    margin-left: 15%;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    font-size: 14px;
+    margin-left: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
   
     li {
         list-style-type: disc;  
@@ -98,7 +103,7 @@
     display: flex;
     margin: 0 auto;
     max-width: 40rem;
-    line-height: 100%;
+    line-height: 1rem;
     min-width: 100%;
     margin-right: 0%;
 
@@ -117,27 +122,29 @@
 
 .card-text {
     color: white;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.2rem;
     padding: 8px;
 }
 
 .fine-print {
     font-size: 12px;
-    padding: 20px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
     max-width: 20rem;
     color: #4D4D4D;
 }
 
 .vert-line {
     border-left: 1.5px solid #FF6C00;
-    height: 140px;
-    margin-top: 22px;
+    height: 130px;
+    margin-top: 12px;
 }
 
 .eligibility {
     font-size: 12px;
-    padding: 20px 10px 15px 10px;
+    padding: 10px 10px 5px 10px;
     //min-width: 26rem;
+    line-height: 0.8rem;
 }
 
 .discs {
@@ -161,7 +168,7 @@ hr {
 @media (max-width: 500px) {
   
     .humm-header {
-        width: 85%; 
+        width: 50%; 
     }
 
     .summary-content {
@@ -213,10 +220,15 @@ hr {
             width: 70%;
             margin-left: 35px;
         }
+
+        .fine-print {
+            padding-left: 40px;
+        }
         
         .eligibility {
             max-width: 250px; 
             padding: 10px;
+            padding-left: 40px;
         }
     }
 }
