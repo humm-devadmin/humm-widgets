@@ -18,7 +18,7 @@
   },
   "scripts": {
     "css-shared": "sass -s compressed css/humm-branding.scss:css/humm-branding.css",
-    "css-au": "sass -s compressed src/au/styles/priceInfoModal.scss:src/au/styles/priceInfoModal.min.css src/au/styles/priceInfoV2.scss:src/au/styles/priceInfoV2.min.css src/au/styles/moreInfoModal.scss:src/au/styles/moreInfoModal.min.css src/au/html/landing-page/styles/landing-cotton-on.scss:src/au/html/landing-page/styles/landing-cotton-on.css src/au/html/landing-page/styles/landing.scss:src/au/html/landing-page/styles/landing.css",
+    "css-au": "sass -s compressed src/au/styles/priceInfoModal.scss:src/au/styles/priceInfoModal.min.css src/au/styles/priceApiModal.scss:src/au/styles/priceApiModal.min.css src/au/styles/priceInfoV2.scss:src/au/styles/priceInfoV2.min.css src/au/styles/moreInfoModal.scss:src/au/styles/moreInfoModal.min.css src/au/html/landing-page/styles/landing-cotton-on.scss:src/au/html/landing-page/styles/landing-cotton-on.css src/au/html/landing-page/styles/landing.scss:src/au/html/landing-page/styles/landing.css",
     "css-nz": "sass -s compressed src/nz/styles/priceInfoModal.scss:src/nz/styles/priceInfoModal.min.css src/nz/styles/moreInfoModal.scss:src/nz/styles/moreInfoModal.min.css",
     "css": "npm run css-shared && npm run css-au && npm run css-nz",
     "build": "npm run css && webpack",
