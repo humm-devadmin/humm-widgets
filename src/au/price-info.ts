@@ -278,8 +278,8 @@ import { MerchantTerms } from './merchant-terms';
             widgetUrl = Config.priceInfoV2Url;
             widgetId = Config.priceInfoV2ModalId
         } else {
-            widgetUrl = Config.priceInfoV2Url;
-            widgetId = Config.priceInfoV2ModalId;
+            widgetUrl = Config.priceInfoMoreUrl;
+            widgetId = Config.priceInfoMoreModalId;
         }
         if (typeof useHTML !== 'undefined') {
             if (typeof replaceElement !== 'undefined') {
