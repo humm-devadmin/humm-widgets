@@ -35,5 +35,4 @@ export class Config {
     public static hummBannerTopModalUrl = Config.moreInfoUrlNew;
 
     // price info api
-    public static priceInfoAPIUrl = 'https://buyerapi.shophumm.com.au/api';
-}
+    public static priceInfoAPIUrl = 'https://buyerapi.shophumm.com.au/api';}

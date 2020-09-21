@@ -1,0 +1,272 @@
+// proxima-nova font
+@import url("https://use.typekit.net/plq2clw.css");
+
+$HUMM_ORANGE: #FF6C00;
+$HUMM_GRAY: #666666;
+$HUMM_LIGHT_GRAY: #999999;
+$HUMM_DARK_GRAY: #333333;
+$HUMM-WRAPPER-GRAY: #F1F2EE;
+
+body {
+    margin: 0;
+    font-size: 17px;
+    color: $HUMM_GRAY;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.humm-price-info-modal {
+    font-family: "proxima-nova", sans-serif;
+    line-height: 1.3;
+    background: white;
+    overflow: visible;
+    overflow-x: hidden;
+    top: 5vh !important;
+    margin: 0 auto;
+    padding: 30px 0px 0px;
+
+    .header {
+        text-align: center;
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 95%;
+
+        margin: 0 auto 20px;
+
+        .title {
+            margin-bottom: 20px;
+            
+            img {
+                height: 43px;
+            }
+        }
+    }
+
+    .pricing-wrapper {
+        background-color: $HUMM-WRAPPER-GRAY;
+
+        .pricing {
+            height: 150px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            max-width: 55rem;
+            margin: 0 auto;
+
+            .pricing-left, .pricing-right {
+                width: 50%;
+                text-align: center;
+                padding: 20px 0;
+            }
+
+            .pricing-left {
+                border-right: 1px solid $HUMM_ORANGE; 
+            }
+        }
+    }
+
+    .main-wrapper {
+        background-color: $HUMM_ORANGE;
+
+        .main {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin: 0 auto;
+            max-width: 55rem;
+
+            .card-dividor {
+                text-align: center;
+                margin: auto auto;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            
+            .card {
+                text-align: center;
+                padding: 2.5rem 0;
+                margin: 0 auto;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                color: white;
+    
+                .title {
+                    font-size: 18px;
+                    font-weight: 800;
+                    letter-spacing: -0.5px;
+                    margin-bottom: 10px;
+
+                }
+    
+                img {
+                    height: 35px;
+                    margin-bottom: 15px;
+                }
+    
+                .content {
+                    max-width: 160px;
+                    font-size: 14px;
+                    font-weight: normal;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .footer-wrapper {
+        background-color: $HUMM-WRAPPER-GRAY;
+
+        .footer {
+            height: 180px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            max-width: 50rem;
+            margin: 0 auto;
+
+            .footer-left, .footer-right {
+                text-align: left;
+                padding: 20px 35px;
+            }
+
+            .footer-left {
+                width: 30%;
+                border-right: 0.5px solid #66666659;
+            }
+
+            .footer-right {
+                width: 70%;
+            }
+
+            img {
+                max-width: 180px;
+                margin: 20px auto;
+            }
+
+            .fine-print {
+                font-weight: 300;
+                font-size: 12px;
+
+                ul {
+                    margin-block-start: 0;
+                    margin-block-end: 0;
+                    padding-inline-start: 15px;
+                }
+                
+                .orange {
+                    font-weight: bold;
+                    color: $HUMM_ORANGE;
+                }
+            }
+        }
+    }
+}
+
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.text-humm {
+    color: $HUMM_ORANGE;
+    font-weight: 800;
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: 16px;
+    }
+    .humm-price-info-modal {
+        .header {
+            max-width: 300px;
+        }
+
+        .main-wrapper {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            
+            .main {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-flow: column;
+                flex-flow: column;
+                max-width: 300px;
+                width: auto;
+                height: auto;
+
+                .card {
+                    max-width: 250px;
+                    padding-top: 1rem;
+                    padding-bottom: 0.5rem;
+
+                    img {
+                        width: 50%;
+                    }
+                }
+
+                .card-dividor {
+                    display: none;
+                }
+            }
+        }
+
+        .pricing-wrapper {
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            .pricing {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-flow: column;
+                flex-flow: column;
+                max-width: 300px;
+                width: auto;
+                height: auto;
+
+                .pricing-left, .pricing-right {
+                    max-width: 250px;
+                    width: 100%;
+                    padding-top: 1rem;
+                    padding-bottom: 0.5rem;
+                    border: none;
+                }
+            }
+        }
+
+        .footer-wrapper {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            
+            .footer {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: reverse;
+                -ms-flex-flow: column-reverse;
+                flex-flow: column-reverse;
+                max-width: 300px;
+                width: auto;
+                height: auto;
+
+                .footer-left, .footer-right {
+                    max-width: 250px;
+                    width: 100%;
+                    padding-top: 1rem;
+                    padding-bottom: 0.5rem;
+                    border: none;
+                }
+            }
+
+        }
+    }
+}
