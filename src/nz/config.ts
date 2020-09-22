@@ -18,6 +18,10 @@ export class Config {
     public static priceInfoMoreModalId = 'humm-price-info-more-modal';
     public static priceInfoMoreUrl = Config.baseContentUrl + '/content/html/priceInfoMoreModal.html';
 
+    // price-info-api modal
+    public static priceInfoAPIModalId = 'humm-price-info-api-modal';
+    public static priceInfoAPIModalUrl = Config.baseContentUrl + '/content/html/priceInfoAPIModal.html';
+
     // more-info modal
     public static moreInfoModalId = 'humm-more-info-modal';
     public static moreInfoUrlNew = Config.baseContentUrl + '/content/html/moreInfoModal.html';
@@ -25,4 +29,7 @@ export class Config {
     // top-banner modal
     public static hummBannerTopModalId = Config.moreInfoModalId;
     public static hummBannerTopModalUrl = Config.moreInfoUrlNew;
+
+    // price info api
+    public static priceInfoAPIUrl = 'https://buyerapi.shophumm.co.nz/api';
 }
