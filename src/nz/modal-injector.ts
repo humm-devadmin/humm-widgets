@@ -11,6 +11,8 @@ require('../../node_modules/remodal/dist/remodal-default-theme.css');
 // tslint:disable-next-line:no-var-requires
 require('../../css/humm-branding.css');
 
+import { MerchantTerms } from './merchant-terms';
+
 export class ModalInjector {
     constructor(private jQuery: JQueryStatic) {
     }
@@ -39,6 +41,15 @@ export class ModalInjector {
         }
     }
 
+    public replaceBanner(template: string, targetUrl: string, modalId: string, dynamicData: MerchantTerms, purchasePrice: number, element?: JQuery, ) {
+        // use this method only when GUID id has been passed 
+        if (!this.modalExists(modalId)) {
+            this.injectDynamicModal(targetUrl, dynamicData, modalId, purchasePrice);
+        }
+
+        element.replaceWith(template);
+    }
+
     private modalExists(modalId: string): boolean {
         return this.jQuery("#" + modalId) ? this.jQuery("#" + modalId).length > 0 : false;
     }
@@ -53,5 +64,19 @@ export class ModalInjector {
         const body = this.jQuery(bodyTag);
 
         body.append(modalDiv);
+    }
+
+    private injectDynamicModal(url: string, dynamicData: MerchantTerms, modalId: string, purchasePrice: number): void {
+        const bodyTag = 'body';
+        const modalDiv =
+            `<div class='remodal' data-remodal-id='${modalId}'>
+                <iframe id='humm-api-info-modal' src='${url}?repayments=${dynamicData.numberOfRepayments}&deposit-amount=${dynamicData.depositAmount}&repayment-amount=${dynamicData.repaymentAmount}&mak-fee=${dynamicData.monthlyAccountKeepingFee}&establishment-fee=${dynamicData.establishmentFeeAmount}&total-amount=${dynamicData.totalRepaymentAmount+dynamicData.depositAmount}&months=${dynamicData.numberOfMonths}&purchasePrice=${purchasePrice}'></iframe>
+                <button data-remodal-action="close" class="remodal-close"></button>
+            </div>`;
+        const body = this.jQuery(bodyTag);
+
+        body.append(modalDiv);
+
+        let modal = this.jQuery('[data-remodal-id=' + modalId + ']').remodal();
     }
 }

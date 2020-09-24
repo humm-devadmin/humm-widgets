@@ -1,12 +1,13 @@
 import * as jq from 'jquery';
 import { ModalInjector } from './modal-injector';
 import { Config } from './config';
+import { MerchantTerms } from './merchant-terms';
 
 (($: JQueryStatic) => {
 
     /**
      * The src attribute from the script we are executing e.g
-     * <script src="http://widgets.shophumm.com.au/scripts/price-info.js?foo"
+     * <script src="http://widgets.shophumm.co.nz/scripts/price-info.js?foo"
      */
     let srcString: string;
     let scriptElement: any;
@@ -56,7 +57,7 @@ import { Config } from './config';
         m24 = 24
     }
 
-    let bigThingChoice: BigThingOptions;
+    //let bigThingChoice: BigThingOptions;
 
     /**
      * The extracted product price from either parsing the content from HTML (via css selector)
@@ -83,9 +84,15 @@ import { Config } from './config';
     element = (getParameterByName('element', srcString)) ? jq(getParameterByName('element', srcString)) : jq(scriptElement);
 
     littleThingChoice = LittleThingOptions[getParameterByName('little', srcString) ? getParameterByName('little', srcString).toLowerCase() : null];
-    bigThingChoice = BigThingOptions[getParameterByName('big', srcString) ? getParameterByName('big', srcString).toLowerCase() : null];
+    //bigThingChoice = BigThingOptions[getParameterByName('big', srcString) ? getParameterByName('big', srcString).toLowerCase() : null];
+    let bigThingChoice = existParameterByName('BigThings', srcString);
 
-    if (bigThingChoice) {
+    let priceStr = getParameterByName('productPrice', srcString);
+    //let merchantId = getParameterByName('merchantId', srcString);
+    let merchantId = null;
+
+
+    if (bigThingChoice || merchantId) {
         type = Type.bigThings;
         min = scriptElement.dataset.min > 80 ? scriptElement.dataset.min : 80;
         max = scriptElement.dataset.max < 10000 ? scriptElement.dataset.max : 10000;
@@ -97,8 +104,6 @@ import { Config } from './config';
             littleThingChoice = LittleThingOptions.f5
         }
     }
-
-    let priceStr = getParameterByName('productPrice', srcString);
 
     if (priceStr) {
         priceStr = priceStr.replace(/^\D+/, '');
@@ -139,6 +144,14 @@ import { Config } from './config';
         }
     }
 
+    function newGuid() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random() * 16 | 0,
+            v = c == 'x' ? r : (r & 0x3 | 0x8);
+          return v.toString(16);
+        });
+    }
+
     function extractPrice(el: any) {
         let textValue = el.text().trim();
         textValue = textValue.replace(/^\D+/, "");
@@ -154,8 +167,10 @@ import { Config } from './config';
 
         let template: string;
         let logo_html = noLogo ? '' : `<div><img alt="Humm" class="humm-widget-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" /></div>`;
+        let logo_html_no_div = noLogo ? '' : `<img alt="Humm" class="humm-widget-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />`;
         let main_html = '';
         let price_breakdown_html = '';
+        let myGuid = newGuid();
 
         if (productPrice > max || productPrice < min || productPrice == 0) {
             return '<a class="humm-price-info-widget"></a>';
@@ -188,35 +203,74 @@ import { Config } from './config';
             }
         } else {
             if (productPrice >= min && productPrice <= max) {
-                let instalmentsList = {
-                    "m6": 13,
-                    "m9": 19,
-                    "m12": 26,
-                    "m18": 39,
-                    "m24": 52
-                };
-                numberOfInstalments = instalmentsList[BigThingOptions[bigThingChoice]];
+                if (merchantId) {
+                    getMerchantTerms(merchantId,productPrice).then (
+                        terms => {
+                            template = `
+                            <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${Config.priceInfoAPIModalId + '-' + merchantId + '-' + (terms.totalRepaymentAmount + terms.depositAmount).toFixed(0)}">
+                                ${logo_html}
+                                <span class="humm-description">
+                                    <span class="humm-main wrap">
+                                        <span class="nowrap">${terms.numberOfRepayments} fortnightly payments of <span class="humm-price">$${terms.repaymentAmount.toFixed(2)}</span></span>
+                                        <span class="nowrap">(total payable 
+                                            <span class="humm-price">$${(terms.totalRepaymentAmount + terms.depositAmount).toFixed(2)}</span>)
+                                            <span class="humm-more-info left-pad">more info</span>
+                                            
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>`;
+                            insert(template, myGuid, terms);
+                        }
+                    ).catch(error => { console.log(error); });
+                    
+                    template = `
+                    <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${widgetId}">
+                        ${logo_html}
+                        <span class="humm-description">
+                            <span class="humm-main">Pay in slices. No interest ever.</span>
+                            <span class="humm-main">Loading...</span>
+                        </span>
+                    </a>`;
+                } else {
+                    let instalmentsList = {
+                        "m6": 13,
+                        "m9": 19,
+                        "m12": 26,
+                        "m18": 39,
+                        "m24": 52
+                    };
+                    //numberOfInstalments = instalmentsList[BigThingOptions[bigThingChoice]];
 
-                deposit = Math.floor(productPrice * 0.1 * Math.pow(10, 2)) / Math.pow(10, 2);
-                instalment = productPrice * 0.9 / numberOfInstalments;
-                numberOfMonths = bigThingChoice;
-                // Banking Rounding
-                let roundedDownProductPrice = Math.floor(instalment * Math.pow(10, 2)) / Math.pow(10, 2);
-                price_breakdown_html = `<span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`;
+                    //deposit = Math.floor(productPrice * 0.1 * Math.pow(10, 2)) / Math.pow(10, 2);
+                    //instalment = productPrice * 0.9 / numberOfInstalments;
+                    //numberOfMonths = bigThingChoice;
+                    // Banking Rounding
+                    //let roundedDownProductPrice = Math.floor(instalment * Math.pow(10, 2)) / Math.pow(10, 2);
+                    //price_breakdown_html = `<span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`;
 
-                template = `
-                <a class="humm-price-info-widget" data-remodal-target="${widgetId}">
-                    ${logo_html}
-                    <span class="humm-description">
-                        <span class="humm-main">$${deposit} upfront then fortnightly instalments of ${price_breakdown_html} over ${numberOfMonths} months plus fees.</span>
-                        <span class="humm-more-info">more info</span>
-                    </span>
-                </a>`;
+                    template = `
+                    <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${widgetId}">
+                        ${logo_html}
+                        <span class="humm-description">
+                            <span class="humm-main">Pay in slices. No interest ever.</span><span class="humm-more-info">more info</span>
+                        </span>
+                    </a>`;
+                }
             }
         }
 
 
         return template;
+    }
+
+    function getMerchantTerms(merchantNumber: string, purchaseAmount: number ): Promise<MerchantTerms> {
+        return fetch (Config.priceInfoAPIUrl + '/PriceInfo/Get?merchantNumber=' + merchantNumber + '&purchaseAmount=' + purchaseAmount)
+                // the JSON body is taken from the response
+                .then(res => res.json())
+                .then(res => {
+                        return res as MerchantTerms
+                })
     }
 
     function getCurrentScript(): any {
@@ -248,15 +302,42 @@ import { Config } from './config';
         return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
 
-    function insert() {
-        let widgetUrl = productPrice <= 2000 ? Config.priceInfoUrl : Config.priceInfoMoreUrl;
-        let widgetId = productPrice <= 2000 ? Config.priceInfoModalId : Config.priceInfoMoreModalId;
-        if (type == Type.littleThings) {
-            widgetUrl = Config.priceInfoUrl;
-            widgetId = Config.priceInfoModalId;
+    function existParameterByName(name: string, url: string): boolean {
+        name = name.replace(/[\[\]]/g, '\\$&');
+        let regex = new RegExp('[?&]' + name + '(([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+
+        if (!results) {
+            return null;
         }
-        let template = generateWidget(widgetId);
-        widget.injectBanner(template, widgetUrl, widgetId, element);
+        
+        return true;
+    }
+
+    function insert(useHTML?: string, replaceElement?: string, dynamicData?: MerchantTerms) {
+        let widgetUrl = Config.priceInfoUrl;
+        let widgetId = Config.priceInfoModalId;
+        if (type !== Type.littleThings) {
+            if (merchantId) {
+                widgetUrl = Config.priceInfoAPIModalUrl;
+                widgetId = Config.priceInfoAPIModalId;
+            } 
+            else {
+                widgetUrl = Config.priceInfoMoreUrl;
+                widgetId = Config.priceInfoMoreModalId;    
+            }
+        }
+        if (typeof useHTML !== 'undefined') {
+            if (typeof replaceElement !== 'undefined') {
+                widget.replaceBanner(useHTML, Config.priceInfoAPIModalUrl, Config.priceInfoAPIModalId + '-' + merchantId + '-' + (dynamicData.totalRepaymentAmount + dynamicData.depositAmount).toFixed(0), dynamicData, productPrice, element.next('#' + replaceElement), );
+            } else {
+                widget.injectBanner(useHTML, widgetUrl, widgetId, element);
+            }
+        }
+        else {
+            let template = generateWidget(widgetId);
+            widget.injectBanner(template, widgetUrl, widgetId, element);
+        }
     }
 
     function logDebug(msg: string) {

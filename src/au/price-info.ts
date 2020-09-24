@@ -179,15 +179,21 @@ import { MerchantTerms } from './merchant-terms';
             }
         } else {
             if (productPrice < min || productPrice == 0) {
-                main_html = 'with 5 fortnightly payments';
+                main_html = 'or 5 fortnightly payments';
             } else if ((productPrice <= 1000 && productPrice <= max)) {
-                main_html = 'with 5 fortnightly payments';
+                main_html = 'or 5 fortnightly payments';
                 let productPriceDividedByFive = productPrice / 5;
                 // Banking Rounding
                 let roundedDownProductPrice = Math.floor(productPriceDividedByFive * Math.pow(10, 2)) / Math.pow(10, 2);
                 price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
-            } else if (productPrice <= max) {
-                main_html = 'Pay in slices. No interest ever.';
+            } else if(productPrice > 1000 && productPrice < 2000) {
+                main_html = 'or 10 fortnightly payments';
+                let productPriceDividedByTen = productPrice / 10;
+                // Banking Rounding
+                let roundedDownProductPrice = Math.floor(productPriceDividedByTen * Math.pow(10, 2)) / Math.pow(10, 2);
+                price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
+            } else if (productPrice <= max && productPrice >= 2000) {
+                main_html = 'Pay in slices. No interest ever';
                 if (merchantId) {
                     getMerchantTerms(merchantId,productPrice).then (
                         terms => {
@@ -213,9 +219,8 @@ import { MerchantTerms } from './merchant-terms';
 
         template = `
         <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${widgetId}">
-            ${logo_html}
             <span class="humm-description">
-                <span class="humm-main">${main_html} ${price_breakdown_html}</span>
+                <span class="humm-main">${main_html} ${price_breakdown_html} with ${logo_html_no_div}</span>
                 <span class="humm-more-info">more info</span>
             </span>
         </a>`;
@@ -276,10 +281,13 @@ import { MerchantTerms } from './merchant-terms';
         }
         if (type == Type.littleThings) {
             widgetUrl = Config.priceInfoV2Url;
-            widgetId = Config.priceInfoV2ModalId
-        } else {
+            widgetId = Config.priceInfoV2ModalId;
+        } else if (productPrice >= 2000) {
             widgetUrl = Config.priceInfoMoreUrl;
             widgetId = Config.priceInfoMoreModalId;
+        } else {
+            widgetUrl = Config.priceInfoV2Url;
+            widgetId = Config.priceInfoV2ModalId;
         }
         if (typeof useHTML !== 'undefined') {
             if (typeof replaceElement !== 'undefined') {
