@@ -8,7 +8,7 @@ export class Config {
     public static baseContentUrl = 'https://widgets.shophumm.co.nz';    // for remote deploy
     // public static baseContentUrl = 'https://s3-ap-southeast-2.amazonaws.com/widgets.oxipay.co.nz';    // for remote deploy
     // public static baseContentUrl = 'https://s3-ap-southeast-2.amazonaws.com/widgets.shophumm.co.nz/dist/nz';    // for remote demo
-    public static baseContentUrl = './dist/nz';       // for local testing
+    // public static baseContentUrl = './dist/nz';       // for local testing
 
     // price-info modal
     public static priceInfoModalId = 'humm-price-info-modal';
