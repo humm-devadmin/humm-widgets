@@ -33,6 +33,7 @@ module.exports = {
         "nz/content/scripts/more-info-small-slices": "./src/nz/more-info-small-slices.ts",
         "nz/content/scripts/more-info-mini": "./src/nz/more-info-mini.ts",
         "nz/content/scripts/price-info": "./src/nz/price-info.ts",
+        "nz/content/scripts/price-info-new": "./src/nz/price-info-new.ts",
 
         // "nz/content/scripts/landing-page": "./src/nz/landing-page.ts",
         "nz/content/scripts/landing-page-little-online": "./src/nz/landing-page-little-online.ts",
