@@ -5,10 +5,10 @@
 //   baseContentUrl = 'https://YOUR-URL'
 
 export class Config {
-    public static baseContentUrl = 'https://widgets.shophumm.co.nz';    // for remote deploy
+    // public static baseContentUrl = 'https://widgets.shophumm.co.nz';    // for remote deploy
     // public static baseContentUrl = 'https://s3-ap-southeast-2.amazonaws.com/widgets.oxipay.co.nz';    // for remote deploy
     // public static baseContentUrl = 'https://s3-ap-southeast-2.amazonaws.com/widgets.shophumm.co.nz/dist/nz';    // for remote demo
-    // public static baseContentUrl = './dist/nz';       // for local testing
+    public static baseContentUrl = './dist/nz';       // for local testing
 
     // price-info modal
     public static priceInfoModalId = 'humm-price-info-modal';
@@ -17,6 +17,10 @@ export class Config {
     // price-info-more modal
     public static priceInfoMoreModalId = 'humm-price-info-more-modal';
     public static priceInfoMoreUrl = Config.baseContentUrl + '/content/html/priceInfoMoreModal.html';
+
+    // price-info-new modal
+    public static priceInfoNewModalId = 'humm-price-info-new-modal';
+    public static priceInfoNewUrl = Config.baseContentUrl + '/content/html/priceInfoNewModal.html';
 
     // price-info-api modal
     public static priceInfoAPIModalId = 'humm-price-info-api-modal';
