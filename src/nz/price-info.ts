@@ -44,7 +44,6 @@ import { MerchantTerms } from './merchant-terms';
     // widget type in price range
     enum LittleThingOptions {
         f5,
-        w10
     }
 
     let littleThingChoice: LittleThingOptions;
@@ -184,13 +183,7 @@ import { MerchantTerms } from './merchant-terms';
                     // Banking Rounding
                     let roundedDownProductPrice = Math.floor(productPriceDividedByFive * Math.pow(10, 2)) / Math.pow(10, 2);
                     price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
-                } else {
-                    main_html = 'with 10 weekly payments';
-                    let productPriceDividedByTen = productPrice / 10;
-                    // Banking Rounding
-                    let roundedDownProductPrice = Math.floor(productPriceDividedByTen * Math.pow(10, 2)) / Math.pow(10, 2);
-                    price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
-                }
+                } 
 
                 template = `
                     <a class="humm-price-info-widget" data-remodal-target="${widgetId}">
