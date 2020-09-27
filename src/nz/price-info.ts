@@ -43,20 +43,10 @@ import { MerchantTerms } from './merchant-terms';
 
     // widget type in price range
     enum LittleThingOptions {
-        f5,
+        f5
     }
 
     let littleThingChoice: LittleThingOptions;
-
-    enum BigThingOptions {
-        m6 = 6,
-        m9 = 9,
-        m12 = 12,
-        m18 = 18,
-        m24 = 24
-    }
-
-    //let bigThingChoice: BigThingOptions;
 
     /**
      * The extracted product price from either parsing the content from HTML (via css selector)
@@ -83,26 +73,10 @@ import { MerchantTerms } from './merchant-terms';
     element = (getParameterByName('element', srcString)) ? jq(getParameterByName('element', srcString)) : jq(scriptElement);
 
     littleThingChoice = LittleThingOptions[getParameterByName('little', srcString) ? getParameterByName('little', srcString).toLowerCase() : null];
-    //bigThingChoice = BigThingOptions[getParameterByName('big', srcString) ? getParameterByName('big', srcString).toLowerCase() : null];
     let bigThingChoice = existParameterByName('BigThings', srcString);
 
     let priceStr = getParameterByName('productPrice', srcString);
-    //let merchantId = getParameterByName('merchantId', srcString);
-    let merchantId = null;
-
-
-    if (bigThingChoice || merchantId) {
-        type = Type.bigThings;
-        min = scriptElement.dataset.min > 80 ? scriptElement.dataset.min : 80;
-        max = scriptElement.dataset.max < 10000 ? scriptElement.dataset.max : 10000;
-    } else {
-        type = Type.littleThings;
-        min = scriptElement.dataset.min > 20 ? scriptElement.dataset.min : 20;
-        max = scriptElement.dataset.max < 1000 ? scriptElement.dataset.max : 1000;
-        if (!littleThingChoice) {
-            littleThingChoice = LittleThingOptions.f5
-        }
-    }
+    let merchantId = getParameterByName('merchantId', srcString);
 
     if (priceStr) {
         priceStr = priceStr.replace(/^\D+/, '');
@@ -171,6 +145,17 @@ import { MerchantTerms } from './merchant-terms';
         let price_breakdown_html = '';
         let myGuid = newGuid();
 
+        if (bigThingChoice || (littleThingChoice===undefined && productPrice >= 1000)) {
+            type = Type.bigThings;
+            min = scriptElement.dataset.min > 80 ? scriptElement.dataset.min : 80;
+            max = scriptElement.dataset.max < 10000 ? scriptElement.dataset.max : 10000;
+        } else {
+            type = Type.littleThings;
+            min = scriptElement.dataset.min > 20 ? scriptElement.dataset.min : 20;
+            max = scriptElement.dataset.max < 1000 ? scriptElement.dataset.max : 1000;
+            littleThingChoice = LittleThingOptions.f5
+        }
+
         if (productPrice > max || productPrice < min || productPrice == 0) {
             return '<a class="humm-price-info-widget"></a>';
         }
@@ -206,7 +191,7 @@ import { MerchantTerms } from './merchant-terms';
                                     <span class="humm-main wrap">
                                         <span class="nowrap">${terms.numberOfRepayments} fortnightly payments of <span class="humm-price">$${terms.repaymentAmount.toFixed(2)}</span></span>
                                         <span class="nowrap">(total payable 
-                                            <span class="humm-price">$${(terms.totalRepaymentAmount + terms.depositAmount).toFixed(2)}</span>)
+                                            <span class="humm-price">$${terms.totalPayableAmount.toFixed(2)}</span>)
                                             <span class="humm-more-info left-pad">more info</span>
                                             
                                         </span>
@@ -226,22 +211,6 @@ import { MerchantTerms } from './merchant-terms';
                         </span>
                     </a>`;
                 } else {
-                    let instalmentsList = {
-                        "m6": 13,
-                        "m9": 19,
-                        "m12": 26,
-                        "m18": 39,
-                        "m24": 52
-                    };
-                    //numberOfInstalments = instalmentsList[BigThingOptions[bigThingChoice]];
-
-                    //deposit = Math.floor(productPrice * 0.1 * Math.pow(10, 2)) / Math.pow(10, 2);
-                    //instalment = productPrice * 0.9 / numberOfInstalments;
-                    //numberOfMonths = bigThingChoice;
-                    // Banking Rounding
-                    //let roundedDownProductPrice = Math.floor(instalment * Math.pow(10, 2)) / Math.pow(10, 2);
-                    //price_breakdown_html = `<span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`;
-
                     template = `
                     <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${widgetId}">
                         ${logo_html}
