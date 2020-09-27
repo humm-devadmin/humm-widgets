@@ -18,6 +18,10 @@ export class Config {
     public static priceInfoMoreModalId = 'humm-price-info-more-modal';
     public static priceInfoMoreUrl = Config.baseContentUrl + '/content/html/priceInfoMoreModal.html';
 
+    // price-info-new modal
+    public static priceInfoNewModalId = 'humm-price-info-new-modal';
+    public static priceInfoNewUrl = Config.baseContentUrl + '/content/html/priceInfoNewModal.html';
+
     // price-info-api modal
     public static priceInfoAPIModalId = 'humm-price-info-api-modal';
     public static priceInfoAPIModalUrl = Config.baseContentUrl + '/content/html/priceInfoAPIModal.html';

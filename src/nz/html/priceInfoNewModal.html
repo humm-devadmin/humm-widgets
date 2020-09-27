@@ -1,0 +1,91 @@
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="../styles/priceApiModal.min.css" rel="stylesheet">
+
+<div class="humm-price-info-modal">
+    <div class="header">
+        <div class="title"><img src="../images/logo-orange.svg" alt="humm logo"></div>
+        <div class="sub-title">
+            <span>No interest ever. Pay in slices over <span id='months'>X</span> months.<sub><sup>*</sup></sub></span>
+        </div>
+    </div>
+    <div class="pricing-wrapper">
+        <div class="pricing">
+            <ul class = "humm-points">
+                <li>Fast approval up to $1000</li>
+                <li>Pay over 2.5 months</li>
+                <li>Pay either weekly or fortnightly</li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-wrapper">
+        <div class="main">
+            <div class="card">
+                <img src="../images/icon-shopnow-white.svg" alt="">
+                <div class="title">Shop now</div>
+                <div class="content">Choose <strong>humm</strong> as your payment option in the online checkout.</div>
+            </div>
+            <div class="card-dividor">
+                <img src="../images/arrow-white.svg" alt="">
+            </div>
+            <div class="card">
+                <img src="../images/icon-login-white.svg" alt="">
+                <div class="title">Login or Sign Up</div>
+                <div class="content">You will be directed to the <strong>humm</strong> portal to login or sign up.</div>
+            </div>
+            <div class="card-dividor">
+                <img src="../images/arrow-white.svg" alt="">
+            </div>
+            <div class="card">
+                <img src="../images/icon-purchase-white.svg" alt="">
+                <div class="title">Complete Purchase</div>
+                <div class="content">Your items will be delivered to your door.</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer">
+            <div class="footer-left">
+                <span class="fine-print"><sup>*</sup> Lending criteria, terms, conditions, minimum amounts and exclusions apply.  An establishment fee of $20 and a monthly $2.50 account fee applies to humm big things only. Credit provided by FlexiGroup (NZ) Ltd NZBN 9429038167249</span>
+            </div>
+            <div class="footer-right">
+                <span class="fine-print"><span class="orange">What do I need to apply for humm?</span>
+                    <ul>
+                    <li>Provide a one-off electronic bank statement.</li>
+                    <li>Be 18 years or older</li>
+                    <li>Be a permanent resident or citizen of New Zealand/li>
+                    <li>Hold an New Zealand driver's license or New Zealand passport</li>
+                    <li>Have a permanent job (at least 25 hours a week) or be on a New Zealand super or veteran’s pensio</li>
+                    <li>Hold an New Zealand Visa or Mastercard debit or credit card</li>
+                </ul></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function getParamValue(paramName)
+    {
+        var url = window.location.search.substring(1); //get rid of "?" in querystring
+        var qArray = url.split('&'); //get key-value pairs
+        for (var i = 0; i < qArray.length; i++) 
+        {
+            var pArr = qArray[i].split('='); //split key and value
+            if (pArr[0] == paramName) 
+                return pArr[1]; //return value
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){
+        
+        document.getElementById("repayments").innerHTML = getParamValue('repayments');
+        document.getElementById("fee-repayments").innerHTML = getParamValue('months');
+        document.getElementById("deposit").innerHTML = parseFloat(getParamValue('deposit-amount')).toFixed(2);
+        document.getElementById("payments").innerHTML = parseFloat(getParamValue('repayment-amount')).toFixed(2);
+        document.getElementById("mak-fee").innerHTML = parseFloat(getParamValue('mak-fee')).toFixed(2);
+        document.getElementById("establishment-fee").innerHTML = parseFloat(getParamValue('establishment-fee')).toFixed(2);
+        document.getElementById("total-amount").innerHTML = parseFloat(getParamValue('total-amount')).toFixed(2);
+        document.getElementById("months").innerHTML = getParamValue('months');
+        document.getElementById("purchase-price").innerHTML = getParamValue('purchasePrice');
+        
+    });
+</script>
