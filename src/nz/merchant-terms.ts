@@ -7,5 +7,6 @@ export interface MerchantTerms {
         monthlyAccountKeepingFee: number
         establishmentFeeAmount: number
         numberOfMonths: number
-        numberOfRepayments: number
+        numberOfRepayments: number,
+        totalPayableAmount: number
 }
