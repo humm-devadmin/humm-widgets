@@ -70,7 +70,7 @@ export class ModalInjector {
         const bodyTag = 'body';
         const modalDiv =
             `<div class='remodal' data-remodal-id='${modalId}'>
-                <iframe id='humm-api-info-modal' src='${url}?repayments=${dynamicData.numberOfRepayments}&deposit-amount=${dynamicData.depositAmount}&repayment-amount=${dynamicData.repaymentAmount}&mak-fee=${dynamicData.monthlyAccountKeepingFee}&establishment-fee=${dynamicData.establishmentFeeAmount}&total-amount=${dynamicData.totalRepaymentAmount+dynamicData.depositAmount}&months=${dynamicData.numberOfMonths}&purchasePrice=${purchasePrice}'></iframe>
+                <iframe id='humm-api-info-modal' src='${url}?repayments=${dynamicData.numberOfRepayments}&deposit-amount=${dynamicData.depositAmount}&repayment-amount=${dynamicData.repaymentAmount}&mak-fee=${dynamicData.monthlyAccountKeepingFee}&establishment-fee=${dynamicData.establishmentFeeAmount}&total-amount=${dynamicData.totalPayableAmount}&months=${dynamicData.numberOfMonths}&purchasePrice=${purchasePrice}'></iframe>
                 <button data-remodal-action="close" class="remodal-close"></button>
             </div>`;
         const body = this.jQuery(bodyTag);
