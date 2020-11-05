@@ -84,6 +84,7 @@ import { MerchantTerms } from './merchant-terms';
 
     let priceStr = getParameterByName('productPrice', srcString);
     let merchantId = getParameterByName('merchantId', srcString);
+    let length = getParameterByName('length', srcString);
 
     if (priceStr) {
         priceStr = priceStr.replace(/^\D+/, '');
@@ -179,15 +180,27 @@ import { MerchantTerms } from './merchant-terms';
             }
         } else {
             if (productPrice < min || productPrice == 0) {
-                main_html = 'or 5 fortnightly payments';
+                if (length == 'short') {
+                    main_html = 'or 5 payments';
+                } else {
+                    main_html = "or 5 fortnightly payments"
+                }
             } else if ((productPrice <= 1000 && productPrice <= max)) {
-                main_html = 'or 5 fortnightly payments';
+                if (length == 'short') {
+                    main_html = 'or 5 payments';
+                } else {
+                    main_html = "or 5 fortnightly payments"
+                }
                 let productPriceDividedByFive = productPrice / 5;
                 // Banking Rounding
                 let roundedDownProductPrice = Math.floor(productPriceDividedByFive * Math.pow(10, 2)) / Math.pow(10, 2);
                 price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
             } else if(productPrice > 1000 && productPrice < 2000) {
-                main_html = 'or 10 fortnightly payments';
+                if (length == 'short') {
+                    main_html = 'or 10 payments';
+                } else {
+                    main_html = "or 10 fortnightly payments"
+                }
                 let productPriceDividedByTen = productPrice / 10;
                 // Banking Rounding
                 let roundedDownProductPrice = Math.floor(productPriceDividedByTen * Math.pow(10, 2)) / Math.pow(10, 2);
