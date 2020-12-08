@@ -79,8 +79,10 @@ import { MerchantTerms } from './merchant-terms';
     let priceStr = getParameterByName('productPrice', srcString);
     let merchantId = getParameterByName('merchantId', srcString);
 
-    if(littleThingChoice != LittleThingOptions.w10)
-        {
+        if(littleThingChoice === LittleThingOptions.w10) {
+            throw new Error("10 Weekly Widget is removed");
+        }
+        
         if (priceStr) {
             priceStr = priceStr.replace(/^\D+/, '');
             productPrice = parseFloat(priceStr.replace(',', ''));
@@ -118,7 +120,6 @@ import { MerchantTerms } from './merchant-terms';
                     });
                 }
             }
-        }
     }
 
     function newGuid() {
