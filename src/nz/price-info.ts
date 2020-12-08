@@ -79,41 +79,44 @@ import { MerchantTerms } from './merchant-terms';
     let priceStr = getParameterByName('productPrice', srcString);
     let merchantId = getParameterByName('merchantId', srcString);
 
-    if (priceStr) {
-        priceStr = priceStr.replace(/^\D+/, '');
-        productPrice = parseFloat(priceStr.replace(',', ''));
+    if(littleThingChoice != LittleThingOptions.w10)
+        {
+        if (priceStr) {
+            priceStr = priceStr.replace(/^\D+/, '');
+            productPrice = parseFloat(priceStr.replace(',', ''));
 
-        // just render the widget
-        // because we have been provided the price we can't bind to events on 
-        // the element containing the price. We just inject the template
-        insert();
-    } else {
-        // we haven't been passed a price in URL, try to get the css selector for price element
-        let selector = getParameterByName('price-selector', srcString);
-        if (!selector) {
-            logDebug("Can't locate an element with selector :  " + selector);
-            return false;
-        }
-
-        let el = jq(selector, document.body);
-
-        if (el.exists()) {
-            productPrice = extractPrice(el);
-
-            if (productPrice) {
-                insert();
+            // just render the widget
+            // because we have been provided the price we can't bind to events on 
+            // the element containing the price. We just inject the template
+            insert();
+        } else {
+            // we haven't been passed a price in URL, try to get the css selector for price element
+            let selector = getParameterByName('price-selector', srcString);
+            if (!selector) {
+                logDebug("Can't locate an element with selector :  " + selector);
+                return false;
             }
 
-            // register event handler to update the price
-            if (monitor) {
-                setInterval(function() {
-                    let el = jq(selector, document.body);
-                    updatePrice(el);
-                }, 1000);
-            } else {
-                el.on("DOMSubtreeModified", function(e) {
-                    updatePrice(jq(e.target));
-                });
+            let el = jq(selector, document.body);
+
+            if (el.exists()) {
+                productPrice = extractPrice(el);
+
+                if (productPrice) {
+                    insert();
+                }
+
+                // register event handler to update the price
+                if (monitor) {
+                    setInterval(function() {
+                        let el = jq(selector, document.body);
+                        updatePrice(el);
+                    }, 1000);
+                } else {
+                    el.on("DOMSubtreeModified", function(e) {
+                        updatePrice(jq(e.target));
+                    });
+                }
             }
         }
     }
