@@ -186,8 +186,10 @@ import { MerchantTerms } from './merchant-terms';
                 template = `
                     <a class="humm-price-info-widget" data-remodal-target="${widgetId}">
                         <span class="humm-description">
-                            <span class="humm-main">${main_html} ${price_breakdown_html} with ${logo_html_no_div}</span>
-                            <span class="humm-more-info">more info</span>
+                            <span class="humm-main">
+                                ${main_html} ${price_breakdown_html} with ${logo_html_no_div}
+                                <span class="humm-more-info">more info</span>
+                            </span>
                         </span>
                     </a>`;
             }
