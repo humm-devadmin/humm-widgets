@@ -173,7 +173,7 @@ import { MerchantTerms } from './merchant-terms';
         let myGuid = newGuid();
 
         if (productPrice > max || productPrice < min || productPrice == 0) {
-            return '<a class="humm-price-info-widget"></a>';
+            return '<a class="humm-price-info-widget" href=""></a>';
         }
 
         if (type === Type.littleThings) {
@@ -193,7 +193,7 @@ import { MerchantTerms } from './merchant-terms';
                 }
 
                 template = `
-                    <a class="humm-price-info-widget" data-remodal-target="${widgetId}">
+                    <a class="humm-price-info-widget" data-remodal-target="${widgetId}" href="">
                         ${logo_html}
                         <span class="humm-description">
                             <span class="humm-main">${main_html} ${price_breakdown_html}</span>
@@ -207,7 +207,7 @@ import { MerchantTerms } from './merchant-terms';
                     getMerchantTerms(merchantId,productPrice).then (
                         terms => {
                             template = `
-                            <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${Config.priceInfoAPIModalId + '-' + merchantId + '-' + (terms.totalRepaymentAmount + terms.depositAmount).toFixed(0)}">
+                            <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${Config.priceInfoAPIModalId + '-' + merchantId + '-' + (terms.totalRepaymentAmount + terms.depositAmount).toFixed(0)}" href="">
                                 ${logo_html}
                                 <span class="humm-description">
                                     <span class="humm-main wrap">
@@ -225,7 +225,7 @@ import { MerchantTerms } from './merchant-terms';
                     ).catch(error => { console.log(error); });
                     
                     template = `
-                    <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${widgetId}">
+                    <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${widgetId}" href="">
                         ${logo_html}
                         <span class="humm-description">
                             <span class="humm-main">Pay in slices. No interest ever.</span>
@@ -250,7 +250,7 @@ import { MerchantTerms } from './merchant-terms';
                     //price_breakdown_html = `<span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`;
 
                     template = `
-                    <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${widgetId}">
+                    <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${widgetId}" href="">
                         ${logo_html}
                         <span class="humm-description">
                             <span class="humm-main">Pay in slices. No interest ever.</span><span class="humm-more-info">more info</span>
