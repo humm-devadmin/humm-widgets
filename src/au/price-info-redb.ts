@@ -138,7 +138,7 @@ import { Config } from './config';
             max = 2000;
         }
         if (productPrice > max) {
-            return '<a class="humm-price-info-widget"></a>';
+            return '<a class="humm-price-info-widget" href=""></a>';
         }
 
         if (type == Type.bigThings) {
@@ -164,7 +164,7 @@ import { Config } from './config';
         }
 
         template = `
-        <a class="humm-price-info-widget" data-remodal-target="${widgetId}">
+        <a class="humm-price-info-widget" data-remodal-target="${widgetId}" href="">
             ${logo_html}
             <span class="humm-description">
                 <span class="humm-main">${main_html} ${price_breakdown_html}</span>

@@ -153,7 +153,7 @@ import { MerchantTerms } from './merchant-terms';
             max = 2000;
         }
         if (productPrice > max) {
-            return '<a class="humm-price-info-widget"></a>';
+            return '<a class="humm-price-info-widget" href=""></a>';
         }
 
         if (type == Type.bigThings) {
@@ -162,7 +162,7 @@ import { MerchantTerms } from './merchant-terms';
                 getMerchantTerms(merchantId,productPrice).then (
                     terms => {
                         template = `
-                            <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${Config.priceInfoAPIModalId + '-' + merchantId + '-' + (terms.totalRepaymentAmount + terms.depositAmount).toFixed(0)}">
+                            <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${Config.priceInfoAPIModalId + '-' + merchantId + '-' + (terms.totalRepaymentAmount + terms.depositAmount).toFixed(0)}" href="">
                                 <span class="humm-description">
                                     <span class="humm-main wrap">
                                         <span class="nowrap">${terms.numberOfRepayments} fortnightly payments of <span class="humm-price">$${terms.repaymentAmount.toFixed(2)}</span></span>
@@ -194,7 +194,7 @@ import { MerchantTerms } from './merchant-terms';
                     getMerchantTerms(merchantId,productPrice).then (
                         terms => {
                             template = `
-                            <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${Config.priceInfoAPIModalId + '-' + merchantId + '-' + (terms.totalRepaymentAmount + terms.depositAmount).toFixed(0)}">
+                            <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${Config.priceInfoAPIModalId + '-' + merchantId + '-' + (terms.totalRepaymentAmount + terms.depositAmount).toFixed(0)}" href="">
                                 <span class="humm-description">
                                     <span class="humm-main wrap">
                                         <span class="nowrap">${terms.numberOfRepayments} fortnightly payments of <span class="humm-price">$${terms.repaymentAmount.toFixed(2)}</span></span>
@@ -214,7 +214,7 @@ import { MerchantTerms } from './merchant-terms';
         }
 
         template = `
-        <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${widgetId}">
+        <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${widgetId}" href="">
             <span class="humm-description">
                 <span class="humm-main">
                     ${main_html} ${price_breakdown_html} with ${logo_html}
