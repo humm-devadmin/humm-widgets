@@ -203,7 +203,8 @@ import { MerchantTerms } from './merchant-terms';
                                 <span class="humm-description">
                                     <span class="humm-main wrap">
                                         <span class="nowrap">or ${terms.numberOfRepayments} fortnightly payments of <span class="humm-price">$${terms.repaymentAmount.toFixed(2)}</span></span>
-                                        <span class="nowrap">(Excl. fees)
+                                        <span class="nowrap">(total payable 
+                                            <span class="humm-price">$${terms.totalPayableAmount.toFixed(2)}</span>)
                                             <span class="nowrap"> with ${logo_html_no_div}</span>
                                             <span class="humm-more-info left-pad">more info</span>
                                             
