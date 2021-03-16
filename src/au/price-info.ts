@@ -85,6 +85,7 @@ import { MerchantTerms } from './merchant-terms';
     let priceStr = getParameterByName('productPrice', srcString);
     let merchantId = getParameterByName('merchantId', srcString);
     let length = getParameterByName('length', srcString);
+    let theme = getParameterByName('theme', srcString);
 
     if (priceStr) {
         priceStr = priceStr.replace(/^\D+/, '');
@@ -147,6 +148,11 @@ import { MerchantTerms } from './merchant-terms';
         let main_html = '';
         let price_breakdown_html = '';
         let myGuid = newGuid();
+
+        if (theme =='black') {
+            logo_html = noLogo ? '' : `<div><img alt="Humm" class="humm-widget-logo" src="${Config.baseContentUrl}/content/images/logo-black.svg" /></div>`;
+            logo_html_no_div = noLogo ? '' : `<img alt="Humm" class="humm-widget-logo" src="${Config.baseContentUrl}/content/images/logo-black.svg" />`;
+        }
 
         if (type == Type.littleThings && (!max || max > 2000)) {
             max = 2000;
@@ -294,15 +300,27 @@ import { MerchantTerms } from './merchant-terms';
                 widgetId = Config.priceInfoMoreModalId;    
             }
         }
+        // If widget is specified as little things, check for theme
         if (type == Type.littleThings) {
-            widgetUrl = Config.priceInfoV2Url;
-            widgetId = Config.priceInfoV2ModalId;
+            if (theme == 'black') {
+                widgetUrl = Config.priceInfoV2BlackUrl;
+                widgetId = Config.priceInfoV2BlackModalId;
+            } else {
+                widgetUrl = Config.priceInfoV2Url;
+                widgetId = Config.priceInfoV2ModalId;
+            }
+            // If widget is little things only and price > $2000
         } else if (productPrice >= 2000) {
             widgetUrl = Config.priceInfoMoreUrl;
             widgetId = Config.priceInfoMoreModalId;
         } else {
-            widgetUrl = Config.priceInfoV2Url;
-            widgetId = Config.priceInfoV2ModalId;
+            if (theme == 'black') {
+                widgetUrl = Config.priceInfoV2BlackUrl;
+                widgetId = Config.priceInfoV2BlackModalId;
+            } else {
+                widgetUrl = Config.priceInfoV2Url;
+                widgetId = Config.priceInfoV2ModalId;
+            }
         }
         if (typeof useHTML !== 'undefined') {
             if (typeof replaceElement !== 'undefined') {
