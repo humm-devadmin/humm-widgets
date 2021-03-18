@@ -22,9 +22,13 @@ export class Config {
     public static priceInfoAPIModalId = 'humm-price-info-api-modal';
     public static priceInfoAPIModalUrl = Config.baseContentUrl + '/content/html/priceInfoAPIModal.html';
 
-    //price-info-ent modal
+    //price-info-v2 modal
     public static priceInfoV2ModalId = 'humm-price-info-v2-modal';
     public static priceInfoV2Url = Config.baseContentUrl + '/content/html/priceInfoV2.html';
+
+    //price-info-v2-black-modal
+    public static priceInfoV2BlackModalId = 'humm-price-info-v2-black-modal';
+    public static priceInfoV2BlackUrl = Config.baseContentUrl + '/content/html/priceInfoV2-black.html';
 
     // more-info modal
     public static moreInfoModalId = 'humm-more-info-modal';
