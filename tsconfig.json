@@ -19,6 +19,7 @@
     "./src/au/price-info-v2.ts",
     "./src/au/price-info-redb.ts",
     "./src/au/price-info-5m.ts",
+    "./src/au/price-info-myer.ts",
     "./src/au/config.ts",
     "./src/au/page-injector.ts",
   ],

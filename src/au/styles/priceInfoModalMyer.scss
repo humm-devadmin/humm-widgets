@@ -27,6 +27,7 @@
     top: 5vh !important;
     margin: 0 auto;
     padding: 30px 0px 0px;
+    border-radius: 5px;
   
     .header {
         text-align: center;
@@ -71,6 +72,7 @@
     font-size: 25px;
     letter-spacing: -1px;
     margin-bottom: -10px;
+    margin: 0px 10px;
 }
 
 .summary {
@@ -90,7 +92,7 @@
 }
 
 .flow {
-    background-color: #FF6C00;
+    background-color: black;
     min-width: 100%;
     margin-right: 0%;
 }
@@ -135,7 +137,7 @@
 }
 
 .vert-line {
-    border-left: 1.5px solid #FF6C00;
+    border-left: 1.5px solid black;
     height: 110px;
     margin-top: 25px;
 }
@@ -156,7 +158,7 @@
 }
 
 .question {
-    color: #FF6C00;
+    color: black;
     font-weight: 700;
 }
 
@@ -219,8 +221,8 @@ hr {
       
         hr {
             visibility: visible;
-            color: #FF6C00;
-            background-color: #FF6C00; 
+            color: black;
+            background-color: black;
             height: 2px;
             border-style: solid;
             margin: 0;
@@ -230,6 +232,7 @@ hr {
 
         .fine-print {
             padding-left: 40px;
+            margin-right: 25px;
         }
         
         .eligibility {

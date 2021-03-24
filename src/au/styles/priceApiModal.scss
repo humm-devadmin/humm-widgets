@@ -184,6 +184,11 @@ body {
     font-weight: 800;
 }
 
+.disclaimer {
+    text-decoration: underline;
+    color: inherit;
+}
+
 @media (max-width: 500px) {
     body {
         font-size: 16px;

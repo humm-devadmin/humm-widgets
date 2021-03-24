@@ -30,6 +30,10 @@ export class Config {
     public static priceInfoV2BlackModalId = 'humm-price-info-v2-black-modal';
     public static priceInfoV2BlackUrl = Config.baseContentUrl + '/content/html/priceInfoV2-black.html';
 
+    //price-info-myer modal
+    public static priceInfoMyerModalId = 'humm-price-info-myer-modal';
+    public static priceInfoMyerUrl = Config.baseContentUrl + '/content/html/priceInfoModalMyer.html';
+
     // more-info modal
     public static moreInfoModalId = 'humm-more-info-modal';
     public static moreInfoUrlNew = Config.baseContentUrl + '/content/html/moreInfoModal.html';
