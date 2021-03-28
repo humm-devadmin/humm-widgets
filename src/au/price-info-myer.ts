@@ -143,7 +143,7 @@ import { MerchantTerms } from './merchant-terms';
 
     function generateWidget(widgetId): string {
         let template;
-        let logo_html = noLogo ? '' : `<div><img alt="Humm" class="humm-widget-logo" src="${Config.baseContentUrl}/content/images/logo-black.svg" /></div>`;
+        let logo_html = noLogo ? '' : `<div><img alt="Humm" class="humm-widget-logo" src="${Config.baseContentUrl}/content/images/logo-orange.svg" /></div>`;
         let logo_html_no_div = noLogo ? '' : `<img alt="Humm" class="humm-widget-logo-myer" src="${Config.baseContentUrl}/content/images/logo-black.svg" />`;
         let main_html = '';
         let price_breakdown_html = '';
@@ -162,13 +162,12 @@ import { MerchantTerms } from './merchant-terms';
                 getMerchantTerms(merchantId,productPrice).then (
                     terms => {
                         template = `
-                            <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${Config.priceInfoAPIModalId + '-' + merchantId + '-' + (terms.totalRepaymentAmount + terms.depositAmount).toFixed(0)}" href="">
+                            <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${Config.priceInfoAPIModalMyerId + '-' + merchantId + '-' + (terms.totalRepaymentAmount + terms.depositAmount).toFixed(0)}" href="">
                                 <span class="humm-description">
                                     <span class="humm-main wrap">
                                         <span class="nowrap">${terms.numberOfRepayments} fortnightly payments of <span class="humm-price">$${terms.repaymentAmount.toFixed(2)}</span></span>
                                         <span class="nowrap">(total payable 
                                             <span class="humm-price">$${(terms.totalRepaymentAmount + terms.depositAmount).toFixed(2)}</span>)
-                                            <span class="humm-more-info left-pad">more info</span>
                                             ${logo_html_no_div}
                                         </span>
                                     </span>
@@ -196,29 +195,20 @@ import { MerchantTerms } from './merchant-terms';
                 // Banking Rounding
                 let roundedDownProductPrice = Math.floor(productPriceDividedByFive * Math.pow(10, 2)) / Math.pow(10, 2);
                 price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
-            // } else if(productPrice > 1000 && productPrice < 2000) {
-            //     if (length == 'short') {
-            //         main_html = '10 payments';
-            //     } else {
-            //         main_html = "10 fortnightly payments"
-            //     }
-            //     let productPriceDividedByTen = productPrice / 10;
-            //     // Banking Rounding
-            //     let roundedDownProductPrice = Math.floor(productPriceDividedByTen * Math.pow(10, 2)) / Math.pow(10, 2);
-            //     price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
+            } else if(productPrice > 1000 && productPrice < 2000) {
+                main_html = 'Pay in slices. No interest ever, ';
             } else if (productPrice <= max && productPrice >= 1000) {
                 main_html = 'Pay in slices. No interest ever, ';
                 if (merchantId) {
                     getMerchantTerms(merchantId,productPrice).then (
                         terms => {
                             template = `
-                            <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${Config.priceInfoAPIModalId + '-' + merchantId + '-' + (terms.totalRepaymentAmount + terms.depositAmount).toFixed(0)}" href="">
+                            <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${Config.priceInfoAPIModalMyerId + '-' + merchantId + '-' + (terms.totalRepaymentAmount + terms.depositAmount).toFixed(0)}" href="">
                                 <span class="humm-description">
                                     <span class="humm-main wrap">
                                         <span class="nowrap">${terms.numberOfRepayments} fortnightly payments of <span class="humm-price">$${terms.repaymentAmount.toFixed(2)}</span></span>
                                         <span class="nowrap">(total payable 
                                             <span class="humm-price">$${(terms.totalRepaymentAmount + terms.depositAmount).toFixed(2)}</span>)
-                                            <span class="humm-more-info left-pad">more info</span>
                                             ${logo_html_no_div}
                                         </span>
                                     </span>
@@ -286,8 +276,8 @@ import { MerchantTerms } from './merchant-terms';
         let widgetId = productPrice <= 2000 ? Config.priceInfoV2ModalId : ( merchantId ? Config.priceInfoAPIModalId : Config.priceInfoMoreModalId );
         if (type == Type.bigThings) {
             if (merchantId) {
-                widgetUrl = Config.priceInfoAPIModalUrl;
-                widgetId = Config.priceInfoAPIModalId;
+                widgetUrl = Config.priceInfoAPIModalMyerUrl;
+                widgetId = Config.priceInfoAPIModalMyerId;
             } 
             else {
                 widgetUrl = Config.priceInfoMoreUrl;
@@ -308,7 +298,7 @@ import { MerchantTerms } from './merchant-terms';
         }
         if (typeof useHTML !== 'undefined') {
             if (typeof replaceElement !== 'undefined') {
-                widget.replaceBanner(useHTML, Config.priceInfoAPIModalUrl, Config.priceInfoAPIModalId + '-' + merchantId + '-' + (dynamicData.totalRepaymentAmount + dynamicData.depositAmount).toFixed(0), dynamicData, element.next('#' + replaceElement), );
+                widget.replaceBanner(useHTML, Config.priceInfoAPIModalMyerUrl, Config.priceInfoAPIModalMyerId + '-' + merchantId + '-' + (dynamicData.totalRepaymentAmount + dynamicData.depositAmount).toFixed(0), dynamicData, element.next('#' + replaceElement), );
             } else {
                 widget.injectBanner(useHTML, widgetUrl, widgetId, element);
             }
