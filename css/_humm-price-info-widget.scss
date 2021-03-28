@@ -26,6 +26,27 @@
         float: none !important;
         width: auto;
         vertical-align: baseline;
+
+        @media (max-width: 500px) {
+            margin-left: 0px;
+        }
+    }
+
+    img.humm-widget-logo-myer {
+        all: unset;
+        display: inline-block;
+        margin-left: 6px;
+        margin-right: 3px;
+        height: 15px !important;
+        float: none !important;
+        width: auto;
+        vertical-align: bottom;
+        border-bottom: 1.5px solid black !important;
+        padding-bottom: 3px;
+
+        @media (max-width: 500px) {
+            margin-left: 0px;
+        }
     }
 
     .humm-description {
@@ -55,6 +76,8 @@
             .nowrap {
                 white-space: nowrap;
             }
+
+            
         }
 
         .humm-more-info {

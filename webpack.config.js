@@ -13,6 +13,7 @@ module.exports = {
         "au/content/scripts/price-info-v2": "./src/au/price-info-v2.ts",
         "au/content/scripts/price-info-redb": "./src/au/price-info-redb.ts",
         "au/content/scripts/price-info-5m": "./src/au/price-info-5m.ts",
+        "au/content/scripts/price-info-myer": "./src/au/price-info-myer",
 
         "au/content/scripts/landing-page": "./src/au/landing-page.ts",
         "au/content/scripts/landing-page-little-online": "./src/au/landing-page-little-online.ts",
