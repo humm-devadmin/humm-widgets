@@ -76,7 +76,7 @@
 }
 
 .summary {
-    background-color: #F1F2EE;
+    background-color: white;
     margin-right: 0%;
 }
 
@@ -92,13 +92,13 @@
 }
 
 .flow {
-    background-color: black;
+    background-color: #f4f5f1;
     min-width: 100%;
     margin-right: 0%;
 }
 
 .footer {
-    background-color: #F1F2EE;
+    background-color: white;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -116,14 +116,14 @@
 }
 
 .content {
-    color: white;
+    color: black;
     font-weight: 550;
     font-size: 20px;
     text-align: center;
 }
 
 .card-text {
-    color: white;
+    // color: white;
     font-size: 14px;
     line-height: 1.2rem;
     padding: 8px;
@@ -137,7 +137,7 @@
 }
 
 .vert-line {
-    border-left: 1.5px solid black;
+    border-left: 1.5px solid #FF6C00;
     height: 110px;
     margin-top: 25px;
 }
@@ -221,8 +221,8 @@ hr {
       
         hr {
             visibility: visible;
-            color: black;
-            background-color: black;
+            color: #FF6C00;
+            background-color: #FF6C00;
             height: 2px;
             border-style: solid;
             margin: 0;
