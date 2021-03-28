@@ -206,11 +206,7 @@ import { MerchantTerms } from './merchant-terms';
                             <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${Config.priceInfoAPIModalMyerId + '-' + merchantId + '-' + (terms.totalRepaymentAmount + terms.depositAmount).toFixed(0)}" href="">
                                 <span class="humm-description">
                                     <span class="humm-main wrap">
-                                        <span class="nowrap">${terms.numberOfRepayments} fortnightly payments of <span class="humm-price">$${terms.repaymentAmount.toFixed(2)}</span></span>
-                                        <span class="nowrap">(total payable 
-                                            <span class="humm-price">$${(terms.totalRepaymentAmount + terms.depositAmount).toFixed(2)}</span>)
-                                            ${logo_html_no_div}
-                                        </span>
+                                        ${main_html} with ${logo_html_no_div}
                                     </span>
                                 </span>
                             </a>`;
@@ -289,9 +285,9 @@ import { MerchantTerms } from './merchant-terms';
             widgetUrl = Config.priceInfoMyerUrl;
             widgetId = Config.priceInfoMyerModalId;
             // If widget is little things only and price > $2000
-        } else if (productPrice >= 2000) {
-            widgetUrl = Config.priceInfoMoreUrl;
-            widgetId = Config.priceInfoMoreModalId;
+        } else if (productPrice >= 1000) {
+            widgetUrl = Config.priceInfoMyer5mUrl;
+            widgetId = Config.priceInfoMyer5mModalId;
         } else {
             widgetUrl = Config.priceInfoMyerUrl;
             widgetId = Config.priceInfoMyerModalId;

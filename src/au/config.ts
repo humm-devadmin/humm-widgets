@@ -34,6 +34,10 @@ export class Config {
     public static priceInfoMyerModalId = 'humm-price-info-myer-modal';
     public static priceInfoMyerUrl = Config.baseContentUrl + '/content/html/priceInfoModalMyer.html';
 
+    //price-info-myer modal
+    public static priceInfoMyer5mModalId = 'humm-price-info-myer-5m-modal';
+    public static priceInfoMyer5mUrl = Config.baseContentUrl + '/content/html/priceInfoModalMyer-5m.html';
+
     //price-info-api modal Myer
     public static priceInfoAPIModalMyerId = 'humm-price-info-api-modal-myer';
     public static priceInfoAPIModalMyerUrl = Config.baseContentUrl + '/content/html/priceInfoAPIModalMyer.html';
