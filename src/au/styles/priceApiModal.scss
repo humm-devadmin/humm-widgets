@@ -213,7 +213,12 @@ body {
 
             .footer-left {
                 width: 30%;
-                border-right: 0.5px solid $HUMM_ORANGE;
+            }
+
+            .vert-line {
+                border-left: 1.5px solid #FF6C00;
+                height: 110px;
+                margin-top: 2px;
             }
 
             .footer-right {
@@ -227,7 +232,7 @@ body {
 
             .fine-print {
                 font-weight: 300;
-                font-size: 12px;
+                font-size: 10px;
 
                 ul {
                     margin-block-start: 0;
@@ -453,6 +458,10 @@ body {
                     padding-top: 1rem;
                     padding-bottom: 0.5rem;
                     border: none;
+                }
+
+                .vert-line {
+                    display: none;
                 }
             }
 
