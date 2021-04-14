@@ -11,13 +11,14 @@
     <div class="pricing-wrapper">
         <div class="pricing">
             <div class="pricing-left">
-                <strong><span id='repayments'>X</span></strong> fortnightly payments of <strong></span>$<span id='payments'>X</span></strong><br><br>
-                Deposit now <strong>$<span id='deposit'>X</span></strong>
+                Pay <strong>$<span id='deposit'>X</span></strong> today, then <br>
+                <strong><span id='repayments'>X</span></strong> fortnightly payments of <strong></span>$<span id='payments'>X</span></strong><sup>1</sup>
             </div>
             <div class="pricing-right">
-                Total purchase price, which includes<br>
-                <strong><span id='fee-repayments'>X</span></strong> $<span id='mak-fee'>X</span> monthly fees +<br>
-                <strong>$<span id='establishment-fee'>X</span></strong> establishment fee = <strong>$<span id='total-amount'>X</span></strong> 
+                Total amount payable is <strong>$<span id='total-amount'>X</span></strong>,<br> which includes the 
+                <strong>$<span id='purchase-amount'>X</span></strong> purchase price, <br>
+                <span id='fee-repayments'>X</span> x <strong>$<span id='mak-fee'>X</span></strong> monthly fees, and a<br>
+                <strong>$<span id='establishment-fee'>X</span></strong> establishment fee
             </div>
         </div>
     </div>
@@ -50,7 +51,10 @@
         <div class="footer">
             <div class="footer-left">
                 <span class="fine-print"><sup>1</sup> plan to approved applicants only; <a class = "disclaimer" href = "https://cdn.shophumm.com/humm/uploads/sites/3/humm-Consumer-Terms-and-Conditions-1-03-2021.pdf" target = "_blank">fees, terms, conditions, minimum amounts and exclusions</a> apply. Payment plan provided by Certegy Ezi-Pay Pty Ltd ABN 28 129 228 986.</span>
+                <br><br>
+                <span class = "fine-print"><sup>1</sup>Monthly fee is charge separately in addition to these repayments. The establishment fee is included in your fornitghtly repayments.</span>
             </div>
+            <div class = "vert-line"></div>
             <div class="footer-right">
                 <span class="fine-print"><span class="orange">What do I need to apply for humm?</span>
                     <ul>
@@ -89,6 +93,8 @@
         document.getElementById("establishment-fee").innerHTML = parseFloat(getParamValue('establishment-fee')).toFixed(2);
         document.getElementById("total-amount").innerHTML = parseFloat(getParamValue('total-amount')).toFixed(2);
         document.getElementById("months").innerHTML = getParamValue('months');
+        document.getElementById("purchase-amount").innerHTML = parseFloat(getParamValue('total-amount')).toFixed(2) - (parseFloat(getParamValue('mak-fee')).toFixed(2) * getParamValue('months')) - parseFloat(getParamValue('establishment-fee')).toFixed(2);
+
         
     });
 
