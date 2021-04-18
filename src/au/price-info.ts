@@ -172,9 +172,9 @@ import { MerchantTerms } from './merchant-terms';
                                     <span class="humm-main wrap">
                                         <span class="nowrap">${terms.numberOfRepayments} fortnightly payments of <span class="humm-price">$${terms.repaymentAmount.toFixed(2)}</span></span>
                                         <span class="nowrap">(total payable 
-                                            <span class="humm-price">$${(terms.totalRepaymentAmount + terms.depositAmount).toFixed(2)}</span>)
+                                            <span class="humm-price">$${(terms.totalRepaymentAmount + terms.depositAmount).toFixed(2)}</span>) with ${logo_html_no_div}
                                             <span class="humm-more-info left-pad">more info</span>
-                                            ${logo_html_no_div}
+                                            
                                         </span>
                                     </span>
                                     
@@ -187,13 +187,13 @@ import { MerchantTerms } from './merchant-terms';
         } else {
             if (productPrice < min || productPrice == 0) {
                 if (length == 'short') {
-                    main_html = 'or 5 payments';
+                    main_html = '5 payments';
                 } else {
-                    main_html = "or 5 fortnightly payments"
+                    main_html = "5 fortnightly payments"
                 }
             } else if ((productPrice <= 1000 && productPrice <= max)) {
                 if (length == 'short') {
-                    main_html = 'or 5 payments';
+                    main_html = '5 payments';
                 } else {
                     main_html = "or 5 fortnightly payments"
                 }
@@ -203,9 +203,9 @@ import { MerchantTerms } from './merchant-terms';
                 price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
             } else if(productPrice > 1000 && productPrice < 2000) {
                 if (length == 'short') {
-                    main_html = 'or 10 payments';
+                    main_html = '10 payments';
                 } else {
-                    main_html = "or 10 fortnightly payments"
+                    main_html = "10 fortnightly payments"
                 }
                 let productPriceDividedByTen = productPrice / 10;
                 // Banking Rounding
@@ -222,9 +222,9 @@ import { MerchantTerms } from './merchant-terms';
                                     <span class="humm-main wrap">
                                         <span class="nowrap">${terms.numberOfRepayments} fortnightly payments of <span class="humm-price">$${terms.repaymentAmount.toFixed(2)}</span></span>
                                         <span class="nowrap">(total payable 
-                                            <span class="humm-price">$${(terms.totalRepaymentAmount + terms.depositAmount).toFixed(2)}</span>)
+                                            <span class="humm-price">$${(terms.totalRepaymentAmount + terms.depositAmount).toFixed(2)}</span>) with ${logo_html_no_div}
                                             <span class="humm-more-info left-pad">more info</span>
-                                            ${logo_html_no_div}
+                                            
                                         </span>
                                     </span>
                                 </span>

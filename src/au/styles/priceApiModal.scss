@@ -32,6 +32,7 @@ body {
     top: 5vh !important;
     margin: 0 auto;
     padding: 30px 0px 0px;
+    border-radius: 5px;
 
     .header {
         text-align: center;
@@ -51,7 +52,7 @@ body {
     }
 
     .pricing-wrapper {
-        background-color: $HUMM-WRAPPER-GRAY;
+        background-color: white;
 
         .pricing {
             height: 150px;
@@ -99,7 +100,7 @@ body {
     }
 
     .main-wrapper {
-        background-color: $HUMM_ORANGE;
+        background-color: $HUMM_FLOW_GRAY;
 
         .main {
             display: -webkit-box;
@@ -121,11 +122,11 @@ body {
                 margin: 0 auto;
                 -webkit-box-sizing: border-box;
                 box-sizing: border-box;
-                color: white;
+                color: black;
     
                 .title {
                     font-size: 18px;
-                    font-weight: 800;
+                    font-weight: 600;
                     letter-spacing: -0.5px;
                     margin-bottom: 10px;
 
@@ -195,7 +196,7 @@ body {
     }
 
     .footer-wrapper {
-        background-color: $HUMM-WRAPPER-GRAY;
+        background-color: white;
 
         .footer {
             height: 180px;
@@ -238,11 +239,13 @@ body {
                     margin-block-start: 0;
                     margin-block-end: 0;
                     padding-inline-start: 15px;
+                    font-size: 12px;
                 }
                 
                 .orange {
                     font-weight: bold;
                     color: $HUMM_ORANGE;
+                    font-size: 12px;
                 }
             }
         }
