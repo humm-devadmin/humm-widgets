@@ -170,7 +170,7 @@ import { MerchantTerms } from './merchant-terms';
         if (type === Type.littleThings) {
             if ((productPrice <= 1000 && productPrice <= max)) {
                 if (littleThingChoice === LittleThingOptions.f5) {
-                    main_html = 'or 5 fortnightly payments';
+                    main_html = '5 fortnightly payments';
                     let productPriceDividedByFive = productPrice / 5;
                     // Banking Rounding
                     let roundedDownProductPrice = Math.floor(productPriceDividedByFive * Math.pow(10, 2)) / Math.pow(10, 2);
@@ -202,7 +202,7 @@ import { MerchantTerms } from './merchant-terms';
                             <a id="${myGuid}" class="humm-price-info-widget" data-remodal-target="${Config.priceInfoAPIModalId + '-' + merchantId + '-' + (terms.totalRepaymentAmount + terms.depositAmount).toFixed(0)}" href="">
                                 <span class="humm-description">
                                     <span class="humm-main wrap">
-                                        <span class="nowrap">or ${terms.numberOfRepayments} fortnightly payments of <span class="humm-price">$${terms.repaymentAmount.toFixed(2)}</span></span>
+                                        <span class="nowrap">${terms.numberOfRepayments} fortnightly payments of <span class="humm-price">$${terms.repaymentAmount.toFixed(2)}</span></span>
                                         <span class="nowrap">(total payable 
                                             <span class="humm-price">$${terms.totalPayableAmount.toFixed(2)}</span>)
                                             <span class="nowrap"> with ${logo_html_no_div}</span>
