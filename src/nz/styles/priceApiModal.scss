@@ -6,6 +6,8 @@ $HUMM_GRAY: #666666;
 $HUMM_LIGHT_GRAY: #999999;
 $HUMM_DARK_GRAY: #333333;
 $HUMM-WRAPPER-GRAY: #F1F2EE;
+$HUMM_FLOW_GRAY: #f4f5f1;
+
 
 body {
     margin: 0;
@@ -31,6 +33,7 @@ body {
     top: 5vh !important;
     margin: 0 auto;
     padding: 30px 0px 0px;
+    border-radius: 5px;
 
     .header {
         text-align: center;
@@ -50,7 +53,7 @@ body {
     }
 
     .pricing-wrapper {
-        background-color: $HUMM-WRAPPER-GRAY;
+        background-color: white;
 
         .pricing {
             height: 150px;
@@ -77,7 +80,7 @@ body {
     }
 
     .main-wrapper {
-        background-color: $HUMM_ORANGE;
+        background-color: $HUMM_FLOW_GRAY;
 
         .main {
             display: -webkit-box;
@@ -99,11 +102,11 @@ body {
                 margin: 0 auto;
                 -webkit-box-sizing: border-box;
                 box-sizing: border-box;
-                color: white;
+                color: black;
     
                 .title {
                     font-size: 18px;
-                    font-weight: 800;
+                    font-weight: 600;
                     letter-spacing: -0.5px;
                     margin-bottom: 10px;
 
@@ -125,7 +128,7 @@ body {
     }
 
     .footer-wrapper {
-        background-color: $HUMM-WRAPPER-GRAY;
+        background-color: white;
 
         .footer {
             height: 180px;
