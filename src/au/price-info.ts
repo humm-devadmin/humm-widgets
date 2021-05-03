@@ -195,7 +195,7 @@ import { MerchantTerms } from './merchant-terms';
                 if (length == 'short') {
                     main_html = '5 payments';
                 } else {
-                    main_html = "or 5 fortnightly payments"
+                    main_html = "5 fortnightly payments"
                 }
                 let productPriceDividedByFive = productPrice / 5;
                 // Banking Rounding
