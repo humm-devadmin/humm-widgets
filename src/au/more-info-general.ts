@@ -4,7 +4,7 @@ import {Config} from './config';
 
 (($: JQueryStatic) => {
     const template =
-        `<a id="humm-more-info-general" data-remodal-target="${Config.moreInfoModalId}">
+        `<a id="humm-more-info-general">
             <div class="logo">
                 <img alt="humm" src="${Config.baseContentUrl}/content/images/logo-orange.svg" />
             </div>
