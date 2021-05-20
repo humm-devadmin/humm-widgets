@@ -4,7 +4,7 @@ import {Config} from './config';
 
 (($: JQueryStatic) => {
     const template =
-        `<a class="humm-more-info-widget humm-more-info-small humm-more-info-small-slices" data-remodal-target="${Config.moreInfoModalId}">
+        `<a class="humm-more-info-widget humm-more-info-small humm-more-info-small-slices">
             <div class="humm-inside">
                 <div class="humm-main">
                     <div class="humm-text-area">
