@@ -3,8 +3,13 @@ import {ModalInjector} from './modal-injector';
 import {Config} from './config';
 
 (($: JQueryStatic) => {
+    // Add popup to banner
+    // const template =
+    //     `<a class="humm-more-info-widget humm-more-info-large" data-remodal-target="${Config.moreInfoModalId}">
+
+    // Removes popup from banner
     const template =
-        `<a class="humm-more-info-widget humm-more-info-large">
+         `<a class="humm-more-info-widget humm-more-info-large">
             <div class="humm-inside">
                 <div class="humm-main">
                     <div class="humm-text-area">
