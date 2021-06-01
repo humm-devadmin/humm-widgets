@@ -412,9 +412,6 @@
 @media (max-width: 665px) {
     .humm-more-info-widget {
         min-height: 280px;
-        overflow-y: scroll;
-
-        
 
         .humm-inside {
             display: initial;
@@ -464,7 +461,7 @@
             }
 
             .getting-started {
-                margin-top: 15%;
+                margin-top: 30px;
 
                 .title {
                     font-size: 4vw;
@@ -549,4 +546,47 @@
             font-size: calc(10px + 2vw) !important;
         }
     }
+}
+
+@media (min-width: 495px) and (max-width: 664px) {
+
+    .humm-inside {
+        width: 80% !important;
+    }
+    .getting-started {
+        margin-top: 30px !important;
+        .title {
+            font-size: 16px !important;
+        }
+    }
+
+    .getting-started-big {
+        margin-top: 30px !important;
+        .title {
+            font-size: 16px !important;
+        }
+    }
+
+    .title-text-big {
+        .tt-main {
+            font-size: calc(10px + 6vw) !important;
+        }
+
+        .tt-main-big {
+            font-size: calc(10px + 6vw) !important;
+        }
+    }
+
+    .humm-logo {
+        img {
+            height: 180px !important;
+        }
+    }
+
+    .humm-logo-big {
+        img {
+            top: 0px !important;
+        }
+    }
+
 }
