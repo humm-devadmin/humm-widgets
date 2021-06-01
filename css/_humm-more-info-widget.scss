@@ -162,7 +162,7 @@
                 background: white;
                 border-radius: 40px;
                 color: #FF6C00;
-                padding: 10px 5px;
+                padding: 10px 10px;
                 font-weight: 800;
                 font-size: 1.4vw;
                 margin-bottom: 10%;
@@ -536,5 +536,17 @@
 @media (max-width: 325px) {
     .humm-more-info-widget {
         display: none;
+    }
+}
+
+@media (min-width: 1600px) {
+    .title-text-big {
+        .tt-main-big {
+            font-size: calc(10px + 2vw) !important;
+        }
+
+        .tt-main {
+            font-size: calc(10px + 2vw) !important;
+        }
     }
 }
