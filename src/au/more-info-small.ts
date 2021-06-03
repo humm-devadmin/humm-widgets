@@ -9,26 +9,29 @@ import {Config} from './config';
 
     // Removes popup from banner
     const template =
-        `<a class="humm-more-info-widget humm-more-info-small">
+        `<div class="humm-more-info-widget humm-more-info-small">
             <div class="humm-inside">
-                <div class="humm-main">
-                    <div class="humm-text-area">
-                        <div class='humm-title'>
-                            <div class="humm-strong">
-                                <span class="humm-inline-block">Little things. </span>
-                                <span class="humm-inline-block">Big things. </span>
-                                <span class="humm-inline-block">Everything.</span>
-                            </div>
-                            <div class="humm-nowrap">No interest ever.</div>
-                        </div>
-                        <div class="humm-tandc">T&Cs apply. See shophumm.com.au</div>
-                    </div>
+                <div class = "title-text">
+                    <span class = "tt-main">Pay in 5</span>
+                    <br style = "display: none;">
+                    <span class = "tt-sub">(or more)</span>
                 </div>
-                <div class="humm-logo">
-                    <img alt="Humm" src="${Config.baseContentUrl}/content/images/bird-humm.svg" />
+                <div class = "if-text">
+                    ALWAYS<br> INTEREST<br> FREE //
+                </div>
+                <div class = "humm-logo">
+                    <img alt="Humm" src="${Config.baseContentUrl}/content/images/humm-phone.png" />
+                </div>
+                <div class = "getting-started">
+                    <div class = "if-text-mb">
+                        ALWAYS<br> 
+                        INTEREST FREE //
+                    </div>
+                    <div class = "title"><a href = "https://www.shophumm.com/au/" target = "_blank">Get Started</a></div>
+                    <div class = "humm-tandc">Terms and conditions apply.</div>
                 </div>
             </div>
-        </a>`;
+        </div>`;
 
     const widget = new ModalInjector($);
     widget.injectBanner(template, Config.moreInfoUrlNew, Config.moreInfoModalId);
