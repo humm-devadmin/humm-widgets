@@ -185,7 +185,7 @@ import { MerchantTerms } from './merchant-terms';
                 } else {
                     main_html = "5 fortnightly payments"
                 }
-            } else if ((productPrice <= 2000 && productPrice <= max)) {
+            } else if ((productPrice <= 1000 && productPrice <= max)) {
                 if (length == 'short') {
                     main_html = '5 payments';
                 } else {
@@ -195,8 +195,16 @@ import { MerchantTerms } from './merchant-terms';
                 // Banking Rounding
                 let roundedDownProductPrice = Math.floor(productPriceDividedByFive * Math.pow(10, 2)) / Math.pow(10, 2);
                 price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
-            // } else if(productPrice > 1000 && productPrice < 2000) {
-                // main_html = 'Pay in slices. No interest ever, ';
+            } else if(productPrice > 1000 && productPrice <= 2000) {
+                if (length == 'short') {
+                    main_html = '10 payments';
+                } else {
+                    main_html = "10 fortnightly payments"
+                }                
+                let productPriceDividedByTen = productPrice / 10;
+                // Banking Rounding
+                let roundedDownProductPrice = Math.floor(productPriceDividedByTen * Math.pow(10, 2)) / Math.pow(10, 2);
+                price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
             } else if (productPrice <= max && productPrice > 2000) {
                 main_html = 'Pay in slices. No interest ever, ';
                 if (merchantId) {
