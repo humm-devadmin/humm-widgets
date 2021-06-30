@@ -34,13 +34,26 @@ export class Config {
     public static priceInfoMyerModalId = 'humm-price-info-myer-modal';
     public static priceInfoMyerUrl = Config.baseContentUrl + '/content/html/priceInfoModalMyer.html';
 
+    //price-info-winning-group modal
+    public static priceInfoWinningGroupModalId = 'humm-price-info-winning-group-modal';
+    public static priceInfoWinningGroupUrl = Config.baseContentUrl + '/content/html/priceInfoModalWinningGroup.html';
+    
     //price-info-myer modal
     public static priceInfoMyer5mModalId = 'humm-price-info-myer-5m-modal';
     public static priceInfoMyer5mUrl = Config.baseContentUrl + '/content/html/priceInfoModalMyer-5m.html';
 
+    //price-info-winning-group modal
+    public static priceInfoWinningGroup5mModalId = 'humm-price-info-winning-group-5m-modal';
+    public static priceInfoWinningGroup5mUrl = Config.baseContentUrl + '/content/html/priceInfoModalWinningGroup-5m.html';
+
+
     //price-info-api modal Myer
     public static priceInfoAPIModalMyerId = 'humm-price-info-api-modal-myer';
     public static priceInfoAPIModalMyerUrl = Config.baseContentUrl + '/content/html/priceInfoAPIModalMyer.html';
+
+    //price-info-api modal Winning Group
+    public static priceInfoAPIModalWinningGroupId = 'humm-price-info-api-modal-winning-group';
+    public static priceInfoAPIModalWinningGroupUrl = Config.baseContentUrl + '/content/html/priceInfoAPIModalWinningGroup.html';
 
     // more-info modal
     public static moreInfoModalId = 'humm-more-info-modal';

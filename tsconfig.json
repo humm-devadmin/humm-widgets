@@ -20,6 +20,7 @@
     "./src/au/price-info-redb.ts",
     "./src/au/price-info-5m.ts",
     "./src/au/price-info-myer.ts",
+    "./src/au/price-info-winning-group.ts",
     "./src/au/config.ts",
     "./src/au/page-injector.ts",
   ],
