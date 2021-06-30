@@ -180,15 +180,25 @@ import { MerchantTerms } from './merchant-terms';
             }
         } else {
             if (productPrice < min || productPrice == 0) {
-                main_html = "5 payments"
+                if (length == 'short') {
+                    main_html = '5 payments';
+                } else {
+                    main_html = "5 fortnightly payments"
+                }
             } else if ((productPrice <= 2000 && productPrice <= max)) {
-                main_html = "5 payments"
+                if (length == 'short') {
+                    main_html = '5 payments';
+                } else {
+                    main_html = "5 fortnightly payments"
+                }                
                 let productPriceDividedByFive = productPrice / 5;
                 // Banking Rounding
                 let roundedDownProductPrice = Math.floor(productPriceDividedByFive * Math.pow(10, 2)) / Math.pow(10, 2);
                 price_breakdown_html = `of <span class="humm-price">$${roundedDownProductPrice.toFixed(2)}</span>`
-            } else if (productPrice <= max && productPrice >= 2000) {
-                main_html = 'Big Things - Pay in slices ';
+            // } else if(productPrice > 1000 && productPrice < 2000) {
+                // main_html = 'Pay in slices. No interest ever, ';
+            } else if (productPrice <= max && productPrice > 2000) {
+                main_html = 'Pay in slices. No interest ever, ';
                 if (merchantId) {
                     getMerchantTerms(merchantId,productPrice).then (
                         terms => {
