@@ -1,0 +1,244 @@
+// proxima-nova font
+@import url("https://use.typekit.net/plq2clw.css");
+
+/*body {
+    margin: 0;
+    font-size: 17px;
+    color: #FF6C00;
+    -ms-overflow-style: none;
+}*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/* =========== Humm price info modal CSS ============= */
+
+.humm-price-info-modal {
+    font-family: "proxima-nova", sans-serif;
+    line-height: 1.3;
+    background: white;
+    overflow: visible;
+    overflow-x: hidden;
+    top: 5vh !important;
+    margin: 0 auto;
+    padding: 30px 0px 0px;
+    border-radius: 5px;
+  
+    .header {
+        text-align: center;
+        font-weight: 800;
+        margin: 0 auto 20px;
+    }
+}
+
+.humm-header {
+    width: 30%; 
+}
+
+.flow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    max-width: 40rem; 
+  
+    .card {
+        text-align: center;
+        padding: 1rem 0;
+        margin: 0 auto;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        max-width: 30%;
+
+        .card-img {
+            height: 40px;
+            width: 20%;
+            margin-bottom: 20px;
+        }
+      
+        .arrow-img {
+            margin-top: 60px;
+            padding: 0;
+        }
+    }
+}
+
+.sub-title {
+    font-size: 25px;
+    letter-spacing: -1px;
+    margin-bottom: -10px;
+    margin: 0px 10px;
+}
+
+.summary {
+    background-color: white;
+    margin-right: 0%;
+}
+
+.summary-content {
+    font-size: 14px;
+    margin-left: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  
+    li {
+        list-style-type: disc;  
+    }
+}
+
+.flow {
+    background-color: #f4f5f1;
+    min-width: 100%;
+    margin-right: 0%;
+}
+
+.footer {
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    max-width: 40rem;
+    line-height: 1rem;
+    min-width: 100%;
+    margin-right: 0%;
+    height: 160px;
+
+    hr {
+        border: 0;
+        border-bottom: 0;
+    }
+}
+
+.content {
+    color: black;
+    font-weight: 550;
+    font-size: 20px;
+    text-align: center;
+}
+
+.card-text {
+    // color: white;
+    font-size: 14px;
+    line-height: 1.2rem;
+    padding: 8px;
+}
+
+.fine-print {
+    font-size: 12px;
+    padding: 40px 10px 10px 20px;
+    max-width: 20rem;
+    color: #4D4D4D;
+}
+
+.vert-line {
+    border-left: 1.5px solid #FF6C00;
+    height: 110px;
+    margin-top: 25px;
+}
+
+.eligibility {
+    font-size: 12px;
+    padding: 20px 10px 5px 20px;
+    //min-width: 26rem;
+    line-height: 0.8rem;
+}
+
+.discs {
+    padding-left: 14px;
+    color: #4D4D4D;
+    li {
+        list-style-type: disc; 
+    }
+}
+
+.question {
+    color: black;
+    font-weight: 700;
+}
+
+hr {
+
+    visibility: hidden;
+}
+
+.disclaimer {
+    text-decoration: underline;
+    color: inherit;
+}
+
+@media (max-width: 500px) {
+  
+    .humm-header {
+        width: 50%; 
+    }
+
+    .summary-content {
+        margin-left: 10%;
+        margin-right: 15%;
+    }
+  
+    .flow {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        max-width: 300px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      
+        .card {
+            max-width: 250px;
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+          
+            .card-img {
+                width: 20%; 
+            }
+          
+            .arrow-img {
+                display: none; 
+            }
+        }
+    }
+  
+    .footer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        max-width: 300px;
+        height: auto;
+           
+        .vert-line {
+            display: none; 
+        }
+      
+        hr {
+            visibility: visible;
+            color: #FF6C00;
+            background-color: #FF6C00;
+            height: 2px;
+            border-style: solid;
+            margin: 0;
+            width: 70%;
+            margin-left: 35px;
+        }
+
+        .fine-print {
+            padding-left: 40px;
+            margin-right: 25px;
+        }
+        
+        .eligibility {
+            max-width: 250px; 
+            padding: 10px;
+            padding-left: 40px;
+        }
+    }
+}
